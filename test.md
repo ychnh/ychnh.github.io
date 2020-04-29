@@ -3,6 +3,8 @@
 * Tes
   * TRest 2
 
-# $ Math EQAUTION $
+# Some topic about
 * Additional
-  * $MATHSTUFF$
+  * $F: xB \rightarrow B$
+  * The binary is a function to this
+  * ${F,T} = B$

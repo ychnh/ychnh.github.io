@@ -90,8 +90,11 @@ def codify(L):
         L_.append(L[B:])
     return ''.join(L_), codex
 #IDX.append(len(L))
+import sys
+fname = sys.argv[1]
 
-L = ytl.writeFileToList('test.md')
+print('compiling', fname)
+L = ytl.writeFileToList(fname)
 codex = {}
 L_ = []
 for l in L:
@@ -125,4 +128,5 @@ def mathjaxL(L):
     return L
 
 L = mathjaxL(L)
-ytl.writeListToFile(L, 'test.html')
+name = fname.split('.')[0]
+ytl.writeListToFile(L, name+'.html')

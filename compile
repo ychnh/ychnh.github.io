@@ -95,6 +95,14 @@ fname = sys.argv[1]
 
 print('compiling', fname)
 L = ytl.writeFileToList(fname)
+
+def san_repr(x):
+    x = repr(x)
+    if len(x)>=2:
+        x = x[1:-1]
+    return x
+
+L = [san_repr(l) for l in L]
 codex = {}
 L_ = []
 for l in L:

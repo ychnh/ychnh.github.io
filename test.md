@@ -9,3 +9,4 @@
   * The binary is a function to this
   * ${F,T} = B$
   * ${\mathcal {L}}(\theta \mid x)=p_{\theta }(x) = P_{\theta }(X=x | \theta)$
+* https://gist.github.com/HarshTrivedi/f4e7293e941b17d19058f6fb90ab0fec

@@ -4,7 +4,7 @@
   * TRest 2
 
 # Some topic about
-* Additional
+* Additional SHOW THIS
   * $F: xB \rightarrow B$
   * The binary is a function to this
   * ${F,T} = B$

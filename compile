@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 #print('Content-type: text/html')
+
+
+# TODO: Extend to put placeholder for multiline latex
+# Extend to work for directory crawling
+# Clean code a bit, write diagram of information flow
+
+
 # So we are going to look through all files of *.md and generate *.html
 #  Convert md to html markdown while ignorning latex code and putting it as plain text
 # Things we need to convert are
@@ -37,7 +44,9 @@ from ytil import ytl
 # Extract all latex and store in sequential array and put placeholder text
 # save converted file to temp
 #print( markdown2.markdown_path('test.md') )  # or use `html = markdown_path(PATH)`
+
 import sys
+idx = 0
 
 def toMathJaxStr(s):
     k = s[0]
@@ -53,7 +62,6 @@ def ordr(i, MAX=sys.maxsize):
         i = MAX
     return i
 
-idx = 0
 def codexstr():
     global idx
     c = 'LTXCD'+str(idx).zfill(5)
@@ -102,7 +110,7 @@ def san_repr(x):
         x = x[1:-1]
     return x
 
-L = [san_repr(l) for l in L]
+#L = [san_repr(l) for l in L]
 codex = {}
 L_ = []
 for l in L:
@@ -110,7 +118,7 @@ for l in L:
     L_.append(l)
     codex.update(c)
 
-mkdownstr = '\n'.join(L_)
+mkdownstr = repr( '\n'.join(L_) )
 L = markdown2.markdown(mkdownstr).split('\n')
 
 def codexify(L, codex):
@@ -136,5 +144,6 @@ def mathjaxL(L):
     return L
 
 L = mathjaxL(L)
-name = fname.split('.')[0]
+
+name = fname[:-3]
 ytl.writeListToFile(L, name+'.html')

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 #print('Content-type: text/html')
 
-
 # TODO: Extend to put placeholder for multiline latex
 # Extend to work for directory crawling
 # Clean code a bit, write diagram of information flow

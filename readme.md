@@ -1,3 +1,7 @@
+# Build and design a navigation structure
+  * I am thinking of an index for each directory
+  * And loading this index as a popup upon a button press
+
 # Change folder structure into 2 separate to be more clean
 # Index page
 

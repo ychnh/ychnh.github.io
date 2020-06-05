@@ -118,7 +118,7 @@ for l in L:
     L_.append(l)
     codex.update(c)
 
-mkdownstr = repr( '\n'.join(L_) )
+mkdownstr = '\n'.join(L_)
 L = markdown2.markdown(mkdownstr).split('\n')
 
 def codexify(L, codex):

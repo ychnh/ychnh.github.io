@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+import os
+from os.path import join
+from os import system
+from ytil import ytl
+
+def requires_compile_md(fp_md):
+    fp_html = fp_md[:-3] + '.html'
+    return os.path.getmtime(fp_md) >= os.path.getmtime(fp_html)
+
+def compile(fm_md):
+    system('./compile '+fp_md)
+
+def md_link_str(name,link):
+    return '['+name+']'+'('+link+')'
+
+def build_index(FP_html):
+    root = 'https://ychnh.github.io/'
+    links = [ root + fp_html[2:] for fp_html in FP_html]
+    names = [ fp_html[:-5] for fp_html in FP_html]
+    index_lines = ['* '+ md_link_str(n,l) for n,l in zip(names,links)]
+
+    fp_index = 'index.md'
+    ytl.writeListToFile(index_lines,fp_index)
+    compile(fp_index)
+
+
+
+FP_html = []
+
+exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil']
+for root, dirs, files in os.walk('.', topdown=True):
+    dirs[:] = [d for d in dirs if d not in exclude]
+    for f in files:
+
+        if f[-3:] == '.md':
+            fp_md = join(root,f) 
+            fp_html = fp_md[:-3] + '.html'
+            if requires_compile_md(fp_md): compile(fp_md)
+            FP_html.append(fp_html)
+
+build_index(FP_html)
+#* [packed seq tutorial](https://gist.github.com/HarshTrivedi/f4e7293e941b17d19058f6fb90ab0fec)

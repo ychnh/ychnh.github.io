@@ -1,3 +1,6 @@
+# Change folder structure into 2 separate to be more clean
+# Index page
+
 # Need some additional processing
 * with multiline $$ $$ (Probs if a sentence starts with $$ or $)
 * Also with it removing \\

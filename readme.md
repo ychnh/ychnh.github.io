@@ -1,13 +1,18 @@
-# Build and design a navigation structure
-  * I am thinking of an index for each directory
-  * And loading this index as a popup upon a button press
+# ISSUES
+* Navigation Sturcture
+  * Build and design a navigation structure
+    * I am thinking of an index for each directory
+    * And loading this index as a popup upon a button press
 
-# Change folder structure into 2 separate to be more clean
-# Index page
-
-# Need some additional processing
-* with multiline $$ $$ (Probs if a sentence starts with $$ or $)
-* Also with it removing \\
+  * Index page
+    * Prettier layout
+* Code GUI separation
+  * Change folder structure into 2 separate to be more clean
+* MD COMPILER
+  * with multiline $$ $$ (Probs if a sentence starts with $$ or $)
+  * Also with it removing \\
+  * Some issue with using ~ as delimiter in links html
+  * Need some additional processing
 
 
 # Some issue with scaling when displaying on mobile

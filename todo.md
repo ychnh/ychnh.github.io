@@ -11,4 +11,5 @@
 
 * CV
   * 3D Monocular reconstruction
-    * F, H
+    * F and  H
+  * Ok

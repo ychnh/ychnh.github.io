@@ -9,3 +9,6 @@
   * Work on using BERT 
     * I want a model that understands context between sentences
 
+* CV
+  * 3D Monocular reconstruction
+    * F, H

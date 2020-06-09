@@ -4,7 +4,7 @@
     * (Quads/Hamstring,Hip) (Core ab and back)
 
 * You reap what you sow
-
+* Form, Volume, Intensity tk build Size
 
 # Bench
 * Press shoulder together

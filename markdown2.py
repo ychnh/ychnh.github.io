@@ -134,7 +134,7 @@ elif sys.version_info[0] >= 3:
 DEBUG = False
 log = logging.getLogger("markdown")
 
-DEFAULT_TAB_WIDTH = 4
+DEFAULT_TAB_WIDTH = 2
 
 
 SECRET_SALT = bytes(randint(0, 1000000))

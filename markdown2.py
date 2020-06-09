@@ -210,7 +210,7 @@ class Markdown(object):
 
     _ws_only_line_re = re.compile(r"^[ \t]+$", re.M)
 
-    def __init__(self, html4tags=False, tab_width=4, safe_mode=None,
+    def __init__(self, html4tags=False, tab_width=2, safe_mode=None,
                  extras=None, link_patterns=None,
                  footnote_title=None, footnote_return_symbol=None,
                  use_file_vars=False, cli=False):

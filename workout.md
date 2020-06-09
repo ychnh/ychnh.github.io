@@ -1,7 +1,7 @@
 * When lifting make sure to ask the question how can my body support this weight
-  * Support with muscle by using opposing forces 
-    * (Bicep/Triceps) 
-    * (Quads/Hamstring,Hip) (Core ab and back)
+    * Support with muscle by using opposing forces 
+       * (Bicep/Triceps) 
+       * (Quads/Hamstring,Hip) (Core ab and back)
 
 * You reap what you sow
 

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 import os
-from os.path import join
+from os.path import join,exists
 from os import system
 from ytil import ytl
 
 def requires_compile_md(fp_md):
     fp_html = fp_md[:-3] + '.html'
+    if not exists(fp_html):
+        return True
     return os.path.getmtime(fp_md) >= os.path.getmtime(fp_html)
+
 
 def comp(fp_md):
     system('./compile '+fp_md)

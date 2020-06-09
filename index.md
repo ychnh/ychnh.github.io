@@ -3,6 +3,7 @@
 * [./index](https://ychnh.github.io/index.html)
 * [./todo](https://ychnh.github.io/todo.html)
 * [./test](https://ychnh.github.io/test.html)
+* [./workout](https://ychnh.github.io/workout.html)
 * [./readme](https://ychnh.github.io/readme.html)
   * [./test/wtime](https://ychnh.github.io/test/wtime.html)
   * [./test/journal](https://ychnh.github.io/test/journal.html)

@@ -1,3 +1,7 @@
+# Themes and styles
+* https://styles.ulysses.app/themes/new-order-y9n
+  * See how to convert? I really like theses
+
 # ISSUES
 * Navigation Sturcture
   * Build and design a navigation structure

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>MathJax TeX Test Page</title><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> </head> <body>
+<!DOCTYPE html><html><head><title>MathJax TeX Test Page</title><link rel = "stylesheet" type = "text/css" href = "style.css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> </head> <body>
 <h6>#</h6>
 
 <h1>GOALS</h1>
@@ -265,8 +265,10 @@ x Script file
 x Complete SPRAY<em>LIQUID</em>SCRIPT=LIQUID<em>VALID
 x Complete POSITION</em>VALID
 x Make core lib
-x Remove BG dependecy because I dont think it matters</li>
+x Remove BG dependecy because I dont think it matters
+<ul>
 <li>TODO: remove as part of training in future</li>
+</ul></li>
 <li>Load model based on class
 x Remove warning message on posenet load weights</li>
 </ul></li>
@@ -301,10 +303,14 @@ x Remove warning message on posenet load weights</li>
 
 <ul>
 <li>We trained the pose detector with viewing the entire outer frame. If we want it to be more robust we should train pose detection with zoom and closer variation.</li>
-<li><em>POSE</em> Detection</li>
+<li><em>POSE</em> Detection
+<ul>
 <li>Improve pose detection by training with non perfect crops and variations in crop</li>
-<li><em>SPRAY</em> detection</li>
+</ul></li>
+<li><em>SPRAY</em> detection
+<ul>
 <li>In a similar manner, sprat data should be collected to account for minor deficiencies in pose by sampling non perfect spray boxes</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -327,10 +333,12 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>Landcover <a href="http://www.g2b.go.kr:8081/ep/invitation/publish/bidInfoDtl.do?bidno=20200436765&amp;bidseq=00&amp;releaseYn=Y&amp;taskClCd=1">Landcover</a>
 <ul>
-<li>Documents</li>
+<li>Documents
+<ul>
 <li>Bidding procedure/process announcements</li>
 <li>Reason for emergency bidding</li>
 <li>Terms and Conditions</li>
+</ul></li>
 </ul></li>
 <li>Testing of model on B0 different videos</li>
 <li>Designing how to handle Yolo problem</li>
@@ -444,11 +452,10 @@ x Remove warning message on posenet load weights</li>
   * REPNET and POSE (Cropped background and image) and (Coordinate data)
   * SPRAY DATASET (0,1 label with placeholder for image data)</p>
 
-<ul>
-<li>Combine all workflow design and plan</li>
-<li>Annotation  joint labeling workflow implement</li>
-<li>Data packers for yolov3</li>
-</ul>
+<pre><code>* Combine all workflow design and plan
+* Annotation  joint labeling workflow implement
+* Data packers for yolov3
+</code></pre>
 
 <p>[
 * Train YOLO, REPNET, POSE
@@ -463,11 +470,13 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>During training some components not displaying
 <ul>
-<li>I think this is due to lower components being cut off</li>
+<li>I think this is due to lower components being cut off
+<ul>
 <li>Make randius larger than 50?</li>
 <li>Tone down augmentations that cut off</li>
 <li>Make sure that all parts are being displayed by adjusting weights to heavily penalize if nothing is showing</li>
 <li>Flip transformation</li>
+</ul></li>
 </ul></li>
 <li>Meeting with Haesol about homography</li>
 <li>Meeting with team at 2pm to talk about progress and what we are doing</li>
@@ -522,8 +531,10 @@ x Remove warning message on posenet load weights</li>
 <li><p>2 Experiements</p>
 
 <ul>
-<li>Only train pose on nozzle ends and see if it can track better</li>
+<li>Only train pose on nozzle ends and see if it can track better
+<ul>
 <li>posesprayfocus</li>
+</ul></li>
 <li>Train direct pose instead of representation</li>
 <li>Train pose on where water is actually coming out</li>
 </ul></li>
@@ -557,8 +568,10 @@ x Remove warning message on posenet load weights</li>
 <li><p>Can also hotwire transform </p>
 
 <ul>
-<li>so that model doesn't always predict identity</li>
+<li>so that model doesn't always predict identity
+<ul>
 <li>model(x,bg,hotwire<em>tf) == py</em>with_tf</li>
+</ul></li>
 </ul></li>
 <li><p>VAE</p>
 
@@ -567,9 +580,7 @@ x Remove warning message on posenet load weights</li>
 <li>likelyhood P(X = x | θ) probabilty of an event given a model</li>
 <li>\({\displaystyle {\mathcal {L}}(\theta \mid x)=p_{\theta }(x) = P_{\theta }(X=x | \theta)}\)</li>
 <li>Likelyhood of x over distribution of latent + KullbeckDivergence(encoder dist[qθ(z∣x)], p(z) )
-<ul>
-<li>where p(z) is normal dist with mean 0 std 1</li>
-</ul></li>
+  * where p(z) is normal dist with mean 0 std 1</li>
 </ul></li>
 <li><p>Seems like actually training the specificity of tf matrix is not as important</p></li>
 </ul>
@@ -587,18 +598,22 @@ x Remove warning message on posenet load weights</li>
 <li><p>How would you have a <em>pipeline to test different</em> versions of code</p>
 
 <ul>
-<li>Probably best way is to do the <em>github branch</em> idea</li>
+<li>Probably best way is to do the <em>github branch</em> idea
+<ul>
 <li>Need to manage my source</li>
 <li>And save <em>common elments in a shared location</em> that makes sense</li>
+</ul></li>
 </ul></li>
 <li><p>Do we even care about rotation?</p>
 
 <ul>
-<li>Maybe what is important is the latent space</li>
+<li>Maybe what is important is the latent space
+<ul>
 <li>Replace y with x and set rotation to 0</li>
 <li>Setting rotation to 90 to enfore high level of rotations
 <ul>
 <li>maybe 90 too extreme try 45?</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -639,21 +654,15 @@ x Remove warning message on posenet load weights</li>
 
 <h1>Potential Improvements</h1>
 
-<ul>
-<li>place emphasis near spray region
-<ul>
-<li>NAN error</li>
-</ul></li>
-<li>Train for more after each adjustment
-<ul>
-<li>Running</li>
-</ul></li>
-<li>Dataloader shifting is too much  that it cuts off sometimes
-<ul>
-<li>Runing with adjusted</li>
-<li>Issue with: why is it not learning with smaller joint size? (at 100 epochs)</li>
-</ul></li>
-</ul>
+<pre><code>* place emphasis near spray region
+  * NAN error
+* Train for more after each adjustment
+  * Running
+* Dataloader shifting is too much  that it cuts off sometimes
+  * Runing with adjusted
+</code></pre>
+
+<p>* Issue with: why is it not learning with smaller joint size? (at 100 epochs)</p>
 
 <h1>4/8</h1>
 
@@ -672,14 +681,15 @@ x Remove warning message on posenet load weights</li>
 
 <h1>Labels</h1>
 
-<ul>
-<li>Radius of pose labels</li>
-<li><p>Use discrete vars?</p>
+<pre><code>* Radius of pose labels
+* Use discrete vars?
+</code></pre>
 
-<h1>Model</h1></li>
-<li><p>Freeze</p></li>
-<li>Train at the same time?</li>
-</ul>
+<h1>Model</h1>
+
+<pre><code>* Freeze
+* Train at the same time?
+</code></pre>
 
 <h1>4/7</h1>
 
@@ -722,18 +732,27 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>In an attempt to get it to recognize</li>
 <li><p>I feel like based on our pose experiments, it should know</p></li>
-<li><p>PoseNet</p></li>
+<li><p>PoseNet</p>
+
+<ul>
 <li>Detect pose even during train/test split</li>
-<li>NVS Net</li>
-<li><p>Cannot detect pose during train/test split</p></li>
+</ul></li>
+<li><p>NVS Net</p>
+
+<ul>
+<li>Cannot detect pose during train/test split</li>
+</ul></li>
 <li><p>Pose net uses feature based and it can pick up in the variations between the nozzle types</p></li>
 <li>NVS net is having issues due to compressing info into latent space</li>
 <li>[E] L [D] Out</li>
 <li>Encoder needs better training</li>
 <li><p>I propose that encoder needs to improve</p></li>
 <li><p>I think we should work on tracker pipeline first
-because this is a hole without end</p></li>
+because this is a hole without end</p>
+
+<ul>
 <li>Fix weird bug with tracker</li>
+</ul></li>
 </ul></li>
 </ul>
 

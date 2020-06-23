@@ -1403,6 +1403,23 @@ class Markdown(object):
                     if is_img:
                         start_idx -= 1
 
+
+
+                    # Extract size option and rebuild if has size params
+                    # @YHONG
+                    W,H = '',''
+                    if is_img:
+                        A = text.split('(')[1]; a = text.find('(')+1
+                        check = A.find(' ')
+                        if check != -1:
+                            B = A.split(' ')[1]; b = A.find(' ')+1
+                            check = B.find('=')
+                            if check != -1:
+                                C = B.split('=')[1]; c = B.find('=')+1
+                                H,W = C.split('x')
+                                text = text[:a+b+c-2]+')'
+                                url, title, url_end_idx = self._extract_url_and_title(text, p)
+
                     # We've got to encode these to avoid conflicting
                     # with italics/bold.
                     url = url.replace('*', self._escape_table['*']) \
@@ -1416,9 +1433,10 @@ class Markdown(object):
                         title_str = ''
                     if is_img:
                         img_class_str = self._html_class_str_from_tag("img")
-                        result = '<img src="%s" alt="%s"%s%s%s' \
+                        result = '<img src="%s" alt="%s" height="%s" width="%s" %s%s%s' \
                             % (_html_escape_url(url, safe_mode=self.safe_mode),
                                _xml_escape_attr(link_text),
+                               H,W,
                                title_str,
                                img_class_str,
                                self.empty_element_suffix)
@@ -1472,9 +1490,10 @@ class Markdown(object):
                             title_str = ''
                         if is_img:
                             img_class_str = self._html_class_str_from_tag("img")
-                            result = '<img src="%s" alt="%s"%s%s%s' \
+                            result = '<img src="%s" alt="%s" height="%s" width="%s" %s%s%s' \
                                 % (_html_escape_url(url, safe_mode=self.safe_mode),
                                    _xml_escape_attr(link_text),
+                                   H,W,
                                    title_str,
                                    img_class_str,
                                    self.empty_element_suffix)

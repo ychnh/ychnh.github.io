@@ -53,7 +53,7 @@ def toMathJaxStr(s):
     if k == '$':
         return "\\("+s+'\\)'
         
-    elif k == '~':
+    elif k == '`':
         return '$$'+s+'$$'
 
 def ordr(i, MAX=sys.maxsize):
@@ -71,11 +71,11 @@ def codify(L):
     if L =='':
         return '',{}
 
-    L = L.replace('$$','~')
+    L = L.replace('$$','`')
     IDX = []
     a = 0
     while a < len(L):
-        a = a+min( ordr(L[a:].find('~')), ordr(L[a:].find('$')) )+1
+        a = a+min( ordr(L[a:].find('`')), ordr(L[a:].find('$')) )+1
         IDX.append(a-1)
         
 

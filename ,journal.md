@@ -1,5 +1,9 @@
+# Pytorch
+* Tutorials
+
 # Math
 * Learning about math is *not* about completing and proving theorem a,b,c ... and making a tabulated list. Nor is it about proving something *for the first time*. Because your *memory* is *limited* and with the *pass of time* you will forget. Stand on the shoulders of giants.
+* Creations are just observations
 * It is more about being able traverse/journey from a significant point to arriving at a desired point
 * What can help you facilitate this process?
   * It is an adventure and exercise. Familar paths are pleasant as well as unfamiliar territory. Have no shame in repetition

@@ -1,4 +1,10 @@
 * ./
+* [log.html](https://ychnh.github.io/html/log.html)
+* [board.html](https://ychnh.github.io/html/board.html)
+* [ptime.html](https://ychnh.github.io/html/ptime.html)
+* [protocol.html](https://ychnh.github.io/html/protocol.html)
+* [index.html](https://ychnh.github.io/html/index.html)
+* [wtime.html](https://ychnh.github.io/html/wtime.html)
 * ./old
   * [old/hldmod.html](https://ychnh.github.io/html/old/hldmod.html)
   * [old/,journal.html](https://ychnh.github.io/html/old/,journal.html)

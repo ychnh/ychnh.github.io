@@ -36,7 +36,7 @@ def md_link_str(name,link):
 
 def build_index(FP_html):
     root = 'https://ychnh.github.io/'
-    links = [ root + fp_html[2:] for fp_html in FP_html]
+    links = [ root + fp_html for fp_html in FP_html]
     names = [ fp_html[:-5] for fp_html in FP_html]
     K = [ n.count('/')-1 for n in names]
     idnt = '  '

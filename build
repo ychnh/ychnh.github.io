@@ -7,6 +7,7 @@ import argparse
 
 MD = 'md'
 HTML = 'html'
+WEBROOT = 'https://ychnh.github.io/'
 
 parser = argparse.ArgumentParser(description='Compile')
 parser.add_argument('--f', metavar='N', type=bool, default=False, help='Force rebuild')
@@ -22,6 +23,9 @@ def requires_compile_md(fp_md):
     return os.path.getmtime(fp_md) >= os.path.getmtime(fp_html)
 
 
+def dirname(d):
+    return './'+'/'.join( d.split('/')[1:] )
+
 def comp(fp_md, fp_html):
     dirs = '/'.join( fp_html.split('/')[:-1] )
 
@@ -35,16 +39,24 @@ def md_link_str(name,link):
     return '['+name+']'+'('+link+')'
 
 def build_index(FP_html):
-    root = 'https://ychnh.github.io/'
-    links = [ root + fp_html for fp_html in FP_html]
-    names = [ fp_html[:-5] for fp_html in FP_html]
-    K = [ n.count('/')-1 for n in names]
     idnt = '  '
+    index_lines = []
 
+    for data in FP_html:
+        t = data['type']
+        if t == 'dir':
+            n = data['name']
+            splits = n.split('/')
+            try: splits.remove('')
+            except ValueError: pass
+            k = len( splits )
+            index_lines.append(  k*'#'+' '+n )
+        elif t == 'link':
+            n,l = data['name'], data['link']
+            k = n.count('/')-1
+            index_lines.append(  k*idnt+'* '+ md_link_str(n,l) )
 
-    index_lines = [k*idnt+'* '+ md_link_str(n,l) for k,n,l in zip(K,names,links)]
-    index_lines.insert(0,'# Index')
-
+    print('\n'.join(index_lines) )
     fp_index = 'index.md'
     ytl.writeListToFile(index_lines,fp_index)
     comp(fp_index, 'index.html')
@@ -62,14 +74,18 @@ def get_fphtml(fpmd):
 exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil']
 for root, dirs, files in os.walk(MD, topdown=True):
     dirs[:] = [d for d in dirs if d not in exclude]
-    for f in files:
 
+    FP_html.append( {'name':dirname(root),'type':'dir'})
+
+    for f in files:
         if f[-3:] == '.md':
             fp_md = join(root,f) 
             fp_html = get_fphtml(fp_md)
             if requires_compile_md(fp_md):
                 comp(fp_md, fp_html)
-            FP_html.append(fp_html)
+            name = fp_html[5:-5]
+            link = WEBROOT+ fp_html
+            FP_html.append( {'name':name, 'link':link,'type':'link'})
 
 build_index(FP_html)
 #system('./compile '+'index.md')

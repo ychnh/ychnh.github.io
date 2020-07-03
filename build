@@ -52,7 +52,7 @@ def build_index(FP_html):
             #k = len( splits )
             #index_lines.append(  k*'#'+' '+n )
             k = len( splits )-2
-            index_lines.append(  k*idnt+'*'+n )
+            index_lines.append(  k*idnt+'* '+n )
         elif t == 'link':
             n,l = data['name'], data['link']
             k = n.count('/')
@@ -85,7 +85,7 @@ for root, dirs, files in os.walk(MD, topdown=True):
             fp_html = get_fphtml(fp_md)
             if requires_compile_md(fp_md):
                 comp(fp_md, fp_html)
-            name = fp_html[5:-5]
+            name = fp_html[5:]
             link = WEBROOT+ fp_html
             FP_html.append( {'name':name, 'link':link,'type':'link'})
 

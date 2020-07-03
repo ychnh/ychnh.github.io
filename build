@@ -4,6 +4,10 @@ from os.path import join,exists
 from os import system
 from ytil import ytl
 import argparse
+
+MD = 'md'
+HTML = 'html'
+
 parser = argparse.ArgumentParser(description='Compile')
 parser.add_argument('--f', metavar='N', type=bool, default=False, help='Force rebuild')
 args = parser.parse_args()
@@ -12,14 +16,20 @@ def requires_compile_md(fp_md):
     if args.f:
         return True
 
-    fp_html = fp_md[:-3] + '.html'
+    fp_html = get_fphtml(fp_md)
     if not exists(fp_html):
         return True
     return os.path.getmtime(fp_md) >= os.path.getmtime(fp_html)
 
 
-def comp(fp_md):
-    system('./compile '+fp_md)
+def comp(fp_md, fp_html):
+    dirs = '/'.join( fp_html.split('/')[:-1] )
+
+    if dirs!='' and not os.path.exists(dirs):
+        os.makedirs(dirs)
+
+
+    system('./compile '+fp_md+' '+fp_html)
 
 def md_link_str(name,link):
     return '['+name+']'+'('+link+')'
@@ -37,22 +47,28 @@ def build_index(FP_html):
 
     fp_index = 'index.md'
     ytl.writeListToFile(index_lines,fp_index)
-    comp(fp_index)
+    comp(fp_index, 'index.html')
 
 
 
 FP_html = []
 
+def get_fphtml(fpmd):
+    fp_html = fp_md[:-3] + '.html'
+    fp_html = fp_html.replace(MD,HTML,1)
+    return fp_html
+
+
 exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil']
-for root, dirs, files in os.walk('.', topdown=True):
+for root, dirs, files in os.walk(MD, topdown=True):
     dirs[:] = [d for d in dirs if d not in exclude]
     for f in files:
 
         if f[-3:] == '.md':
             fp_md = join(root,f) 
-            fp_html = fp_md[:-3] + '.html'
+            fp_html = get_fphtml(fp_md)
             if requires_compile_md(fp_md):
-                comp(fp_md)
+                comp(fp_md, fp_html)
             FP_html.append(fp_html)
 
 build_index(FP_html)

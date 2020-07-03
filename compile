@@ -99,6 +99,7 @@ def codify(L):
 #IDX.append(len(L))
 import sys
 fname = sys.argv[1]
+dest = sys.argv[2]
 
 print('compiling', fname)
 L = ytl.writeFileToList(fname)
@@ -145,4 +146,4 @@ def mathjaxL(L):
 L = mathjaxL(L)
 
 name = fname[:-3]
-ytl.writeListToFile(L, name+'.html')
+ytl.writeListToFile(L, dest)

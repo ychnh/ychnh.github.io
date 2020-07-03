@@ -15,328 +15,6 @@
  Rewrite to reuse code 
 * track<em>pose</em>py rewrite as well</p>
 
-<h1>6/18</h1>
-
-<ul>
-<li>Fix trackpose Robust_dataloader bug
-<ul>
-<li>Adjust coordinates on image tf, crop, and resize</li>
-<li>Update this value in the batch aug return</li>
-<li>Test</li>
-</ul></li>
-<li><p>https://towardsdatascience.com/can-you-remove-99-of-a-neural-network-without-losing-accuracy-915b1fab873b</p></li>
-<li><p>Work on the land cover proposal</p>
-
-<ul>
-<li>Try reading the korean report but it is so difficult to understand
-<ul>
-<li>Tried translating the document but fragmenting</li>
-</ul></li>
-<li>Outline and specify</li>
-</ul></li>
-<li><p>Fix trackpose robust_dataloader bug</p>
-
-<ul>
-<li>Coordinate updated but still not correct</li>
-<li>Issue with c,r notation not being reverted by after being imported to r,c</li>
-<li>Issue with not fliping image</li>
-<li>Adjust pad</li>
-<li>Training model
-<ul>
-<li>Issues with training adjusting.
-<ul>
-<li>Find that in the beginning it helps to have pose coord off</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>Continue working on landcover proposal again</p></li>
-</ul>
-
-<h1>6/17</h1>
-
-<ul>
-<li>Meeting at Sejeong Environment Department
-<ul>
-<li>Decide on the main point</li>
-<li>Organize points of meeting</li>
-</ul></li>
-<li>Meeting with Landcover TF</li>
-<li>Saup Suhang Geuhyuk Su documentation preparation</li>
-</ul>
-
-<h1>6/16</h1>
-
-<ul>
-<li><p>Work on finishing up wrappers for the diff poses with pose_micro</p>
-
-<ul>
-<li>Encountered bug while testing pose_net due to ['coords'] being wrt to large frame</li>
-<li>Design Solution:
-<ul>
-<li>Apply tf to coord points and adjust for crop</li>
-<li>Test by extracting dataloader and redrawing from coords</li>
-<li>Robust_dataloader 198-217</li>
-</ul></li>
-</ul></li>
-<li><p>Meeting with President and Mr Han about landcover presentation at 930 tomorrow</p>
-
-<ul>
-<li>Remake Instruction Manual</li>
-<li>Create Demo</li>
-<li><p>Refine Power Point</p></li>
-<li><p>Inference with Analytics</p>
-
-<ul>
-<li>Colormap</li>
-<li>Load Model</li>
-<li>Load Weights</li>
-<li>Load Data
-<ul>
-<li>TIFF</li>
-<li>SHP</li>
-</ul></li>
-<li>Inference
-<ul>
-<li>Batch</li>
-<li>Single</li>
-</ul></li>
-<li>Output
-<ul>
-<li>Colormap
-<ul>
-<li>Display</li>
-<li>Save as JPG</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>Work until 9:10 pm on presentation</li>
-</ul>
-
-<h1>6/15</h1>
-
-<ul>
-<li>Modify slides for landcover</li>
-<li>Meeting with president about BIO
-<ul>
-<li>Landcover WBS Plan diagram</li>
-</ul></li>
-<li>Collate some images from new cmap for landcover</li>
-<li>Fish eye discussion with Vasyl</li>
-<li>Implement pose-micro</li>
-<li>Debug pose-micro</li>
-<li>Train pose-micro model</li>
-</ul>
-
-<h1>6/12</h1>
-
-<ul>
-<li>Identify timesink in joint extraction
-<ul>
-<li>need further testing with actual pose image</li>
-</ul></li>
-<li>Implement regression model</li>
-<li><p>Train regression model</p></li>
-<li><p>Meeting with president,HS,JW, for rdiscussion of improving performance of nozzle track AI</p></li>
-<li>Meeting with president about landcover and biochemistry</li>
-</ul>
-
-<h1>6/11</h1>
-
-<ul>
-<li><p>Updated color map</p></li>
-<li><p>Prepare landcover resources</p>
-
-<ul>
-<li>Layout
-<ul>
-<li>Comparison of different models
-<ul>
-<li>Architecture affects SAM</li>
-<li>Speed</li>
-<li>Accuracy
-<ul>
-<li>Prediction output</li>
-<li>Confusion Matrix</li>
-</ul></li>
-<li>Memory</li>
-</ul></li>
-</ul></li>
-<li>Comparison of hyper parameters</li>
-<li>Optimization framework</li>
-<li>LSTM model</li>
-</ul></li>
-<li><p>Design and develop pose-micro</p>
-
-<ul>
-<li>Debugging</li>
-</ul></li>
-<li>Testing</li>
-<li>Help finding resources for airpor project</li>
-</ul>
-
-<h1>6/10</h1>
-
-<ul>
-<li><p>C based test of tensorrt</p>
-
-<ul>
-<li>pip install onnx==1.6.0</li>
-<li>Test small model</li>
-<li>Issue with onnx-tensorrt convertor
-<ul>
-<li>Makefile</li>
-</ul></li>
-<li>Verified that c also takes cuda context </li>
-</ul></li>
-<li><p>Find the unsupported layers and see how to convert the model, and test</p>
-
-<ul>
-<li><a href="https://docs.nvidia.com/deeplearning/tensorrt/support-matrix/index.html">supported layers</a></li>
-<li><ol>
-<li>Supported Ops</li>
-</ol></li>
-<li>What are the unsupported layers in YOLO and POSENET</li>
-<li>POSENET
-<ul>
-<li>Warning: Encountered known unsupported method </li>
-<li>torch.nn.functional.interpolate</li>
-<li>torch.Tensor.transpose</li>
-<li>torch.bmm</li>
-<li>torch.Tensor.expand</li>
-</ul></li>
-</ul></li>
-<li><p>1 hour meeting with president about</p>
-
-<ul>
-<li>Landcover future</li>
-* 
-</ul></li>
-<li><p>Land cover presentation</p>
-
-<ul>
-<li><p>Change color of landcover map</p>
-
-<ul>
-<li>c_road = (247,65,42)</li>
-<li>c_indst = (255,0,0)</li>
-<li>c_paddy = (255,255,191)</li>
-<li>c_field = (247,249,102)</li>
-<li>c_farm = (238,233,7)</li>
-<li>c_orchid = (184,177,44)</li>
-<li>c_wood = (42,75,45)</li>
-<li>c_plain = (57,153,38)</li>
-<li>c_swmp = (124,34,126)</li>
-<li>c_brrn = (89,206,202)</li>
-<li>c_water = (6,2,250)</li>
-<li>cmap = ListedColormap([c<em>road, c</em>wood, c<em>indst, c</em>paddy, c<em>field, c</em>farm, c<em>orchid, c</em>plain, c<em>swmp, c</em>brrn, c_water])</li>
-<li><p>['road', 'frst', 'buld', 'pddy', 'fild', 'farm', 'orcd', 'plan', 'swmp', 'brrn', 'watr']</p></li>
-<li><p>vmin=0, vmax=6</p></li>
-<li>Colormap and normalization</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h1>6/9</h1>
-
-<ul>
-<li>Research/Investigate memory issues</li>
-<li>Next step
-<ul>
-<li>Compile a simple model in PyTorch2TRT
-<ul>
-<li>See CUDA Context overhead and run</li>
-</ul></li>
-</ul></li>
-<li>Get TRT working on C++ or just python wihtout torch cuda overhead
-<ul>
-<li>Even in python tensorrt we have this overhead issue of 900mb for a single conv2d layer</li>
-</ul></li>
-</ul>
-
-<h1>OPTIONS</h1>
-
-<pre><code>* Resolve Compatibility issues with tensor rt
-  * Github track questions
-* Refit original algorithm to be more memory efficient
-  * Design plan (Reduction of channels)
-  * Remove bg dependency
-  * Increase batch
-  * ? Is it possible to use APEX AMP investigate if possible
-</code></pre>
-
-<h1>6/8</h1>
-
-<ul>
-<li>This seems to hint that the issue lies in interpolation</li>
-<li><p>Time to redesign</p>
-
-<ul>
-<li>Yolo -> microYolo. set num classes to proper number
-<ul>
-<li>Pretrained layer?</li>
-</ul></li>
-<li>Remove BG dependency and tone down posenet</li>
-<li>Make interpolation more optimal</li>
-</ul></li>
-<li><p>Define and train micro yolo</p>
-
-<ul>
-<li>Reduced it down quite alot with alright performance
-<ul>
-<li>yolov3-micro3</li>
-</ul></li>
-<li>Investigate memory allocation issue
-<ul>
-<li>Even when I change the model the memory allocated seems to remain same. Why?
-<ul>
-<li>[feature request] Set limit on GPU memory use #18626</li>
-<li>Overhead context</li>
-<li>I need to calculate gpu used using other means</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h1>6/5</h1>
-
-<ul>
-<li>Fininsh installing</li>
-<li>Install PyCuda
-<ul>
-<li>Issue with NVCC</li>
-</ul></li>
-<li>Install torch-to-trt
-<ul>
-<li>symbolic link issue
-<ul>
-<li>/usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudnn.so.7 is not a symbolic link</li>
-<li>Some issue with not finding tensorrt package
-<ul>
-<li>Manually reloated dist-package to site-package to detect due to debian install</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>Test torch2trt on yolo</p>
-
-<ul>
-<li>Incompatibility error. Need to investigate</li>
-</ul></li>
-<li><p>Test torch2trt on posenet</p>
-
-<ul>
-<li>Crash on tensor conversion to ConvTranspose2d
-<ul>
-<li>Investigating issues on github similar 2 openissues (recent)
-<ul>
-<li>https://github.com/NVIDIA-AI-IOT/torch2trt/issues/323</li>
-<li>https://github.com/NVIDIA-AI-IOT/torch2trt/issues/326</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>Investigate whyPose is not set on eval</p></li>
-</ul>
-
 <h1>6/4</h1>
 
 <ul>
@@ -349,11 +27,6 @@
 <li>install tensor rt
 <ul>
 <li>https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html</li>
-</ul></li>
-<li>Research alternate ways to improve performance
-<ul>
-<li>torch2trt</li>
-<li>Downscale pose model by removing bg dependecy</li>
 </ul></li>
 </ul>
 
@@ -727,12 +400,9 @@ x Remove warning message on posenet load weights</li>
 <li><p>posemodel printing 3 times remove</p></li>
 <li><p>Extract water spray from video</p></li>
 <li>Identified key weakness with YOLOv3 model overfitting</li>
-<li>Review architure of yolo module and see if we can write wrappers</li>
-</ul>
+<li><p>Review architure of yolo module and see if we can write wrappers</p>
 
-<h1>4/23</h1>
-
-<ul>
+<h1>4/23</h1></li>
 <li>Verify training of representation</li>
 <li>Meeting 9:30-10:30 incheon airport</li>
 <li>Remove the potential strange case of shift or rotate duplicating the borders as we move</li>
@@ -1859,7 +1529,7 @@ Vacation</p>
 0935-1200
 * Literature review Seminconductor. 
 * Overview of simliar existing methods
-* Vision Course pdfs http://webdiis.unizar.es/$$neira/vision.htm$$
+* Vision Course pdfs http://webdiis.unizar.es/~neira/vision.html
   * Review additional slides
 * Robotic handling systems
 * Optical wafer inspection system
@@ -1883,7 +1553,7 @@ Vacation</p>
 * robotic handling systems (RHS)
 * an open cassette, FOUP, a process chamber, etc.
 0500-0600
-* Vision Course pdfs http://webdiis.unizar.es/$$neira/vision.htm$$
+* Vision Course pdfs http://webdiis.unizar.es/~neira/vision.html
   * Review additional slides</p>
 
 <h1>12/18</h1>
@@ -2078,12 +1748,12 @@ dca region protect
 <p>0900-0920
 * Time logging 12/9
 0920-1000
-* Resolving issue with 10%$$20% lower accuracy on 35616082, 35616061 additional dat$$
+* Resolving issue with 10%~20% lower accuracy on 35616082, 35616061 additional data
   * 35616061 predicting grassland with forest 10% lower
 1000-1100
   * Compile data of mislabled training data where grassland is set as forest
 1100-1200
-* Resolving issue with 10%$$20% lower accuracy on 35616082, 35616061 additional dat$$
+* Resolving issue with 10%~20% lower accuracy on 35616082, 35616061 additional data
   * Issue with 35616082 identifying orchid as plains and field/paddy as barren
   * Potentially with validation dataset having particular barren regions and our model optimized towards it
 0100-0250

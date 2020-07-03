@@ -10,6 +10,8 @@
 ## ./test
 * [test/wtime](https://ychnh.github.io/html/test/wtime.html)
 * [test/journal](https://ychnh.github.io/html/test/journal.html)
+### ./test/nested2
+  * [test/nested2/test](https://ychnh.github.io/html/test/nested2/test.html)
 ## ./temp
 * [temp/test](https://ychnh.github.io/html/temp/test.html)
 * [temp/list](https://ychnh.github.io/html/temp/list.html)

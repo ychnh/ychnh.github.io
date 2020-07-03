@@ -56,7 +56,7 @@ def build_index(FP_html):
             k = n.count('/')-1
             index_lines.append(  k*idnt+'* '+ md_link_str(n,l) )
 
-    print('\n'.join(index_lines) )
+    #print('\n'.join(index_lines) )
     fp_index = 'index.md'
     ytl.writeListToFile(index_lines,fp_index)
     comp(fp_index, 'index.html')

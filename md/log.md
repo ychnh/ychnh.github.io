@@ -1,22 +1,24 @@
-___________________________________________________________________________________
-
 # HEAD
-Video: 4cwsd901-4 * Seems to be an interesting candidate for monocular depth
-Linear Algebra
-Object Detection
-Variational Auto Encoder
-Boolean
-Probability
-KL-Divergence
-RNN
-MetaLearning
-Random Variable
-Reinforcement Learning
-3D Reconstruction
-___________________________________________________________________________________
+* BERT
+  * https://www.reddit.com/r/SubSimulatorGPT2/
+  * GPT2
 
-# Pytorch
-* Tutorials
+* Neural ODE
+* Linear Algebra
+* Reinforcement Learning
+* Variational Auto Encoder
+* Boolean
+* Probability
+* KL-Divergence
+* RNN
+* MetaLearning
+* Random Variable
+
+* Object Detection
+* 3D Reconstruction
+  * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
+___________________________
+
 
 # Math
 * Learning about math is *not* about completing and proving theorem a,b,c ... and making a tabulated list. Nor is it about proving something *for the first time*. Because your *memory* is *limited* and with the *pass of time* you will forget. Stand on the shoulders of giants.

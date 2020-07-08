@@ -1,13 +1,58 @@
-#####################
-# GOALS
-##################### 
+___________________________
+# HEAD
 
-# Research Topics
-* VAE
-  * Auto-Encoder Strategy for Adaptive Image Segmentation 
-  * Adversarial Latent Autoencoders
-* New Segmentation Models
-* Hyper paremeter optimization
+## VAE
+* Auto-Encoder Strategy for Adaptive Image Segmentation 
+* Adversarial Latent Autoencoders
+
+## New Segmentation Models
+* Terms
+  * Any new types of backbone? Efficient DET?
+  * Diff types of convolution or 
+  * Pyramid feature?
+
+## Hyper paremeter optimization
+* Bayesian
+
+## Internal
+* Holiday Documentation .5+7.5
+  * 
+* Question
+___________________________
+
+
+# Understand previous code
+* Investigate mIOU code
+* Understand the flow of training test data and separation
+
+adjust label path to MIOU.py
+* label_path = '../../data/land-cover-data/preprocessing_data/창원/label_gray_'+target
+
+# 7/8
+* 
+
+# 7/7
+* Finish analyzing inference.sh and analyze into workflow.md
+* Run IOU calculation code
+* Investigate calculation of IOU
+  * Meeting to discuss IOU Issue
+  * Analyze the error
+  * Write analysis document
+* Documentation research for holiday dispension and military attendance and weekly report form
+
+# 7/6
+* Half-day off for banking
+* Understand laplacian
+  * Laplician is the sum of unmixed second derivatives
+* understanding mix results.py
+  * really confused about img[img != 0] = 0
+  * this means that combine will only work the second time around
+  * Investigate the source copy of the repo in RTT machine to verify
+    * *Only the last category of [road, train, river] is being saved under #####_linear. #####.png is just a blank black i \mage*
+* Investigate
+  * overwrite_etc_with_linear.py
+  * gray_to_rgb.py
+
 
 # 7/3
 * Go to Eterra

@@ -1,4 +1,6 @@
 # HEAD
+* RL
+  * https://ai.googleblog.com/2020/07/duality-new-approach-to-reinforcement.html?m=1
 * BERT
   * https://www.reddit.com/r/SubSimulatorGPT2/
   * GPT2

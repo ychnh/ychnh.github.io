@@ -12,13 +12,26 @@ ___________________________
   * Pyramid feature?
 
 ## Hyper paremeter optimization
-* Bayesian
+### Bayesian Optimization
+* Gaussian Process
+### Population Based Training
+* PBT Deepmind
 
 # Understand previous code
 * Understand the flow of training test data and separation
 
 ## Internal
 ___________________________
+
+
+# 7/9
+* Hyper parameter research 
+  * Bayesian Optimization
+    * Gaussian Process
+    * Bernoulli Process
+* Meeting for wafer eye
+* Create report 
+* Work on SFR
 
 # 7/8
 * Finish MIOU report 

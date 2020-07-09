@@ -14,22 +14,21 @@ ___________________________
 ## Hyper paremeter optimization
 * Bayesian
 
-## Internal
-* Holiday Documentation .5+7.5
-  * 
-* Question
-___________________________
-
-
 # Understand previous code
-* Investigate mIOU code
 * Understand the flow of training test data and separation
 
-adjust label path to MIOU.py
-* label_path = '../../data/land-cover-data/preprocessing_data/창원/label_gray_'+target
+## Internal
+___________________________
 
 # 7/8
-* 
+* Finish MIOU report 
+* Spark and Pytorch
+  * PySpark Interface
+  * Uber Petastorm
+* Research Hyper Parameter Optimization
+  * Hyperparams
+  * Optimizations
+* Documentation research for holiday dispension and military attendance and weekly report form
 
 # 7/7
 * Finish analyzing inference.sh and analyze into workflow.md
@@ -38,7 +37,6 @@ adjust label path to MIOU.py
   * Meeting to discuss IOU Issue
   * Analyze the error
   * Write analysis document
-* Documentation research for holiday dispension and military attendance and weekly report form
 
 # 7/6
 * Half-day off for banking

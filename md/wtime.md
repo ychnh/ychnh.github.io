@@ -23,6 +23,53 @@ ___________________________
 ## Internal
 ___________________________
 
+TODO: Add post processing
+TODO: Add Combination Also figure out how it is done
+
+# 7/15
+* Embedding weight tying
+* Gaussian Process
+  * Multivariate Guassian
+    * Random Variable
+    * Convariance
+* Spark torch example review
+  * Data parallel distributed training for large datasets. SparkTorch offers distributed synchronous and asynchronous training methodologies. This is useful for training very large datasets that do not fit into a single machine.
+  * Full integration with Spark's ML library. This ensures that you can save and load pipelines with your trained model.
+  * Inference. With SparkTorch, you can load your existing trained model and run inference on billions of records in parallel
+
+# 7/14
+* Prepare for presentation demo
+* Hyper parameter optimization research
+  * Gauassian Optimization
+    * Guassian Process
+      * Stochastic Process
+      * Multivariate Gaussian
+* Weekly Meeting with government
+
+# 7/13
+* Write presentation and preparing demo
+  * mIOU leq Recall Precision
+  * mIOU estimation using mean_precision and mean_recall
+  * Calculating bounds for estimation
+* Tiling issue find examples
+  * 513 sized tiles showing up in final inference
+* Live demo preparation
+  * Run inferences wihtout grad
+  * Separate out the 2 separate
+
+
+
+# 7/10
+* Half day off due to not feeling well because of stress not sleeping well.
+* Modularize AIdentify code to run as live demo
+
+* Develop Workflow
+  * nn.Dataparallel saving model causes module.key to be append causing error
+    * https://discuss.pytorch.org/t/solved-keyerror-unexpected-key-module-encoder-embedding-weight-in-state-dict/1686
+  * dlink pipeline in jupyter notebook
+    * preprocess, load, and inference
+  * dlab pipeline
+    * preprocess, load and inference
 
 # 7/9
 * Hyper parameter research 
@@ -30,7 +77,7 @@ ___________________________
     * Gaussian Process
     * Bernoulli Process
 * Meeting for wafer eye
-* Create report 
+* Create weekly report 
 * Work on SFR
 
 # 7/8

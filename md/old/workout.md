@@ -1,3 +1,10 @@
+# Fundamental idea of muscle mechanics
+
+* Muscle can exert the most amount of force when it has been extended, ready to contract
+  * Like a elastic string
+* This means that for chest, you must tighten your back to allow chest muscle to extend outwards
+* How about back?
+
 * When lifting make sure to ask the question how can my body support this weight
   * Support with muscle by using opposing forces 
     * (Bicep/Triceps) 

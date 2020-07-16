@@ -20,6 +20,16 @@
 * 3D Reconstruction
   * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
 ___________________________
+# On 
+Recall practice. This it appears you are doing, but perhaps too late. You should attempt to recall any new information you learn at multiple stages. For example, say you just learned about the Sylow theorems. As soon as you write down those theorems, close the book and see if you can recall the conditions and conclusions of the theorems, as well as why they "make sense." If you cannot, then you can't expect to remember them much later either. Then, while doing the exercises from the text, aim first to do them without any reference to the text. Only after some struggle should you permit yourself access to the text. This forces you to acknowledge what material you do not currently remember, and helps it stick in your memory. For direct recall of the theorems, you can make yourself simple decks in a program like Anki, which takes little time each day.
+
+Spaced practice: You should aim to return to each topic a week later, and then a month later. This can be done by setting aside one day each week to be a "review the previous week" study day, where you pick exercises you skipped from each section the first go around. Then one day each month can be a "review the previous month" study day, where you do a similar thing. (Notice: This should not only be repetition of the theorems, but applying those theorems in new problems.)
+
+Elaborative practice: Any time you learn a new theorem, you should try to explain to yourself or someone else (even a "rubber duck") how it fits in to the old material. Why do you care about it? What questions does it answer? What questions does it not answer?
+
+Concrete examples: Any time you learn a definition, before learning anything else, you should try to come up with an example of a mathematical object that fits that definition, and one which does not. See if you can justify why.
+
+Dual Coding: If you are learning an algebraic fact, can you come up with a visual example of that fact? For example, if you are learning about the group D_2n, can you both give algebraic rules for manipulating that group and have a visual example of an object with D_2n as its symmetry group? Where do the elements of the center of D_{2n} show up in terms of the visuals of the symmetry group? If you are asked to come up with the Sylow-2 subgroup(s) of D_{12} and, perhaps, their conjugacy classes in an exercise, can you determine what they are both algebraically and within your visual model?
 
 # Kolmogrov
 * "I arrived at Moscow University with a fair knowledge of mathematics. I knew in particular the beginning of set theory. I studied many questions in articles in the Encyclopedia of Brockhaus and Efron, filling out for myself what was presented too concisely in these articles."

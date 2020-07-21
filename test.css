@@ -1,0 +1,72 @@
+* {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	padding-top: 0pt;
+	padding: 0pt;
+	padding-bottom: 0pt;
+	font-size: 11pt;
+	color: black
+}
+
+#toc_frame {
+  background-color: yellow;
+  display: none;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal
+}
+
+h1 {
+	text-transform:uppercase;
+	font-weight: bold;
+}
+h2 {
+	text-transform:uppercase;
+}
+
+a:-webkit-any-link {
+     color: blue;
+}
+
+body {
+	counter-reset: h1n;
+}
+h1 {
+	counter-reset: h2n;
+}
+h2 {
+	counter-reset: h3n;
+}
+h3 {
+	counter-reset: h4n;
+}
+
+h1::before {
+	counter-increment: h1n;
+	content: counter(h1n) " ";
+}
+
+h2::before {
+  counter-increment: h2n;
+  content: counter(h1n)  "." counter(h2n) " ";
+}
+
+h3::before {
+  counter-increment: h3n;
+  content: counter(h1n)  "." counter(h2n) "." counter(h3n) " ";
+}
+
+h4::before {
+  counter-increment: h4n;
+  content: counter(h1n)  "." counter(h2n) "." counter(h3n) "." counter(h4n) " ";
+}
+
+
+
+ul {
+	margin-left: 20pt;
+}
+ol {
+	margin-left: 20pt;
+}

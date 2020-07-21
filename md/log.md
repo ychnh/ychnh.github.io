@@ -20,7 +20,27 @@
 * 3D Reconstruction
   * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
 ___________________________
-# On 
+
+# Best organization
+* Is finishing at a good ending point
+* Finishing what you started
+
+# Benefits of being self-motivated
+* You go hard on your own.
+* It becomes part of your identity
+* THE PROCESS
+
+# Learning and how to spend time
+* Since I CANNOT DO everything that I want or am intrested in Do the things that will be useful in the future
+* DOING MATH IS A FULL-TIME COMMITMENT
+* So is preparing to workout. EVERY HOUR EVERY MIN MUST BE DEVOTED TO COOKING, TRAINING, EATING, and RESTING
+* be a man of PRINCIPLE not desires or wants or needs
+
+# SUMMRY
+* Algorithm 
+  * https://medium.com/@mplaut929/smmry-the-algorithm-behind-reddits-tldr-bot-c268722a4c27
+
+# On MATH
 Recall practice. This it appears you are doing, but perhaps too late. You should attempt to recall any new information you learn at multiple stages. For example, say you just learned about the Sylow theorems. As soon as you write down those theorems, close the book and see if you can recall the conditions and conclusions of the theorems, as well as why they "make sense." If you cannot, then you can't expect to remember them much later either. Then, while doing the exercises from the text, aim first to do them without any reference to the text. Only after some struggle should you permit yourself access to the text. This forces you to acknowledge what material you do not currently remember, and helps it stick in your memory. For direct recall of the theorems, you can make yourself simple decks in a program like Anki, which takes little time each day.
 
 Spaced practice: You should aim to return to each topic a week later, and then a month later. This can be done by setting aside one day each week to be a "review the previous week" study day, where you pick exercises you skipped from each section the first go around. Then one day each month can be a "review the previous month" study day, where you do a similar thing. (Notice: This should not only be repetition of the theorems, but applying those theorems in new problems.)

@@ -1,30 +1,20 @@
-___________________________
-# HEAD
+# 7/20
+* 
+o semieye code make
 
-## VAE
-* Auto-Encoder Strategy for Adaptive Image Segmentation 
-* Adversarial Latent Autoencoders
+# 7/17
+* Kridging
+  * Kriging methods in spatial statistics (Lichtenstern)
+* Survey Other methods
+  * Hyper-Parameter Optimization: A Review of Algorithms and Applications
+  * SHA-Hyperband
+* Show debugging code for mIOU to government
 
-## New Segmentation Models
-* Terms
-  * Any new types of backbone? Efficient DET?
-  * Diff types of convolution or 
-  * Pyramid feature?
-
-## Hyper paremeter optimization
-### Bayesian Optimization
+# 7/16
 * Gaussian Process
-### Population Based Training
-* PBT Deepmind
-
-# Understand previous code
-* Understand the flow of training test data and separation
-
-## Internal
-___________________________
-
-TODO: Add post processing
-TODO: Add Combination Also figure out how it is done
+  * Multivariate Normal Distribution
+  * Normal Distribution in 2D
+  * Kridging
 
 # 7/15
 * Embedding weight tying
@@ -43,7 +33,6 @@ TODO: Add Combination Also figure out how it is done
   * Gauassian Optimization
     * Guassian Process
       * Stochastic Process
-      * Multivariate Gaussian
 * Weekly Meeting with government
 
 # 7/13
@@ -56,8 +45,6 @@ TODO: Add Combination Also figure out how it is done
 * Live demo preparation
   * Run inferences wihtout grad
   * Separate out the 2 separate
-
-
 
 # 7/10
 * Half day off due to not feeling well because of stress not sleeping well.

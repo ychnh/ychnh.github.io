@@ -1,6 +1,20 @@
+# 7/22
+* Population Based Training (PBT) Deepmind paper
+* Generative Pretraining fro Pixels
+* Research documentation
+o semieye code refactoring for batch
+
+# 7/21
+* Population Based Training (PBT) Deepmind paper
+* Generative Pretraining fro Pixels
+* Research documentation
+o semieye code refactoring for batch
+
 # 7/20
-* 
-o semieye code make
+* Large-scale training framework overview
+  * Google Gpipe/Uber Horovod/Deepmind/TF-Replicator/Microsoft DeepSpeed Research and Documentation
+* Research documentation
+o semieye code refactoring for batch
 
 # 7/17
 * Kridging

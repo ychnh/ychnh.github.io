@@ -75,3 +75,9 @@ ul {
 ol {
 	margin-left: 20pt;
 }
+
+code {
+  display: block;
+  white-space: pre-wrap   
+}
+

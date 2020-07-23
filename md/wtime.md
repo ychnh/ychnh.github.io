@@ -2,6 +2,7 @@
 * Population Based Training (PBT) Deepmind paper
 * Generative Pretraining fro Pixels
 * Research documentation
+* Meeting to discuss improvements with Mr.Han
 o semieye code refactoring for batch
 
 # 7/21

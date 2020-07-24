@@ -1,3 +1,13 @@
+# 7/24
+* Prepare documentation for report
+  * exploding/vanishing gradient, overfit, underfit
+
+# 7/23
+* Prepare documentation for report
+  * Hyperparameter: crop/stride size, train/test transformation, mixed-precision, increased size inference, 
+  * Code snippet: Assembling, mIOU error
+
+
 # 7/22
 * Population Based Training (PBT) Deepmind paper
 * Generative Pretraining fro Pixels

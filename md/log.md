@@ -20,6 +20,15 @@
 * 3D Reconstruction
   * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
 ___________________________
+# CHATBOT with person
+* https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313
+* https://github.com/huggingface/transfer-learning-conv-ai
+
+# Reinforcement Learning Part 2
+* Mastering the game of Go without Human Knowledge
+  * https://deepmind.com/research/publications/mastering-game-go-without-human-knowledge
+# gpt 1 2 3
+make a model of transformer and train it for chatbot.
 
 # Best organization
 * Is finishing at a good ending point
@@ -39,9 +48,7 @@ ___________________________
 # SUMMRY
 * Algorithm 
   * https://medium.com/@mplaut929/smmry-the-algorithm-behind-reddits-tldr-bot-c268722a4c27
-
-# On MATH
-Recall practice. This it appears you are doing, but perhaps too late. You should attempt to recall any new information you learn at multiple stages. For example, say you just learned about the Sylow theorems. As soon as you write down those theorems, close the book and see if you can recall the conditions and conclusions of the theorems, as well as why they "make sense." If you cannot, then you can't expect to remember them much later either. Then, while doing the exercises from the text, aim first to do them without any reference to the text. Only after some struggle should you permit yourself access to the text. This forces you to acknowledge what material you do not currently remember, and helps it stick in your memory. For direct recall of the theorems, you can make yourself simple decks in a program like Anki, which takes little time each day.
+# On MATH Recall practice. This it appears you are doing, but perhaps too late. You should attempt to recall any new information you learn at multiple stages. For example, say you just learned about the Sylow theorems. As soon as you write down those theorems, close the book and see if you can recall the conditions and conclusions of the theorems, as well as why they "make sense." If you cannot, then you can't expect to remember them much later either. Then, while doing the exercises from the text, aim first to do them without any reference to the text. Only after some struggle should you permit yourself access to the text. This forces you to acknowledge what material you do not currently remember, and helps it stick in your memory. For direct recall of the theorems, you can make yourself simple decks in a program like Anki, which takes little time each day.
 
 Spaced practice: You should aim to return to each topic a week later, and then a month later. This can be done by setting aside one day each week to be a "review the previous week" study day, where you pick exercises you skipped from each section the first go around. Then one day each month can be a "review the previous month" study day, where you do a similar thing. (Notice: This should not only be repetition of the theorems, but applying those theorems in new problems.)
 

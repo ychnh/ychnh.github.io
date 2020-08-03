@@ -1,4 +1,154 @@
 <!DOCTYPE html><html><head><title>MathJax TeX Test Page</title><link rel = "stylesheet" type = "text/css" href = "https://ychnh.github.io/style.css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> </head> <body style="background-color:white;">
+<ul>
+<li>TODO: Separate video decoderset and batch loader
+<ul>
+<li>decoderset should contain information for managing seek and decoder state</li>
+<li>batch loader should define batchsize, A,B</li>
+<li>Inspect and Fix Pre-post Processing</li>
+<li>Debug cuda() memory</li>
+</ul></li>
+</ul>
+
+<h1>8/3</h1>
+
+<ul>
+<li><p>Deeplab v3+: Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (Liang-Chieh Chen 2018)</p>
+
+<ul>
+<li>History
+<ul>
+<li>v1 Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs (2014)</li>
+<li>v2 DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs (2016)</li>
+<li>v3 Rethinking Atrous Convolution for Semantic Image Segmentation (2017)</li>
+</ul></li>
+</ul></li>
+<li><p>Dense Fusion Classmate Network for Land Cover Classification (Chao Tian)</p></li>
+<li><p>Deep Aggregation Net for Land Cover Classification (Tzu-Sheng Kuo)</p></li>
+<li><p>D-LinkNet: LinkNet with Pretrained Encoder and Dilated Convolution for High Resolution Satellite Imagery Road Extraction (Lichen Zhou)</p></li>
+<li><p>UNet</p></li>
+<li><p>Powerpoint Documentation with 5 models</p>
+
+<ul>
+<li>History</li>
+<li>Performance</li>
+<li>Reason why choosing</li>
+* 
+</ul></li>
+</ul>
+
+<h1>7/31</h1>
+
+<ul>
+<li>Beging testing adding frame seek</li>
+</ul>
+
+<h1>7/30</h1>
+
+<ul>
+<li>Test gpu VPF with AI on various settings
+<ul>
+<li>85~110fps based on presence of nozzle </li>
+</ul></li>
+<li>Research adding frame seek</li>
+<li>Install libraries for data extraction/annotation</li>
+</ul>
+
+<h1>7/29</h1>
+
+<ul>
+<li>Research adding frame seek
+<ul>
+<li>https://github.com/NVIDIA/VideoProcessingFramework/issues/86</li>
+</ul></li>
+<li>Study VPF to add new feature and understand</li>
+<li>Debug VPF build</li>
+<li>Finish Debug VPF</li>
+<li>Testing of decode</li>
+<li>Testing of pytorch memory</li>
+<li>Videoloader module</li>
+</ul>
+
+<h1>7/28</h1>
+
+<ul>
+<li>Meeting preparation on Landcover Improvement from 2019 project</li>
+<li>Review information on Monday's kickoff meeting</li>
+<li><p>Review project proposal for inconsistency and error</p>
+
+<ul>
+<li>Replace DL4j with Tensorflow/Tensorflow on Spark</li>
+<li>FDN training time wrong</li>
+</ul></li>
+<li><p>Class based-pose weight switching</p></li>
+<li>META separate into its own class </li>
+<li>Validation drawing</li>
+<li>Fix bug with nondebug mode returning images</li>
+<li>Install
+<ul>
+<li>Visual Studio 2017</li>
+<li>CUDA 10.2 + cudnn</li>
+<li>FFmpeg 4.3(shared, dev, binary versions) (look https://ffmpeg.zeranoe.com/builds/)</li>
+<li>VideoCodec SDK 9.1</li>
+<li>Python 3.7</li>
+<li>Numpy latest version</li>
+<li>CMAKE</li>
+</ul></li>
+</ul>
+
+<p>cd c:\GitHub\VideoProcessingFramework\
+mkdir build
+cd build
+cmake .. ^
+  -G"Visual Studio 15 2017 Win64" ^
+  -DFFMPEG<em>DIR:PATH="C:/ffmpeg-4.3" ^
+  -DVIDEO</em>CODEC<em>SDK</em>DIR:PATH="C:/Install/Video<em>Codec</em>SDK<em>9.1.23" ^
+  -DGENERATE</em>PYTHON<em>BINDINGS:BOOL="1" ^
+  -DCMAKE</em>INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"</p>
+
+<ul>
+<li>TODO: Train models for the other ones. B0, A1.</li>
+</ul>
+
+<h1>7/27</h1>
+
+<ul>
+<li>Correct mathjax framework issue in landcover documentation </li>
+<li><p>Quick review project proposal for error/addenum</p>
+
+<ul>
+<li>Remove assemble multiclass and single class predictions</li>
+<li>Correct overfiting with dataset balance</li>
+</ul></li>
+<li><p>Working at RTT for semieye project</p>
+
+<ul>
+<li>Fix crop ROi bug</li>
+<li>Finish implement batch service</li>
+<li>Making  yolo return best choice</li>
+<li>Writing validation code for bbox</li>
+<li>Writing validation code for pose</li>
+<li>Error propagation/handling</li>
+<li>Image not returning bug fix for pose debug</li>
+<li>git personal token for authemtication
+<ul>
+<li>6f33dfc241f7638603b0022398694131edafe5cf 
+git clone https://ychnh:6f33dfc241f7638603b0022398694131edafe5cf@github.com/ychnh/trackpose.git</li>
+</ul></li>
+<li>setup installation of libraries for VPF</li>
+</ul></li>
+<li><p>Plan out future steps</p>
+
+<ul>
+<li>On the fly context switch for pose</li>
+<li>Meta format</li>
+</ul></li>
+<li><p>GPU Decode Test on Windows</p>
+
+<ul>
+<li>Enable internet</li>
+</ul></li>
+</ul>
+
 <h1>7/24</h1>
 
 <ul>
@@ -6,6 +156,7 @@
 <ul>
 <li>exploding/vanishing gradient, overfit, underfit</li>
 </ul></li>
+<li>Kickoff Meeting with Environmental Government Agency</li>
 </ul>
 
 <h1>7/23</h1>

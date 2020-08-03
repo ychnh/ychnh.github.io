@@ -1,6 +1,111 @@
+* TODO: Separate video decoderset and batch loader
+  * decoderset should contain information for managing seek and decoder state
+  * batch loader should define batchsize, A,B
+  * Inspect and Fix Pre-post Processing
+  * Debug cuda() memory
+
+# 8/3
+
+* Deeplab v3+: Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (Liang-Chieh Chen 2018)
+  * History
+    * v1 Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs (2014)
+    * v2 DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs (2016)
+    * v3 Rethinking Atrous Convolution for Semantic Image Segmentation (2017)
+
+* Dense Fusion Classmate Network for Land Cover Classification (Chao Tian)
+
+* Deep Aggregation Net for Land Cover Classification (Tzu-Sheng Kuo)
+
+* D-LinkNet: LinkNet with Pretrained Encoder and Dilated Convolution for High Resolution Satellite Imagery Road Extraction (Lichen Zhou)
+* UNet
+
+* Powerpoint Documentation with 5 models
+  * History
+  * Performance
+  * Reason why choosing
+  * 
+
+# 7/31
+* Beging testing adding frame seek
+
+# 7/30
+* Test gpu VPF with AI on various settings
+  * 85~110fps based on presence of nozzle 
+* Research adding frame seek
+* Install libraries for data extraction/annotation
+
+# 7/29
+* Research adding frame seek
+  * https://github.com/NVIDIA/VideoProcessingFramework/issues/86
+* Study VPF to add new feature and understand
+* Debug VPF build
+* Finish Debug VPF
+* Testing of decode
+* Testing of pytorch memory
+* Videoloader module
+
+# 7/28
+* Meeting preparation on Landcover Improvement from 2019 project
+* Review information on Monday's kickoff meeting
+* Review project proposal for inconsistency and error
+  * Replace DL4j with Tensorflow/Tensorflow on Spark
+  * FDN training time wrong
+
+* Class based-pose weight switching
+* META separate into its own class 
+* Validation drawing
+* Fix bug with nondebug mode returning images
+* Install
+  * Visual Studio 2017
+  * CUDA 10.2 + cudnn
+  * FFmpeg 4.3(shared, dev, binary versions) (look https://ffmpeg.zeranoe.com/builds/)
+  * VideoCodec SDK 9.1
+  * Python 3.7
+  * Numpy latest version
+  * CMAKE
+
+cd c:\GitHub\VideoProcessingFramework\
+mkdir build
+cd build
+cmake .. ^
+  -G"Visual Studio 15 2017 Win64" ^
+  -DFFMPEG_DIR:PATH="C:/ffmpeg-4.3" ^
+  -DVIDEO_CODEC_SDK_DIR:PATH="C:/Install/Video_Codec_SDK_9.1.23" ^
+  -DGENERATE_PYTHON_BINDINGS:BOOL="1" ^
+  -DCMAKE_INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"
+
+* TODO: Train models for the other ones. B0, A1.
+
+# 7/27
+* Correct mathjax framework issue in landcover documentation 
+* Quick review project proposal for error/addenum
+  * Remove assemble multiclass and single class predictions
+  * Correct overfiting with dataset balance
+
+* Working at RTT for semieye project
+  * Fix crop ROi bug
+  * Finish implement batch service
+  * Making  yolo return best choice
+  * Writing validation code for bbox
+  * Writing validation code for pose
+  * Error propagation/handling
+  * Image not returning bug fix for pose debug
+  * git personal token for authemtication
+    * 6f33dfc241f7638603b0022398694131edafe5cf 
+    git clone https://ychnh:6f33dfc241f7638603b0022398694131edafe5cf@github.com/ychnh/trackpose.git
+  * setup installation of libraries for VPF
+
+* Plan out future steps
+  * On the fly context switch for pose
+  * Meta format
+
+* GPU Decode Test on Windows
+  * Enable internet
+
 # 7/24
 * Prepare documentation for report
   * exploding/vanishing gradient, overfit, underfit
+* Kickoff Meeting with Environmental Government Agency
 
 # 7/23
 * Prepare documentation for report

@@ -4,6 +4,17 @@
   * Inspect and Fix Pre-post Processing
   * Debug cuda() memory
 
+# 8/4
+* Begin planning landcover prototype
+  * ONNX Conversion 
+  * Set up some models in native TF2
+
+  * Train on 40 classes for the setup models
+    * Models
+    * Dataloader
+    * Augmenter
+    * Speed up using mixed precision[](https://www.sicara.ai/blog/tensorflow-tutorial-training-time)
+
 # 8/3
 
 * Deeplab v3+: Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (Liang-Chieh Chen 2018)

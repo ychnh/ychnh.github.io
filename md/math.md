@@ -1,3 +1,4 @@
+
 # 20200819
 * I have been working on Det for a while what skill do i need to develop to become faster better?
   * Concentration

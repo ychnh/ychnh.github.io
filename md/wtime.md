@@ -4,12 +4,101 @@
   * Inspect and Fix Pre-post Processing
   * Debug cuda() memory
 
+
+# 8/21
+* 
+# 8/20
+* Inspect results of training model
+* Make adjustments
+* Write validation metrics
+* Load model/Train model: DeepLabV3+
+# 8/19
+* Continue writing training loop
+  * Add saving weight
+  * Design saving progress/output log
+# 8/18 WAS VACATION BUT HAD TO CANCEL
+* Add/debug combined dataset
+* Add combined dataloader
+* Issue with module import in nested directories for python
+* Writing training loop
+* Start Load model/Train model: Deep Aggregate net
+* Strage Error: Gdk-CRITICAL : 10:39:07.921: gdk_curs
+# 8/17
+* Holiday
+
+# 8/14
+* Vacation
+# 8/13
+* Corrupted OS while changing python version from 3.6 to 3.7
+* Reinstall OS with machine learning libraries
+  * Had compiler issues and updated the installation instructions
+* Document work and work report
+* Fix bug with margin crop on label images
+* Add right and left mode for tiling to exclude or include leftover pixels
+* Add documentation
+* Modularize color code.
+  * Identified bug issue was with normalized length
+
+# 8/12
+* Add color code
+* torch.nn.Fold/Unfold does not work (byte not supported)
+* Meeting for 3 hours. 
+  * Schedule: Need external support
+  * Team work report
+
+
+
+* Extract tiles and TF Fold Unfold size 512, 1024
+* Verify that dataset is correct
+# 8/11
+* Install libraries for last year code
+* Modularize last year code for data and models
+  * Label, Geometry
+
+
+# 8/10
+* Work/Attendance report and send to RealTimeTech office
+* Finish Setup Aidentify on new server
+* See code required to do FULL classes
+* Plan the base code migration
+  * Data
+  * Data extractor geo/shp
+  * Models (Dlab, DAG, FDN, DLink)
+  * Utility
+  * Dataloader
+  * Plan out distributed training/testing code
+
+* Data Migration
+  * bitmap matching png of src and lbl (Extract minimal code to do this)
+  * tiling, torch fold unfold
+* Layers
+  * Dropout
+* CPU memory gradually leaks when num_workers > 0 in the DataLoader
+  * https://github.com/pytorch/pytorch/issues/13246
+* Distributed and Half Precision
+
+
+
+# 8/7
+* Setup AI server 
+* Replicate Aidentify research on new server
+
+# 8/6
+* Distributed training and prediction in Pytorch
+* Design of process execution and management for distributed system
+* Report on hyperparameter and solution to over/underfit
+
+# 8/5
+* TorchSpark research
+* Petastorm database storage
+* Pytorch vs Tensorflow Discussion
+
 # 8/4
 * Begin planning landcover prototype
   * ONNX Conversion 
   * Set up some models in native TF2
 
-  * Train on 40 classes for the setup models
+  * Train on 40 classes for the setup models design
     * Models
     * Dataloader
     * Augmenter

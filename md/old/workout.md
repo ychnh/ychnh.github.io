@@ -1,3 +1,15 @@
+# 20200819
+* Deadlift
+  * Gotta lean back so that the weight is on the hips as 
+  * Chest out
+* Pullups
+  * Use wider grip
+* Rear Delts and the rotator muscles I think I need to workout
+  * see mantaray delt [manta ray back](https://i.imgur.com/yfTNLK1.jpg)
+* Low Lats
+  * I feel my low lats activate when my elbow becomes closer to my torso.
+  * This is much more possible when my arms are in the underhand grip
+
 # Fundamental idea of muscle mechanics
 
 * Muscle can exert the most amount of force when it has been extended, ready to contract

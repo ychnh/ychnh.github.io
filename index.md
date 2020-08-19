@@ -1,4 +1,5 @@
 * ./
+* [math.html](https://ychnh.github.io/html/math.html)
 * [log.html](https://ychnh.github.io/html/log.html)
 * [board.html](https://ychnh.github.io/html/board.html)
 * [docs.html](https://ychnh.github.io/html/docs.html)

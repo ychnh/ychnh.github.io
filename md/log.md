@@ -1,13 +1,15 @@
 # HEAD
-* RL
-  * https://ai.googleblog.com/2020/07/duality-new-approach-to-reinforcement.html?m=1
-* BERT
-  * https://www.reddit.com/r/SubSimulatorGPT2/
-  * GPT2
+
+## TODO:
+Port the TBC function over to this library
+
+## HOTOWORD TOPICS:
+
+* GPT2
+* Reinforcement Learning
 
 * Neural ODE
 * Linear Algebra
-* Reinforcement Learning
 * Variational Auto Encoder
 * Boolean
 * Probability
@@ -21,8 +23,13 @@
   * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
 ___________________________
 # CHATBOT with person
-* https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313
-* https://github.com/huggingface/transfer-learning-conv-ai
+* Transformer:
+  * /home/yhong/tf2/lib/python3.5/site-packages/torch/nn/modules/transformer.py
+  * Seems like GPT only uses the decoder
+* Bert
+* Personalizing Dialogue Agents: I have a dog, do you have pets too?
+  * https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313
+  * https://github.com/huggingface/transfer-learning-conv-ai
 
 # Reinforcement Learning Part 2
 * Mastering the game of Go without Human Knowledge
@@ -48,6 +55,7 @@ make a model of transformer and train it for chatbot.
 # SUMMRY
 * Algorithm 
   * https://medium.com/@mplaut929/smmry-the-algorithm-behind-reddits-tldr-bot-c268722a4c27
+
 # Math PHASE 2
 
 ## Outline

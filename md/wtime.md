@@ -1,28 +1,70 @@
-* TODO: Separate video decoderset and batch loader
-  * decoderset should contain information for managing seek and decoder state
-  * batch loader should define batchsize, A,B
-  * Inspect and Fix Pre-post Processing
-  * Debug cuda() memory
+* Transformer/Bert Training for Landcover?
+* Dataset - Keep track of source (Not sure how to go about doing this?)
+* Progress - Keep the hyperparameters used?
+* Hyperparam -
 
 
 # 8/21
-* 
+* Inspect results of training dan
+* Inspect NaN in the statistic
+* Fix color bug with int divide
+* Inspect results of training dlabv3
+* Create table using tabulate module
+* Decide on the standardized format of X,Y and numpy and torch.tensor
+
+* Get additional data
+  * Ground truth image
+  * Confusion Matrix
+  * Data Train/Val: hyperparams
+
+* Documentation
+
+* Fix color for confusion matrix
+* Add diagonal line for confusion matrix
+* Add save option for imshow, imshow_confmat, imshow_list ...
+  * Is there a way to group common functionality together? figsize and plt.savefig()
+  * Bug with savefig() saving blank image
+  * plt savefig with background white [*FUTURE*]
+
+
 # 8/20
 * Inspect results of training model
 * Make adjustments
-* Write validation metrics
+* Write prediction image code
+  * TileSlicer implementation
 * Load model/Train model: DeepLabV3+
+  * Error OOM during training
+
+* Plan and write validation metrics for class wise
+* ?Pretrained Weights?
+* ?Differences in model backbone? 34 dan vs 101 dlabv3
+
 # 8/19
 * Continue writing training loop
   * Add saving weight
   * Design saving progress/output log
+
+* Design efficient conf mat computation algorithm
+* Implement efficient confmat computation algorithm
+* Debug confmat display algorithm
+
+* Prepare list of hyperparameter and find source for DAn, DFN DFCN 40min
+* Read about F1. a harmoic mean of precision and recall
+
+* Test confusion matrix code
+* Debug some list issue with confusion matrix when labels miss max.
+* Solved by specifying minlen
+
+* Given new task about DFCN on Friday afternoon
+
 # 8/18 WAS VACATION BUT HAD TO CANCEL
 * Add/debug combined dataset
 * Add combined dataloader
 * Issue with module import in nested directories for python
 * Writing training loop
 * Start Load model/Train model: Deep Aggregate net
-* Strage Error: Gdk-CRITICAL : 10:39:07.921: gdk_curs
+* Strange Error: Gdk-CRITICAL : 10:39:07.921: gdk_curs
+
 # 8/17
 * Holiday
 

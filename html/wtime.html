@@ -2,41 +2,93 @@
 <button onclick="toggle_show()">Table of Contents</button>
 <div id="toc_frame"> <div id="toc"> </div> </div> <div id="contents">
 <ul>
-<li>TODO: Separate video decoderset and batch loader
-<ul>
-<li>decoderset should contain information for managing seek and decoder state</li>
-<li>batch loader should define batchsize, A,B</li>
-<li>Inspect and Fix Pre-post Processing</li>
-<li>Debug cuda() memory</li>
-</ul></li>
+<li>Transformer/Bert Training for Landcover?</li>
+<li>Dataset - Keep track of source (Not sure how to go about doing this?)</li>
+<li>Progress - Keep the hyperparameters used?</li>
+<li>Hyperparam -</li>
 </ul>
 
 <h1>8/21</h1>
 
 <ul>
-<li><h1>8/20</h1></li>
-<li><p>Inspect results of training model</p></li>
+<li>Inspect results of training dan</li>
+<li>Inspect NaN in the statistic</li>
+<li>Fix color bug with int divide</li>
+<li>Inspect results of training dlabv3</li>
+<li>Create table using tabulate module</li>
+<li><p>Decide on the standardized format of X,Y and numpy and torch.tensor</p></li>
+<li><p>Get additional data</p>
+
+<ul>
+<li>Ground truth image</li>
+<li>Confusion Matrix</li>
+<li>Data Train/Val: hyperparams</li>
+</ul></li>
+<li><p>Documentation</p></li>
+<li><p>Fix color for confusion matrix</p></li>
+<li>Add diagonal line for confusion matrix</li>
+<li>Add save option for imshow, imshow<strong>confmat, imshow</strong>list ...
+<ul>
+<li>Is there a way to group common functionality together? figsize and plt.savefig()</li>
+<li>Bug with savefig() saving blank image</li>
+<li>plt savefig with background white [<strong>FUTURE</strong>]</li>
+</ul></li>
+</ul>
+
+<h1>8/20</h1>
+
+<ul>
+<li>Inspect results of training model</li>
 <li>Make adjustments</li>
-<li>Write validation metrics</li>
+<li>Write prediction image code
+<ul>
+<li>TileSlicer implementation</li>
+</ul></li>
 <li><p>Load model/Train model: DeepLabV3+</p>
 
-<h1>8/19</h1></li>
+<ul>
+<li>Error OOM during training</li>
+</ul></li>
+<li><p>Plan and write validation metrics for class wise</p></li>
+<li>?Pretrained Weights?</li>
+<li>?Differences in model backbone? 34 dan vs 101 dlabv3</li>
+</ul>
+
+<h1>8/19</h1>
+
+<ul>
 <li><p>Continue writing training loop</p>
 
 <ul>
 <li>Add saving weight</li>
-<li>Design saving progress/output log
-<h1>8/18 WAS VACATION BUT HAD TO CANCEL</h1></li>
+<li>Design saving progress/output log</li>
 </ul></li>
-<li><p>Add/debug combined dataset</p></li>
+<li><p>Design efficient conf mat computation algorithm</p></li>
+<li>Implement efficient confmat computation algorithm</li>
+<li><p>Debug confmat display algorithm</p></li>
+<li><p>Prepare list of hyperparameter and find source for DAn, DFN DFCN 40min</p></li>
+<li><p>Read about F1. a harmoic mean of precision and recall</p></li>
+<li><p>Test confusion matrix code</p></li>
+<li>Debug some list issue with confusion matrix when labels miss max.</li>
+<li><p>Solved by specifying minlen</p></li>
+<li><p>Given new task about DFCN on Friday afternoon</p></li>
+</ul>
+
+<h1>8/18 WAS VACATION BUT HAD TO CANCEL</h1>
+
+<ul>
+<li>Add/debug combined dataset</li>
 <li>Add combined dataloader</li>
 <li>Issue with module import in nested directories for python</li>
 <li>Writing training loop</li>
 <li>Start Load model/Train model: Deep Aggregate net</li>
-<li><p>Strage Error: Gdk-CRITICAL : 10:39:07.921: gdk_curs</p>
+<li>Strange Error: Gdk-CRITICAL : 10:39:07.921: gdk_curs</li>
+</ul>
 
-<h1>8/17</h1></li>
-<li><p>Holiday</p></li>
+<h1>8/17</h1>
+
+<ul>
+<li>Holiday</li>
 </ul>
 
 <h1>8/14</h1>
@@ -249,10 +301,10 @@ mkdir build
 cd build
 cmake .. ^
   -G"Visual Studio 15 2017 Win64" ^
-  -DFFMPEG<em>DIR:PATH="C:/ffmpeg-4.3" ^
-  -DVIDEO</em>CODEC<em>SDK</em>DIR:PATH="C:/Install/Video<em>Codec</em>SDK<em>9.1.23" ^
-  -DGENERATE</em>PYTHON<em>BINDINGS:BOOL="1" ^
-  -DCMAKE</em>INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"</p>
+  -DFFMPEG<strong>DIR:PATH="C:/ffmpeg-4.3" ^
+  -DVIDEO</strong>CODEC<strong>SDK</strong>DIR:PATH="C:/Install/Video<strong>Codec</strong>SDK<strong>9.1.23" ^
+  -DGENERATE</strong>PYTHON<strong>BINDINGS:BOOL="1" ^
+  -DCMAKE</strong>INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"</p>
 
 <ul>
 <li>TODO: Train models for the other ones. B0, A1.</li>
@@ -417,7 +469,7 @@ o semieye code refactoring for batch</li>
 <li>Write presentation and preparing demo
 <ul>
 <li>mIOU leq Recall Precision</li>
-<li>mIOU estimation using mean<em>precision and mean</em>recall</li>
+<li>mIOU estimation using mean<strong>precision and mean</strong>recall</li>
 <li>Calculating bounds for estimation</li>
 </ul></li>
 <li>Tiling issue find examples
@@ -514,13 +566,13 @@ o semieye code refactoring for batch</li>
 <li>this means that combine will only work the second time around</li>
 <li>Investigate the source copy of the repo in RTT machine to verify
 <ul>
-<li><em>Only the last category of [road, train, river] is being saved under #####_linear. #####.png is just a blank black i \mage</em></li>
+<li><strong>Only the last category of [road, train, river] is being saved under #####_linear. #####.png is just a blank black i \mage</strong></li>
 </ul></li>
 </ul></li>
 <li>Investigate
 <ul>
-<li>overwrite<em>etc</em>with_linear.py</li>
-<li>gray<em>to</em>rgb.py</li>
+<li>overwrite<strong>etc</strong>with_linear.py</li>
+<li>gray<strong>to</strong>rgb.py</li>
 </ul></li>
 </ul>
 
@@ -691,7 +743,7 @@ o semieye code refactoring for batch</li>
 
 <ul>
 <li>Multitask loss training. Need to calculate random loss and scale each accordingly to this value</li>
-<li>ADDED MASK LO<em>S</em>S</li>
+<li>ADDED MASK LO<strong>S</strong>S</li>
 <li>Think we need to freeze the layers prior to regression
 <ul>
 <li>Debugging freeze training inspect</li>
@@ -914,7 +966,7 @@ o semieye code refactoring for batch</li>
 <li>c_swmp = (124,34,126)</li>
 <li>c_brrn = (89,206,202)</li>
 <li>c_water = (6,2,250)</li>
-<li>cmap = ListedColormap([c<em>road, c</em>wood, c<em>indst, c</em>paddy, c<em>field, c</em>farm, c<em>orchid, c</em>plain, c<em>swmp, c</em>brrn, c_water])</li>
+<li>cmap = ListedColormap([c<strong>road, c</strong>wood, c<strong>indst, c</strong>paddy, c<strong>field, c</strong>farm, c<strong>orchid, c</strong>plain, c<strong>swmp, c</strong>brrn, c_water])</li>
 <li><p>['road', 'frst', 'buld', 'pddy', 'fild', 'farm', 'orcd', 'plan', 'swmp', 'brrn', 'watr']</p></li>
 <li><p>vmin=0, vmax=6</p></li>
 <li>Colormap and normalization</li>
@@ -1274,8 +1326,8 @@ x Validate water spray data
 x Revalidate due to issue with continuing after crash</li>
 <li>Train spray detector
 x Script file
-x Complete SPRAY<em>LIQUID</em>SCRIPT=LIQUID<em>VALID
-x Complete POSITION</em>VALID
+x Complete SPRAY<strong>LIQUID</strong>SCRIPT=LIQUID<strong>VALID
+x Complete POSITION</strong>VALID
 x Make core lib
 x Remove BG dependecy because I dont think it matters
 <ul>
@@ -1308,18 +1360,18 @@ x Remove warning message on posenet load weights</li>
 <li>Solution: will we aug the image, need to get a larger outer frame when preserving the image and then crop from center</li>
 <li>This is a more advanced form of cropping</li>
 <li>Seems like the most recent problem is due to my pose net not being up to par to various variations in the nozzle frame capture. In otherwords, my posenet should and needs to be able to detect pose as well as the nozzle appears in the detection frame and we need to adjust the augmentation according to this</li>
-<li><strong>We cut some corners</strong> regarding augmentation and now we need to fix it</li>
+<li><strong>*We cut some corners</strong>* regarding augmentation and now we need to fix it</li>
 <li>Also consider how we started training repnet from base and tranformation matrix. What is this base form.</li>
 </ul></li>
 <li><p>Design</p>
 
 <ul>
 <li>We trained the pose detector with viewing the entire outer frame. If we want it to be more robust we should train pose detection with zoom and closer variation.</li>
-<li><em>POSE</em> Detection
+<li><strong>POSE</strong> Detection
 <ul>
 <li>Improve pose detection by training with non perfect crops and variations in crop</li>
 </ul></li>
-<li><em>SPRAY</em> detection
+<li><strong>SPRAY</strong> detection
 <ul>
 <li>In a similar manner, sprat data should be collected to account for minor deficiencies in pose by sampling non perfect spray boxes</li>
 </ul></li>
@@ -1396,10 +1448,10 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>I feel like part of representation learning invovles the background removal which is invalidated when presented with new examples not seen?</li>
 </ul></li>
-<li><p><strong>Spray Trainer</strong></p>
+<li><p><strong>*Spray Trainer</strong>*</p>
 
 <ul>
-<li>/home/yhong/work/semicond/DaSiamRPN/code/spray<em>detect</em>MN </li>
+<li>/home/yhong/work/semicond/DaSiamRPN/code/spray<strong>detect</strong>MN </li>
 <li>Data loader/ augmentor</li>
 <li>Test and validate with visual display</li>
 </ul></li>
@@ -1447,7 +1499,7 @@ x Remove warning message on posenet load weights</li>
 </ul></li>
 <li>Need to offset coords wrt to framed bbox</li>
 <li>Visualize and validated Repnet/posenet dataset</li>
-<li>Add options to train<em>encdec2D.py train</em>pose.py</li>
+<li>Add options to train<strong>encdec2D.py train</strong>pose.py</li>
 </ul>
 
 <h1>4/21</h1>
@@ -1585,7 +1637,7 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>so that model doesn't always predict identity
 <ul>
-<li>model(x,bg,hotwire<em>tf) == py</em>with_tf</li>
+<li>model(x,bg,hotwire<strong>tf) == py</strong>with_tf</li>
 </ul></li>
 </ul></li>
 <li><p>VAE</p>
@@ -1610,13 +1662,13 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>It seems like the matrix method works better since it can model alot of other transformations other than just rotation, (includeing translation)</li>
 </ul></li>
-<li><p>How would you have a <em>pipeline to test different</em> versions of code</p>
+<li><p>How would you have a <strong>pipeline to test different</strong> versions of code</p>
 
 <ul>
-<li>Probably best way is to do the <em>github branch</em> idea
+<li>Probably best way is to do the <strong>github branch</strong> idea
 <ul>
 <li>Need to manage my source</li>
-<li>And save <em>common elments in a shared location</em> that makes sense</li>
+<li>And save <strong>common elments in a shared location</strong> that makes sense</li>
 </ul></li>
 </ul></li>
 <li><p>Do we even care about rotation?</p>
@@ -2294,7 +2346,7 @@ Research potential solutions to issues with Lucas-Kanade</p>
 0241-0340
 * Time logging 1/3, 1/2, 1/1, 12/31
 0340-0423
-* Test dan<em>IN</em>f64 at different epochs
+* Test dan<strong>IN</strong>f64 at different epochs
 0423-0450
 * Semieye histogram experimentation and averaging techniques on edges
 * Noise reduction
@@ -3022,14 +3074,14 @@ dca region protect
 * Verify exp with fixed labels
 * DAN trn aug has higher acc with new labels and wrong labels
 0120-0215
-* Migrating code to CK<em>GPU to test fdn</em>full
+* Migrating code to CK<strong>GPU to test fdn</strong>full
 0215-0250
-* Running FDN<em>full
+* Running FDN<strong>full
   * Inspect data
 0250-0400
 * Add gpu options
 * add options to organize experiment
-* FDN</em>full epoch 2 same max score
+* FDN</strong>full epoch 2 same max score
 0400-0500
 * Add specify gpu functionality
 * Add strbool parse for bool options
@@ -3205,7 +3257,7 @@ dca region protect
   * Solution, purchase more RAM/ Lower dataloader per training
 1112-1200
 * Running pix2pix. Not too promising
-* Fix issue with clean<em>gan</em>data.py applying transfomration btw lbl and src
+* Fix issue with clean<strong>gan</strong>data.py applying transfomration btw lbl and src
 * Future: Add code to continue val.data and losses.data from crash
 0100-0120
 * Review GAN Clean. Not good
@@ -3251,7 +3303,7 @@ dca region protect
 * Read about boundary aware loss and image dilation
 0300-0400
 * Construct pipeline to compute boundary aware loss with masks
-  * sum( weight<em>crossent( plbl</em>mask, lbl) )
+  * sum( weight<strong>crossent( plbl</strong>mask, lbl) )
 0400-0416
 * Freeze dialiation and sobel convolutions to prevent utility layers being backpropagated
 0416-0504

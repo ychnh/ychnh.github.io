@@ -31,6 +31,7 @@ ___________________________
 * Personalizing Dialogue Agents: I have a dog, do you have pets too?
   * https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313
   * https://github.com/huggingface/transfer-learning-conv-ai
+  * Pose generation
 
     sample code
     test code

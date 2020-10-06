@@ -1,3 +1,14 @@
+* https://docs.google.com/presentation/d/1V80PJ8ByYMTXJDHYgYPEOx3UqL_YWpAB6ZJVbDh3OYA/edit?usp=sharing
+* conv
+  * allow model to store some context of the words/invovled
+
+* Object detection: small object problem
+* https://www.explainthatstuff.com/helicopter.html
+* Conda effect
+* air foil
+
+* Image Transformer
+* Conditional Image Generation with PixelCNN Decoders
 
 # HEAD
 
@@ -5,6 +16,7 @@
 Port the TBC function over to this library
 
 ## HOTOWORD TOPICS:
+
 
 * GPT2
 * Reinforcement Learning
@@ -23,6 +35,11 @@ Port the TBC function over to this library
 * 3D Reconstruction
   * Video: 4cwsd901-4 Seems to be an interesting candidate for monocular depth
 ___________________________
+# Mathematics
+* Consider homework problems as not chores that you must do but as *questions*  that you can explore
+# Pullup
+* really focus on the muscles contracting for the pull
+
 # CHATBOT with person
 * Transformer:
   * /home/yhong/tf2/lib/python3.5/site-packages/torch/nn/modules/transformer.py

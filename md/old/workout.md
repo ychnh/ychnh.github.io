@@ -1,3 +1,5 @@
+# 20200828
+* Really focus on the muscle contractions as you do the pulling motion. Back to the basics
 # 20200819
 * Deadlift
   * Gotta lean back so that the weight is on the hips as 

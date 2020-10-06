@@ -3,6 +3,450 @@
 * Progress - Keep the hyperparameters used?
 * Hyperparam -
 
+------------------
+* Model-specific hyper param Wed
+* How to handle continuation? ( We really need this)
+* Create Evaluation generation script
+------------------
+
+QUESTIONS
+* Under what conditions is Dwise equiv to reg conv.
+* Under what conditions id Dwise commutative?
+
+TODO
+* Progress logging
+  * Need to implement validation and val acc
+  * Loss
+* Need to implement continuation
+  * Saving hyper parameters
+    * Is it possible to serialize args?
+
+* Decoder
+
+# How to predict the future
+
+We are given a sequence of landcover images from the past that are of the same size. {Image0, Image1, Image2, Image3}
+We tile each Image# identically with a size of 1024. Then each tile has corresponding tiles in the other images.
+As input for our model, we form a sequence of corresponding tiles, arranged in increasing time order.
+The model will output Tile4, the prediction for Image4
+
+model( {Tile0, Tile1, Tile2, Tile3} ) = Tile4.
+
+The Tile4 will be predicted many tiles for the tile positions that need to be predicted in Image4.
+
+# Training and prediction processing time
+
+Training an LSTM is alot slower than training convolution models.
+Training 1 epoch with a dataset of 6644 256x256 tiles takes around 1 hour.
+Prediction of one Image with size 32930, 26164 is done by tiling the Image into 858 1024x1024 tiles.
+Prediction of one Image takes around 25 minutes.
+
+# Analyze confusion matrix
+
+2 Confusion matrix was created using the following Image pairs.
+* Image2018xPredict2018: Accuracy 82.6%
+* Image2018xImage2016: Accuracy 84.5%
+
+# Future predictability: conclusion & implication
+
+Our model is expected to predict on 41 classes. 
+It is likely that this task is too difficult for our model and the amount of data we have.
+It might be a better idea to reduce the number of classes that is required for prediction.
+
+We see that the predict2018 is worse than the Image2016.
+This means that the prediction does not contribute meaningful information for the future.
+
+# DDP Validation/Prediction Design
+* Set model
+	* nograd 
+	* eval
+* Concerns: GPU OOM issues
+* How to leverage parallel from diff ranks
+
+## Classic Approach
+* Load X,Y from testing doyups
+* Do prediction stitch
+* Run conf. mat with GT
+* Save results
+
+## Parallel Approach ( As the training framework )
+* Load tiles from testing doyups
+* Do prediction on the tiles
+* Gen conf mat with GT
+* Save results
+
+# Not a big fan of the original tile solution because it only works when there are no stride.
+* What solution is there?
+	* Merge the results after overlap has been processed
+	* How do we know if overlap has been processed?	
+		* We know if i has been overlapped then j leq i is also has been processed
+	* How do we know if i has been processed?
+	* We know that i has been processed if 
+		* Sum of some of the channels is maximum count of overlap
+		* stride has passed the crop window ( elaborate )
+
+# What does the NaN mean?
+it means a/0
+Can this have meaning? other than invalid?
+In our scenario
+The numberator is smaller than the denom
+This means that NaN must be 0/0 which holds no meaning
+
+What is 0? It must be 0/a
+
+# Distributed prediction code
+
+# 10/6
+* Inspect training of DAN for epoch 50,100
+  * Still training
+
+* If it is a package you can do relative imports by calling
+* import .relpack
+
+# 10/5
+* FDN review code and architecture
+* Setup FDN for testing
+* Meeting on preparing documentation for research
+  * 4 New tasks
+  * A. Confusion matrix for 25 epoch DAN, DLINK, Dlabv3
+  * B. DAN accuracy at 25,50,100 epoch
+  * C. Grouping accuracy of DAN
+  * D. ChunAnh Prediction with DAN, Dlabv3
+* Verify A.
+* Write report on problem with D.
+* Work on redoing C with dan34e25 because prior was on 7 test set
+* Missing densenet weight. Downloading from pytorch model zoo
+
+
+# 9/29
+* Prepare source code and demo for government
+	* run code
+	* weight
+	* readme.md/requirements.txt
+* .5 Holiday
+
+# 9/28
+* Inspect training of dlinknet
+* Generate testing/report for dlinknet
+* Write report for F1, precision, recall, iou formula
+* Start implementing lstm overlap prediction solution
+* Write validation code design
+	* Making sure that it can run well even during train/time
+
+
+
+# 9/25
+* Clean Evaluation Code?
+* Make report for Dlabv3res100
+* Clean up code of dlinknet to use
+* Train dlinknet
+
+# 9/24
+* Make report for DANe25 for Mr. Jaeho
+* Modularize and refactor LSTM code
+* Design solution for overlapping LSTM
+  * Make tiler return alternate index value of non-overlap i
+* Clean project repository
+* Write and discuss confusion matrix
+* Write hyperparameter saving
+
+# 9/23
+* Homography Meeting q/a with Haesol
+* Writing report for LSTM
+* Working with Daehong for hadoop spark access
+* Dicussion with Jaeho about benchmarking Hadoop mutiple tables vs single table
+* semaphore error
+* Training DANe25
+* Add reporting statistic
+
+# 9/22
+* Check dataset with Daehong
+* Issue with petastorm retrival
+* LSTM report materials for Jaeho
+* Identify issue with dataset. crop and stride set differently
+
+# 9/21
+* .5 day off vacation
+* Meeting with Jaeho
+* Mixed precision
+  * NaN bug
+    * Adjust learning rate 
+      * https://github.com/pytorch/pytorch/issues/40497
+* Get new lstm prediction
+
+# 9/18
+* LSTM fix bug with enc-dec structure not working with MNIST
+  * Change the design to network 3 https://github.com/joisino/ConvLSTM/blob/master/network.py
+  * Train and verify that the results resemble 
+  * softmax causes degenerate performance???  WHY?
+
+* LSTM prepare for train on landcover data
+  * Write landcover dataloader
+  * Redesign network to 1 to 1 feed in 1to1 input 
+  * Issue with out of memory error
+  * Reduce dataset size
+  * Increase model length
+  * Train/inspect training
+* Prediction
+  * Created tiled prediction manager
+  * Issue with predict restart prediction
+
+# 9/17
+* Inspect results of training
+  * No .tfw file
+
+* Tried custom LSTM prediction.
+  * 
+
+* Tried another repo https://github.com/holmdk/Video-Prediction-using-PyTorch/issues/3
+  * Just outputting blanks
+  * created issue https://github.com/holmdk/Video-Prediction-using-PyTorch/issues/3
+
+
+# 9/16
+* CUDA unknown bug due to sigmoid returning slightly negative value due to precision loss
+* design/experiemtn data augmentation
+
+* Try BCELogitLoss
+* Inspect outputs of seq
+* Inspect max min value outputs
+* Fix issue with sigmoid (Very silly error)
+* Training LSTM on MNIST
+
+# 9/15
+* Download MNIST sequence data
+* Extend LSTM module to accept initial hidden states
+* Refactor LSTM module
+* Fix bug with hidden+input channel mismatch
+
+* Add final prediction layer
+
+* Training loop
+  * dataset/dataloader
+  * optimizer
+  * loss bce
+* Debugging
+  * Cuda unknown error
+
+# 9/14
+* LSTM Cell and Conv LSTM understand H and h code flow
+* Add documentation to lstm code flow
+* Test LSTM Cell/Conv LSTM class
+* Preparing pretraining dataset on video dataset p144
+
+# 9/11
+* Weekly Report
+* Military Report
+
+* Report for combined dan34E20splitdata
+* Writing hyper parameter report
+* LSTM Design and Planning
+  * Testing layers
+
+# 9/10
+
+* Combine clases implement code
+
+* Inspect training new model 
+
+* Report for non-combined classes implement for dan101, dan34E40splitdata
+* Report for combined classes for dan101, dan34E40splitdata
+
+* Counting model parameter in pytorch
+  * def count_parameters(model): return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+* How to add L2 regularization loss
+  * optim.Adam(, weight_decay=1e-5)
+
+* Design for validating and testing metric on train-time
+
+# 9/09
+* Give report of DAN
+
+* Depth: # Number of layers
+* Width: # Channels
+* Resolution: HxW
+
+* Different Hyper parameter research
+  * Imagenet top 1
+    * Model parameter
+  * Efficient Net
+    * Receptive field
+    * Neural Architecture search
+      * Direct neural architecture search on target task and hardware
+
+    * MBConv Block (Inverted Residual Block) Mobilenetv2: Inverted residuals and linear bottlenecks.
+      * *See proof of invertibility*
+      * Inverted Residual Block a narrow -> wide -> narrow approach.
+      * widen with a 1x1 convolution, then use a 3x3 *depthwise convolution*, then we use a 1x1 to ResAdd.
+      * Depthwise separable convolution 3x1 1x3
+
+    * Squeeze and excitation optimization
+      * Squeeze-and-excitation networks
+      * From HxWxC F(Construct an embedding) 1x1xC  F(apply modulation to produce) 1x1xC and apply this kernel to HxWxC
+
+* Combine clases design
+
+* Split dataset
+  * Holdout Test
+  * Val
+  * Train
+
+
+
+# 9/08
+
+* Seq2Seq Encoder Decoder Architecture (referenced in now-casting paper)
+
+* Reporting Modules
+* Create automatic report script
+  * Create report.py
+  * create writing statistic
+  * Add save graph features
+  * Fix bug with displaying image 
+    * call plt.close
+  * Fix bug with not saving color image for py
+
+* Generate overall reporting
+  * Bug with combine conf. matrix
+
+* Inspect results of training
+  * dan101 Training time 9/4 6:00pm - 9/8 5:00am 6+24+24+5=59 hours
+
+* Give source code as part of training
+
+# 9/07
+
+* Understand python logger class
+
+* Design Progress planning and output (torch ignite?)
+  * Understand torch ignite
+  * Understand formatting string
+
+* LSTM
+  * Determine that automan000 convlstm is inefficient and doesn't work as intended in Convolution Weather Now-Casting
+  * Determine that jhhuang96 convlstm is much better and works on sequence level
+
+* LSTM STACKED ARCHITECTURE
+
+
+# 9/04
+* Created temporary DeepAggrNet101 backbone
+* Investigate into backbone incompatibility issue
+  * Custom backbone on DeepLabV3 aidentify
+  * Custone backbone on DAN RTT
+  * Standard torch backbone 
+
+    * Seems like their resnet101 is custom as well
+* Work out a temporary fix
+* Gradient accumilation
+
+* Split data 85,10,5
+  * Want to compare with previous experiment so just use same
+
+# 9/03
+* Generative pretraining from pixels (Chen)
+* Reading about 2 LSTM source code to see which better
+  * https://github.com/jhhuang96/ConvLSTM-PyTorch
+  * https://github.com/automan000/Convolutional_LSTM_PyTorch
+
+* Add backbone 101 to deepagg net
+  * Refactor backbone code
+    * Trying to refactor backbone code. I think I need to rewrite dlabv3 and deepaggr net
+  * make sure sizes align
+    * Check on basic inputs show that this is working well.
+
+* Investigate half precision
+  * https://pytorch.org/docs/stable/notes/amp_examples.html#amp-examples
+  * https://pytorch.org/docs/stable/amp.html
+
+# 9/02
+* Learn about LSTM cell detail: Wikipedia
+* Convolutional LSTM Netork: ML approach for precipitation Nowcasting (2015 Shi)
+* Sequence to Sequence Learning. LSTM encoder decoder structure
+
+# 9/01
+* HALF day off not well 
+* Reading about LSTM article.
+  * PCA
+  * Vector encoding
+* I dont think the article really applies to our project
+
+# 8/31
+* Fix issue loading weight from DPP
+* Analyze results of training
+
+* Design other components
+* Float 16
+* Progress logger
+  * Time
+* Spitting out analysis results to a directory
+
+* LSTM
+* Inspect schema from min
+
+# 8/28
+* Remote desktop issues
+* some record has more than 1 geomtry issue
+  * Fixed by directly linking fiona geometry value
+
+* Write file dataloader
+* Start Train DAN whole dataset
+
+* Look at LSTM
+
+# 8/27
+* Investigating the DDP issue with BatchSyncNorm
+* Opened issue in pytorch
+  * https://github.com/pytorch/pytorch/issues/43685
+  * Add issue on Nvidia
+  * Following up on issue
+    * Run and try with resnet it is fine
+    * Adjust with find_unused_parameters but it doesn't matter
+
+* Creating dataset
+* Color save issue 1channel vs 3channel
+* Additional encoding issues
+
+
+# 8/26
+* Issue with data encoding
+  * postgrs2shp set encoindg option
+* Need to use fiona libary
+* Rewriting label and geometry class in Fiona
+* Test DDP with various models and different parameters
+
+
+# 8/25
+* Distributed trianing demo implement
+  * Partition dataset
+  * Issue with find_unused_parameters=True
+* Consideration
+  * Make loss part of model ( to make gpu data usage the same)
+    * https://discuss.pytorch.org/t/dataparallel-imbalanced-memory-usage/22551/12
+  * Synchronized batch norm?
+    * Does it save weights and load properly?
+    * Yes. The name of the weight depends on the object property name it is tored under
+    * ERROR: Unable to determine the device handle for GPU 0000:17:00.0: GPU is lost.  Reboot the system to recover this GPU
+  * Progress output 
+  * Saving/loading checkpoint
+    * Rank zero saves with barrier
+    * Rank zero loads and then gpu copies to others
+
+* How to handling saving and process
+
+* GDK error
+  * Issue with util.py import pyplot without X server
+
+* Getting 500 data tif and shp
+  * Issue with database for doyup code
+  * Issue with decoding utf or kr
+    * Need to mnaually set encoding
+
+# 8/24
+* Half day off due to sickness
+* Distributed training read
+
 
 # 8/21
 * Inspect results of training dan

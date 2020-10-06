@@ -8,6 +8,651 @@
 <li>Hyperparam -</li>
 </ul>
 
+<hr />
+
+<ul>
+<li>Model-specific hyper param Wed</li>
+<li>How to handle continuation? ( We really need this)
+<h2>* Create Evaluation generation script</h2></li>
+</ul>
+
+<p>QUESTIONS
+* Under what conditions is Dwise equiv to reg conv.
+* Under what conditions id Dwise commutative?</p>
+
+<p>TODO
+* Progress logging
+  * Need to implement validation and val acc
+  * Loss
+* Need to implement continuation
+  * Saving hyper parameters
+    * Is it possible to serialize args?</p>
+
+<ul>
+<li>Decoder</li>
+</ul>
+
+<h1>How to predict the future</h1>
+
+<p>We are given a sequence of landcover images from the past that are of the same size. {Image0, Image1, Image2, Image3}
+We tile each Image# identically with a size of 1024. Then each tile has corresponding tiles in the other images.
+As input for our model, we form a sequence of corresponding tiles, arranged in increasing time order.
+The model will output Tile4, the prediction for Image4</p>
+
+<p>model( {Tile0, Tile1, Tile2, Tile3} ) = Tile4.</p>
+
+<p>The Tile4 will be predicted many tiles for the tile positions that need to be predicted in Image4.</p>
+
+<h1>Training and prediction processing time</h1>
+
+<p>Training an LSTM is alot slower than training convolution models.
+Training 1 epoch with a dataset of 6644 256x256 tiles takes around 1 hour.
+Prediction of one Image with size 32930, 26164 is done by tiling the Image into 858 1024x1024 tiles.
+Prediction of one Image takes around 25 minutes.</p>
+
+<h1>Analyze confusion matrix</h1>
+
+<p>2 Confusion matrix was created using the following Image pairs.
+* Image2018xPredict2018: Accuracy 82.6%
+* Image2018xImage2016: Accuracy 84.5%</p>
+
+<h1>Future predictability: conclusion &amp; implication</h1>
+
+<p>Our model is expected to predict on 41 classes. 
+It is likely that this task is too difficult for our model and the amount of data we have.
+It might be a better idea to reduce the number of classes that is required for prediction.</p>
+
+<p>We see that the predict2018 is worse than the Image2016.
+This means that the prediction does not contribute meaningful information for the future.</p>
+
+<h1>DDP Validation/Prediction Design</h1>
+
+<ul>
+<li>Set model
+<ul>
+<li>nograd </li>
+<li>eval</li>
+</ul></li>
+<li>Concerns: GPU OOM issues</li>
+<li>How to leverage parallel from diff ranks</li>
+</ul>
+
+<h2>Classic Approach</h2>
+
+<ul>
+<li>Load X,Y from testing doyups</li>
+<li>Do prediction stitch</li>
+<li>Run conf. mat with GT</li>
+<li>Save results</li>
+</ul>
+
+<h2>Parallel Approach ( As the training framework )</h2>
+
+<ul>
+<li>Load tiles from testing doyups</li>
+<li>Do prediction on the tiles</li>
+<li>Gen conf mat with GT</li>
+<li>Save results</li>
+</ul>
+
+<h1>Not a big fan of the original tile solution because it only works when there are no stride.</h1>
+
+<ul>
+<li>What solution is there?
+<ul>
+<li>Merge the results after overlap has been processed</li>
+<li>How do we know if overlap has been processed? 
+<ul>
+<li>We know if i has been overlapped then j leq i is also has been processed</li>
+</ul></li>
+<li>How do we know if i has been processed?</li>
+<li>We know that i has been processed if 
+<ul>
+<li>Sum of some of the channels is maximum count of overlap</li>
+<li>stride has passed the crop window ( elaborate )</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>What does the NaN mean?</h1>
+
+<p>it means a/0
+Can this have meaning? other than invalid?
+In our scenario
+The numberator is smaller than the denom
+This means that NaN must be 0/0 which holds no meaning</p>
+
+<p>What is 0? It must be 0/a</p>
+
+<h1>Distributed prediction code</h1>
+
+<h1>10/6</h1>
+
+<ul>
+<li><p>Inspect training of DAN for epoch 50,100</p>
+
+<ul>
+<li>Still training</li>
+</ul></li>
+<li><p>If it is a package you can do relative imports by calling</p></li>
+<li>import .relpack</li>
+</ul>
+
+<h1>10/5</h1>
+
+<ul>
+<li>FDN review code and architecture</li>
+<li>Setup FDN for testing</li>
+<li>Meeting on preparing documentation for research
+<ul>
+<li>4 New tasks</li>
+<li>A. Confusion matrix for 25 epoch DAN, DLINK, Dlabv3</li>
+<li>B. DAN accuracy at 25,50,100 epoch</li>
+<li>C. Grouping accuracy of DAN</li>
+<li>D. ChunAnh Prediction with DAN, Dlabv3</li>
+</ul></li>
+<li>Verify A.</li>
+<li>Write report on problem with D.</li>
+<li>Work on redoing C with dan34e25 because prior was on 7 test set</li>
+<li>Missing densenet weight. Downloading from pytorch model zoo</li>
+</ul>
+
+<h1>9/29</h1>
+
+<ul>
+<li>Prepare source code and demo for government
+<ul>
+<li>run code</li>
+<li>weight</li>
+<li>readme.md/requirements.txt</li>
+</ul></li>
+<li>.5 Holiday</li>
+</ul>
+
+<h1>9/28</h1>
+
+<ul>
+<li>Inspect training of dlinknet</li>
+<li>Generate testing/report for dlinknet</li>
+<li>Write report for F1, precision, recall, iou formula</li>
+<li>Start implementing lstm overlap prediction solution</li>
+<li>Write validation code design
+<ul>
+<li>Making sure that it can run well even during train/time</li>
+</ul></li>
+</ul>
+
+<h1>9/25</h1>
+
+<ul>
+<li>Clean Evaluation Code?</li>
+<li>Make report for Dlabv3res100</li>
+<li>Clean up code of dlinknet to use</li>
+<li>Train dlinknet</li>
+</ul>
+
+<h1>9/24</h1>
+
+<ul>
+<li>Make report for DANe25 for Mr. Jaeho</li>
+<li>Modularize and refactor LSTM code</li>
+<li>Design solution for overlapping LSTM
+<ul>
+<li>Make tiler return alternate index value of non-overlap i</li>
+</ul></li>
+<li>Clean project repository</li>
+<li>Write and discuss confusion matrix</li>
+<li>Write hyperparameter saving</li>
+</ul>
+
+<h1>9/23</h1>
+
+<ul>
+<li>Homography Meeting q/a with Haesol</li>
+<li>Writing report for LSTM</li>
+<li>Working with Daehong for hadoop spark access</li>
+<li>Dicussion with Jaeho about benchmarking Hadoop mutiple tables vs single table</li>
+<li>semaphore error</li>
+<li>Training DANe25</li>
+<li>Add reporting statistic</li>
+</ul>
+
+<h1>9/22</h1>
+
+<ul>
+<li>Check dataset with Daehong</li>
+<li>Issue with petastorm retrival</li>
+<li>LSTM report materials for Jaeho</li>
+<li>Identify issue with dataset. crop and stride set differently</li>
+</ul>
+
+<h1>9/21</h1>
+
+<ul>
+<li>.5 day off vacation</li>
+<li>Meeting with Jaeho</li>
+<li>Mixed precision
+<ul>
+<li>NaN bug
+<ul>
+<li>Adjust learning rate 
+<ul>
+<li>https://github.com/pytorch/pytorch/issues/40497</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Get new lstm prediction</li>
+</ul>
+
+<h1>9/18</h1>
+
+<ul>
+<li><p>LSTM fix bug with enc-dec structure not working with MNIST</p>
+
+<ul>
+<li>Change the design to network 3 https://github.com/joisino/ConvLSTM/blob/master/network.py</li>
+<li>Train and verify that the results resemble </li>
+<li>softmax causes degenerate performance???  WHY?</li>
+</ul></li>
+<li><p>LSTM prepare for train on landcover data</p>
+
+<ul>
+<li>Write landcover dataloader</li>
+<li>Redesign network to 1 to 1 feed in 1to1 input </li>
+<li>Issue with out of memory error</li>
+<li>Reduce dataset size</li>
+<li>Increase model length</li>
+<li>Train/inspect training</li>
+</ul></li>
+<li>Prediction
+<ul>
+<li>Created tiled prediction manager</li>
+<li>Issue with predict restart prediction</li>
+</ul></li>
+</ul>
+
+<h1>9/17</h1>
+
+<ul>
+<li><p>Inspect results of training</p>
+
+<ul>
+<li>No .tfw file</li>
+</ul></li>
+<li><p>Tried custom LSTM prediction.</p>
+
+<ul>
+* 
+</ul></li>
+<li><p>Tried another repo https://github.com/holmdk/Video-Prediction-using-PyTorch/issues/3</p>
+
+<ul>
+<li>Just outputting blanks</li>
+<li>created issue https://github.com/holmdk/Video-Prediction-using-PyTorch/issues/3</li>
+</ul></li>
+</ul>
+
+<h1>9/16</h1>
+
+<ul>
+<li>CUDA unknown bug due to sigmoid returning slightly negative value due to precision loss</li>
+<li><p>design/experiemtn data augmentation</p></li>
+<li><p>Try BCELogitLoss</p></li>
+<li>Inspect outputs of seq</li>
+<li>Inspect max min value outputs</li>
+<li>Fix issue with sigmoid (Very silly error)</li>
+<li>Training LSTM on MNIST</li>
+</ul>
+
+<h1>9/15</h1>
+
+<ul>
+<li>Download MNIST sequence data</li>
+<li>Extend LSTM module to accept initial hidden states</li>
+<li>Refactor LSTM module</li>
+<li><p>Fix bug with hidden+input channel mismatch</p></li>
+<li><p>Add final prediction layer</p></li>
+<li><p>Training loop</p>
+
+<ul>
+<li>dataset/dataloader</li>
+<li>optimizer</li>
+<li>loss bce</li>
+</ul></li>
+<li>Debugging
+<ul>
+<li>Cuda unknown error</li>
+</ul></li>
+</ul>
+
+<h1>9/14</h1>
+
+<ul>
+<li>LSTM Cell and Conv LSTM understand H and h code flow</li>
+<li>Add documentation to lstm code flow</li>
+<li>Test LSTM Cell/Conv LSTM class</li>
+<li>Preparing pretraining dataset on video dataset p144</li>
+</ul>
+
+<h1>9/11</h1>
+
+<ul>
+<li>Weekly Report</li>
+<li><p>Military Report</p></li>
+<li><p>Report for combined dan34E20splitdata</p></li>
+<li>Writing hyper parameter report</li>
+<li>LSTM Design and Planning
+<ul>
+<li>Testing layers</li>
+</ul></li>
+</ul>
+
+<h1>9/10</h1>
+
+<ul>
+<li><p>Combine clases implement code</p></li>
+<li><p>Inspect training new model </p></li>
+<li><p>Report for non-combined classes implement for dan101, dan34E40splitdata</p></li>
+<li><p>Report for combined classes for dan101, dan34E40splitdata</p></li>
+<li><p>Counting model parameter in pytorch</p>
+
+<ul>
+<li>def count<strong>parameters(model): return sum(p.numel() for p in model.parameters() if p.requires</strong>grad)</li>
+</ul></li>
+<li><p>How to add L2 regularization loss</p>
+
+<ul>
+<li>optim.Adam(, weight_decay=1e-5)</li>
+</ul></li>
+<li><p>Design for validating and testing metric on train-time</p></li>
+</ul>
+
+<h1>9/09</h1>
+
+<ul>
+<li><p>Give report of DAN</p></li>
+<li><p>Depth: # Number of layers</p></li>
+<li>Width: # Channels</li>
+<li><p>Resolution: HxW</p></li>
+<li><p>Different Hyper parameter research</p>
+
+<ul>
+<li>Imagenet top 1
+<ul>
+<li>Model parameter</li>
+</ul></li>
+<li><p>Efficient Net</p>
+
+<ul>
+<li>Receptive field</li>
+<li><p>Neural Architecture search</p>
+
+<ul>
+<li>Direct neural architecture search on target task and hardware</li>
+</ul></li>
+<li><p>MBConv Block (Inverted Residual Block) Mobilenetv2: Inverted residuals and linear bottlenecks.</p>
+
+<ul>
+<li><strong>See proof of invertibility</strong></li>
+<li>Inverted Residual Block a narrow -> wide -> narrow approach.</li>
+<li>widen with a 1x1 convolution, then use a 3x3 <strong>depthwise convolution</strong>, then we use a 1x1 to ResAdd.</li>
+<li>Depthwise separable convolution 3x1 1x3</li>
+</ul></li>
+<li><p>Squeeze and excitation optimization</p>
+
+<ul>
+<li>Squeeze-and-excitation networks</li>
+<li>From HxWxC F(Construct an embedding) 1x1xC  F(apply modulation to produce) 1x1xC and apply this kernel to HxWxC</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Combine clases design</p></li>
+<li><p>Split dataset</p>
+
+<ul>
+<li>Holdout Test</li>
+<li>Val</li>
+<li>Train</li>
+</ul></li>
+</ul>
+
+<h1>9/08</h1>
+
+<ul>
+<li><p>Seq2Seq Encoder Decoder Architecture (referenced in now-casting paper)</p></li>
+<li><p>Reporting Modules</p></li>
+<li><p>Create automatic report script</p>
+
+<ul>
+<li>Create report.py</li>
+<li>create writing statistic</li>
+<li>Add save graph features</li>
+<li>Fix bug with displaying image 
+<ul>
+<li>call plt.close</li>
+</ul></li>
+<li>Fix bug with not saving color image for py</li>
+</ul></li>
+<li><p>Generate overall reporting</p>
+
+<ul>
+<li>Bug with combine conf. matrix</li>
+</ul></li>
+<li><p>Inspect results of training</p>
+
+<ul>
+<li>dan101 Training time 9/4 6:00pm - 9/8 5:00am 6+24+24+5=59 hours</li>
+</ul></li>
+<li><p>Give source code as part of training</p></li>
+</ul>
+
+<h1>9/07</h1>
+
+<ul>
+<li><p>Understand python logger class</p></li>
+<li><p>Design Progress planning and output (torch ignite?)</p>
+
+<ul>
+<li>Understand torch ignite</li>
+<li>Understand formatting string</li>
+</ul></li>
+<li><p>LSTM</p>
+
+<ul>
+<li>Determine that automan000 convlstm is inefficient and doesn't work as intended in Convolution Weather Now-Casting</li>
+<li>Determine that jhhuang96 convlstm is much better and works on sequence level</li>
+</ul></li>
+<li><p>LSTM STACKED ARCHITECTURE</p></li>
+</ul>
+
+<h1>9/04</h1>
+
+<ul>
+<li>Created temporary DeepAggrNet101 backbone</li>
+<li><p>Investigate into backbone incompatibility issue</p>
+
+<ul>
+<li>Custom backbone on DeepLabV3 aidentify</li>
+<li>Custone backbone on DAN RTT</li>
+<li><p>Standard torch backbone </p>
+
+<ul>
+<li>Seems like their resnet101 is custom as well</li>
+</ul></li>
+</ul></li>
+<li>Work out a temporary fix</li>
+<li><p>Gradient accumilation</p></li>
+<li><p>Split data 85,10,5</p>
+
+<ul>
+<li>Want to compare with previous experiment so just use same</li>
+</ul></li>
+</ul>
+
+<h1>9/03</h1>
+
+<ul>
+<li>Generative pretraining from pixels (Chen)</li>
+<li><p>Reading about 2 LSTM source code to see which better</p>
+
+<ul>
+<li>https://github.com/jhhuang96/ConvLSTM-PyTorch</li>
+<li>https://github.com/automan000/Convolutional<strong>LSTM</strong>PyTorch</li>
+</ul></li>
+<li><p>Add backbone 101 to deepagg net</p>
+
+<ul>
+<li>Refactor backbone code
+<ul>
+<li>Trying to refactor backbone code. I think I need to rewrite dlabv3 and deepaggr net</li>
+</ul></li>
+<li>make sure sizes align
+<ul>
+<li>Check on basic inputs show that this is working well.</li>
+</ul></li>
+</ul></li>
+<li><p>Investigate half precision</p>
+
+<ul>
+<li>https://pytorch.org/docs/stable/notes/amp_examples.html#amp-examples</li>
+<li>https://pytorch.org/docs/stable/amp.html</li>
+</ul></li>
+</ul>
+
+<h1>9/02</h1>
+
+<ul>
+<li>Learn about LSTM cell detail: Wikipedia</li>
+<li>Convolutional LSTM Netork: ML approach for precipitation Nowcasting (2015 Shi)</li>
+<li>Sequence to Sequence Learning. LSTM encoder decoder structure</li>
+</ul>
+
+<h1>9/01</h1>
+
+<ul>
+<li>HALF day off not well </li>
+<li>Reading about LSTM article.
+<ul>
+<li>PCA</li>
+<li>Vector encoding</li>
+</ul></li>
+<li>I dont think the article really applies to our project</li>
+</ul>
+
+<h1>8/31</h1>
+
+<ul>
+<li>Fix issue loading weight from DPP</li>
+<li><p>Analyze results of training</p></li>
+<li><p>Design other components</p></li>
+<li>Float 16</li>
+<li>Progress logger
+<ul>
+<li>Time</li>
+</ul></li>
+<li><p>Spitting out analysis results to a directory</p></li>
+<li><p>LSTM</p></li>
+<li>Inspect schema from min</li>
+</ul>
+
+<h1>8/28</h1>
+
+<ul>
+<li>Remote desktop issues</li>
+<li><p>some record has more than 1 geomtry issue</p>
+
+<ul>
+<li>Fixed by directly linking fiona geometry value</li>
+</ul></li>
+<li><p>Write file dataloader</p></li>
+<li><p>Start Train DAN whole dataset</p></li>
+<li><p>Look at LSTM</p></li>
+</ul>
+
+<h1>8/27</h1>
+
+<ul>
+<li>Investigating the DDP issue with BatchSyncNorm</li>
+<li><p>Opened issue in pytorch</p>
+
+<ul>
+<li>https://github.com/pytorch/pytorch/issues/43685</li>
+<li>Add issue on Nvidia</li>
+<li>Following up on issue
+<ul>
+<li>Run and try with resnet it is fine</li>
+<li>Adjust with find<strong>unused</strong>parameters but it doesn't matter</li>
+</ul></li>
+</ul></li>
+<li><p>Creating dataset</p></li>
+<li>Color save issue 1channel vs 3channel</li>
+<li>Additional encoding issues</li>
+</ul>
+
+<h1>8/26</h1>
+
+<ul>
+<li>Issue with data encoding
+<ul>
+<li>postgrs2shp set encoindg option</li>
+</ul></li>
+<li>Need to use fiona libary</li>
+<li>Rewriting label and geometry class in Fiona</li>
+<li>Test DDP with various models and different parameters</li>
+</ul>
+
+<h1>8/25</h1>
+
+<ul>
+<li>Distributed trianing demo implement
+<ul>
+<li>Partition dataset</li>
+<li>Issue with find<strong>unused</strong>parameters=True</li>
+</ul></li>
+<li><p>Consideration</p>
+
+<ul>
+<li>Make loss part of model ( to make gpu data usage the same)
+<ul>
+<li>https://discuss.pytorch.org/t/dataparallel-imbalanced-memory-usage/22551/12</li>
+</ul></li>
+<li>Synchronized batch norm?
+<ul>
+<li>Does it save weights and load properly?</li>
+<li>Yes. The name of the weight depends on the object property name it is tored under</li>
+<li>ERROR: Unable to determine the device handle for GPU 0000:17:00.0: GPU is lost.  Reboot the system to recover this GPU</li>
+</ul></li>
+<li>Progress output </li>
+<li>Saving/loading checkpoint
+<ul>
+<li>Rank zero saves with barrier</li>
+<li>Rank zero loads and then gpu copies to others</li>
+</ul></li>
+</ul></li>
+<li><p>How to handling saving and process</p></li>
+<li><p>GDK error</p>
+
+<ul>
+<li>Issue with util.py import pyplot without X server</li>
+</ul></li>
+<li><p>Getting 500 data tif and shp</p>
+
+<ul>
+<li>Issue with database for doyup code</li>
+<li>Issue with decoding utf or kr
+<ul>
+<li>Need to mnaually set encoding</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>8/24</h1>
+
+<ul>
+<li>Half day off due to sickness</li>
+<li>Distributed training read</li>
+</ul>
+
 <h1>8/21</h1>
 
 <ul>

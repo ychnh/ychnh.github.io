@@ -1,3 +1,30 @@
+# 20200915
+* Rule: Learn the tools that get you there. Dont memorize. (Paul Erdos forgetting Hasdorf next day)
+* RUle: Enjoy the process not the destination.
+* Rule: Make it complete by making it simple enough to explain to a person on the street
+
+* Rule: It is your last grand adventure
+
+# 20200904
+* META: What makes a good mathematician (Thnk of it like a sport)
+  * Reducing dependencies between mathematical objects
+  * Persistence
+  * Consistency
+  * No stone unturned (Obsessive Compulsive Behavior)
+    * I know this feeling (OCD-inducing)
+
+
+# 20200901
+* Worked on a problem involving series.
+  * I did not see the connection of viewing the matrices as a series
+  * How could I have improved in this situation?
+  * 
+
+# 20200828
+* Consider homework problems not as chores but as research questions
+  * Change the angle a bit
+* Work on mathematics relearn write your own booklet
+
 # 20200821
 * I finished determinants. Finally did.
 * How did I go about doing this?

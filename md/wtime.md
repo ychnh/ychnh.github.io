@@ -96,12 +96,106 @@ What is 0? It must be 0/a
 
 # Distributed prediction code
 
-# 10/6
+# Make documention
+* For each method?
+
+* X,Y preprocessing
+  * X
+    * HxWx3
+    * dataset.lulc_dataset.fmtx()
+      * /255
+    * 3xHxW 
+  * Y
+    * HxW
+    * dataset.lulc_dataset.fmty()
+    * HxW
+
+* Batching
+  * torch.Dataloader https://pytorch.org/docs/stable/data.html#
+    * batch_size
+    * X
+      * Bx3xHxW
+    * Y
+      * Bx1xHxW
+
+* Model
+  * types: dlinknet, DAN, dlabv3+, fdn, fpn
+  * NCLS = number of classes
+  * Input: Bx3xHxW
+  * Output: BxNCLSxHxW
+    * softmax is applied to last layer of output, making sum of values along NCLS be 1, allowing us to interpret as probability.
+
+* Train
+  * for e in Epoch
+  * for x,y in batch
+    * py = model(x)
+    * loss(y, py)
+      * torch.nn.CrossEntropyLoss()
+
+* Prediction
+  * py = model(x) 
+    * NCLSxHxW
+  * apply torch.argmax() https://pytorch.org/docs/stable/generated/torch.argmax.html
+    * HxW
+
+# LSTM fix overlap
+# FDN
+# FPN
+# DAN152
+# Slow apache hadoop dataloader
+
+# 10/13
+* Prepare papers used in project to government
+* Documentation of method and parameters
+  * data.py
+  * dataset.py
+    * remove dependency in get_dataset
+    * retire old methods
+  * tiles.py
+
+# 10/12
+* .5 Vacation
+* Work report create for military
+* Inspect FDN training results
+  * Still training at e17
+* Design extra shp network
+* Find another deepglobe model source
+* Meeting to explain AI process to government agency
+
+* Create report on new model with source code for FPN
+
+# 10/09
+* Holiday
+
+# 10/08
+* Prepare for presentation
+  * Duration of time
+* Prepare for presentation demo
+* Create Hamachi network
+* FDN
+* Meeting
+  * 3 hours long
+* Discuss with Mr. Choi
+  * Try using the extra resources as part of the input to predict
+
+# 10/07
+* Need to redo C because missing precision recall miou
+* Add precision recall as part of final report
+* Creating report for dan_e25_combined test full
+* Creating report for dan_e50 test full
+* Creating report for dan_e95 test full
+* .5 day off
+
+# 10/06
+* Working on B
 * Inspect training of DAN for epoch 50,100
   * Still training
-
-* If it is a package you can do relative imports by calling
-* import .relpack
+* relative package import research
+  * If it is a package you can do relative imports by calling
+  * import .relpack
+* GPU 0 requires more memory even when the processes are split up investigate
+* Adjust code to save raw deliverables
+* Optimize prediction code
 
 # 10/5
 * FDN review code and architecture

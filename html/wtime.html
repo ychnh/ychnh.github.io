@@ -126,16 +126,177 @@ This means that NaN must be 0/0 which holds no meaning</p>
 
 <h1>Distributed prediction code</h1>
 
-<h1>10/6</h1>
+<h1>Make documention</h1>
 
 <ul>
-<li><p>Inspect training of DAN for epoch 50,100</p>
+<li><p>For each method?</p></li>
+<li><p>X,Y preprocessing</p>
 
+<ul>
+<li>X
+<ul>
+<li>HxWx3</li>
+<li>dataset.lulc_dataset.fmtx()
+<ul>
+<li>/255</li>
+</ul></li>
+<li>3xHxW </li>
+</ul></li>
+<li>Y
+<ul>
+<li>HxW</li>
+<li>dataset.lulc_dataset.fmty()</li>
+<li>HxW</li>
+</ul></li>
+</ul></li>
+<li><p>Batching</p>
+
+<ul>
+<li>torch.Dataloader https://pytorch.org/docs/stable/data.html#
+<ul>
+<li>batch_size</li>
+<li>X
+<ul>
+<li>Bx3xHxW</li>
+</ul></li>
+<li>Y
+<ul>
+<li>Bx1xHxW</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Model</p>
+
+<ul>
+<li>types: dlinknet, DAN, dlabv3+, fdn, fpn</li>
+<li>NCLS = number of classes</li>
+<li>Input: Bx3xHxW</li>
+<li>Output: BxNCLSxHxW
+<ul>
+<li>softmax is applied to last layer of output, making sum of values along NCLS be 1, allowing us to interpret as probability.</li>
+</ul></li>
+</ul></li>
+<li><p>Train</p>
+
+<ul>
+<li>for e in Epoch</li>
+<li>for x,y in batch
+<ul>
+<li>py = model(x)</li>
+<li>loss(y, py)
+<ul>
+<li>torch.nn.CrossEntropyLoss()</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Prediction</p>
+
+<ul>
+<li>py = model(x) 
+<ul>
+<li>NCLSxHxW</li>
+</ul></li>
+<li>apply torch.argmax() https://pytorch.org/docs/stable/generated/torch.argmax.html
+<ul>
+<li>HxW</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1>LSTM fix overlap</h1>
+
+<h1>FDN</h1>
+
+<h1>FPN</h1>
+
+<h1>DAN152</h1>
+
+<h1>Slow apache hadoop dataloader</h1>
+
+<h1>10/13</h1>
+
+<ul>
+<li>Prepare papers used in project to government</li>
+<li>Documentation of method and parameters
+<ul>
+<li>data.py</li>
+<li>dataset.py
+<ul>
+<li>remove dependency in get_dataset</li>
+<li>retire old methods</li>
+</ul></li>
+<li>tiles.py</li>
+</ul></li>
+</ul>
+
+<h1>10/12</h1>
+
+<ul>
+<li>.5 Vacation</li>
+<li>Work report create for military</li>
+<li>Inspect FDN training results
+<ul>
+<li>Still training at e17</li>
+</ul></li>
+<li>Design extra shp network</li>
+<li>Find another deepglobe model source</li>
+<li><p>Meeting to explain AI process to government agency</p></li>
+<li><p>Create report on new model with source code for FPN</p></li>
+</ul>
+
+<h1>10/09</h1>
+
+<ul>
+<li>Holiday</li>
+</ul>
+
+<h1>10/08</h1>
+
+<ul>
+<li>Prepare for presentation
+<ul>
+<li>Duration of time</li>
+</ul></li>
+<li>Prepare for presentation demo</li>
+<li>Create Hamachi network</li>
+<li>FDN</li>
+<li>Meeting
+<ul>
+<li>3 hours long</li>
+</ul></li>
+<li>Discuss with Mr. Choi
+<ul>
+<li>Try using the extra resources as part of the input to predict</li>
+</ul></li>
+</ul>
+
+<h1>10/07</h1>
+
+<ul>
+<li>Need to redo C because missing precision recall miou</li>
+<li>Add precision recall as part of final report</li>
+<li>Creating report for dan<strong>e25</strong>combined test full</li>
+<li>Creating report for dan_e50 test full</li>
+<li>Creating report for dan_e95 test full</li>
+<li>.5 day off</li>
+</ul>
+
+<h1>10/06</h1>
+
+<ul>
+<li>Working on B</li>
+<li>Inspect training of DAN for epoch 50,100
 <ul>
 <li>Still training</li>
 </ul></li>
-<li><p>If it is a package you can do relative imports by calling</p></li>
+<li>relative package import research
+<ul>
+<li>If it is a package you can do relative imports by calling</li>
 <li>import .relpack</li>
+</ul></li>
+<li>GPU 0 requires more memory even when the processes are split up investigate</li>
+<li>Adjust code to save raw deliverables</li>
+<li>Optimize prediction code</li>
 </ul>
 
 <h1>10/5</h1>

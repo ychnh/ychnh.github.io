@@ -1,4 +1,13 @@
-* https://docs.google.com/presentation/d/1V80PJ8ByYMTXJDHYgYPEOx3UqL_YWpAB6ZJVbDh3OYA/edit?usp=sharing
+* Personal Mantras
+  * Forget and learn again
+  * Enjoy the process
+  * If something is worth doing, it is worth doing badly
+  * Why? Why you asked the question?
+  * Have you seen this before?
+  * Can you reduce it to a simpler set
+
+* George Polya: How to solve it
+
 * conv
   * allow model to store some context of the words/invovled
 

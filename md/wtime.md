@@ -138,11 +138,76 @@ What is 0? It must be 0/a
   * apply torch.argmax() https://pytorch.org/docs/stable/generated/torch.argmax.html
     * HxW
 
-# LSTM fix overlap
-# FDN
-# FPN
-# DAN152
-# Slow apache hadoop dataloader
+# TODO
+* ( ) Add softmax to last layer of all model
+* ( ) LSTM fix overlap
+* (3) Evaluation
+  * tile issue with txt pointing path
+* (4) DAN152
+
+* ( ) Slow apache hadoop dataloader
+* (5) Documentation
+* (5) FDN
+* (5) model save bugfix by using model.module when saving statedict
+* (5) Review new model
+
+TODO:
+* Test lstm overlap fix
+* Test softmax fix with loading existing
+* Evaluation and tile path revert
+* Test image aug
+
+# 10/21
+* Inspect training for DDCM
+* Generate report for DDCM
+
+* Test day of new changes 
+  * softmax
+    * Loading weights to changed model after adding softmax
+  * lstm overlap test
+  * image aug test
+
+* Add evaluation
+
+
+# 10/20
+* Get and setup DDCM from github repo
+* Train DDCM
+* Integrate image augmentation
+  * Rotate
+  * Flip
+  * Color
+
+# 10/19
+* .5 day off
+* DAN152
+  * Inspect results of training
+  * Generate report
+* Integrate LSTM overlap solution
+
+# 10/16
+* DAN152 implement
+  * better implementation by using intermediate torch definition for resnet
+* Training DAN152
+* Meeting with Mr.Choi about reference material
+* Fix softmax bug
+  * add torch.nn.Softmax(dim) 
+* Fix LSTM overlap issue
+  * Test tile2
+  * Run test
+
+# 10/15
+* documentation writing of the whole ai process
+* FDN report
+* Inspect reference dataset material
+  * Design how model will use reference material
+
+# 10/14
+* Prepare documentation of the whole ai process with diagrams
+  * Preprocessing
+  * Training
+  * Testing
+* Review paper of new model DDCM
 
 # 10/13
 * Prepare papers used in project to government
@@ -161,7 +226,6 @@ What is 0? It must be 0/a
 * Design extra shp network
 * Find another deepglobe model source
 * Meeting to explain AI process to government agency
-
 * Create report on new model with source code for FPN
 
 # 10/09

@@ -1,4 +1,27 @@
-* Personal Mantras
+# On Math v WW
+* i play ww till really late night, how about for math?
+* What about ww that keeps me going?
+  * Clear end goal
+  * Sense of progression
+* How did I learn ww
+  * Constatnly everywhere I am
+  * Break down into simliar experiences
+  * genuinue interest in improving
+
+# On Math
+* I think one thing that will help you
+* Is to understand that it is like a sport like anything else.
+* That it can be broken down into parts
+* That it can be practiced and improved
+* So what must you improve?
+* Keeping things simple
+* Studying
+* Simplifying existing concepts into better abstractions
+* Persistant
+* Try reading the book how to solve it again.
+
+
+# Personal Mantras
   * Forget and learn again
   * Enjoy the process
   * If something is worth doing, it is worth doing badly

@@ -203,15 +203,114 @@ This means that NaN must be 0/0 which holds no meaning</p>
 </ul></li>
 </ul>
 
-<h1>LSTM fix overlap</h1>
+<h1>TODO</h1>
 
-<h1>FDN</h1>
+<ul>
+<li>( ) Add softmax to last layer of all model</li>
+<li>( ) LSTM fix overlap</li>
+<li>(3) Evaluation
+<ul>
+<li>tile issue with txt pointing path</li>
+</ul></li>
+<li><p>(4) DAN152</p></li>
+<li><p>( ) Slow apache hadoop dataloader</p></li>
+<li>(5) Documentation</li>
+<li>(5) FDN</li>
+<li>(5) model save bugfix by using model.module when saving statedict</li>
+<li>(5) Review new model</li>
+</ul>
 
-<h1>FPN</h1>
+<p>TODO:
+* Test lstm overlap fix
+* Test softmax fix with loading existing
+* Evaluation and tile path revert
+* Test image aug</p>
 
-<h1>DAN152</h1>
+<h1>10/21</h1>
 
-<h1>Slow apache hadoop dataloader</h1>
+<ul>
+<li>Inspect training for DDCM</li>
+<li><p>Generate report for DDCM</p></li>
+<li><p>Test day of new changes </p>
+
+<ul>
+<li>softmax
+<ul>
+<li>Loading weights to changed model after adding softmax</li>
+</ul></li>
+<li>lstm overlap test</li>
+<li>image aug test</li>
+</ul></li>
+<li><p>Add evaluation</p></li>
+</ul>
+
+<h1>10/20</h1>
+
+<ul>
+<li>Get and setup DDCM from github repo</li>
+<li>Train DDCM</li>
+<li>Integrate image augmentation
+<ul>
+<li>Rotate</li>
+<li>Flip</li>
+<li>Color</li>
+</ul></li>
+</ul>
+
+<h1>10/19</h1>
+
+<ul>
+<li>.5 day off</li>
+<li>DAN152
+<ul>
+<li>Inspect results of training</li>
+<li>Generate report</li>
+</ul></li>
+<li>Integrate LSTM overlap solution</li>
+</ul>
+
+<h1>10/16</h1>
+
+<ul>
+<li>DAN152 implement
+<ul>
+<li>better implementation by using intermediate torch definition for resnet</li>
+</ul></li>
+<li>Training DAN152</li>
+<li>Meeting with Mr.Choi about reference material</li>
+<li>Fix softmax bug
+<ul>
+<li>add torch.nn.Softmax(dim) </li>
+</ul></li>
+<li>Fix LSTM overlap issue
+<ul>
+<li>Test tile2</li>
+<li>Run test</li>
+</ul></li>
+</ul>
+
+<h1>10/15</h1>
+
+<ul>
+<li>documentation writing of the whole ai process</li>
+<li>FDN report</li>
+<li>Inspect reference dataset material
+<ul>
+<li>Design how model will use reference material</li>
+</ul></li>
+</ul>
+
+<h1>10/14</h1>
+
+<ul>
+<li>Prepare documentation of the whole ai process with diagrams
+<ul>
+<li>Preprocessing</li>
+<li>Training</li>
+<li>Testing</li>
+</ul></li>
+<li>Review paper of new model DDCM</li>
+</ul>
 
 <h1>10/13</h1>
 
@@ -240,8 +339,8 @@ This means that NaN must be 0/0 which holds no meaning</p>
 </ul></li>
 <li>Design extra shp network</li>
 <li>Find another deepglobe model source</li>
-<li><p>Meeting to explain AI process to government agency</p></li>
-<li><p>Create report on new model with source code for FPN</p></li>
+<li>Meeting to explain AI process to government agency</li>
+<li>Create report on new model with source code for FPN</li>
 </ul>
 
 <h1>10/09</h1>

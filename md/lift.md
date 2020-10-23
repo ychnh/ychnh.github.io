@@ -3,8 +3,76 @@ We are going into the big weight zone so we also need to careful.
 Time to grow proper not just aesthetics
 We got much more to grow
 
-# Modes
 
+
+
+# Cycle 10-23
+## Day 1
+### Pullup
+### Rows
+### Shoulder Press
+
+## Day 2
+### Rows
+### Bench
+### Tricep
+
+## Day 3
+### Pull up - light
+### Squat
+### Forearm
+
+## REST --------------------------
+
+## Day 4
+### Rows
+### Pull up
+### Shoulder Press
+
+## Day 5
+### Pull up
+### Bench
+### Tricep
+
+## Day 6
+### Deadlift
+### Forearm
+### Bicep
+
+## REST --------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# -------------------------------
+# TEMPLATES
+# -------------------------------
+
+
+# Modes
 ## Volume
 S1 40-5 40-5 40-5 40-5
 S2 50-5 50-5 50-5 50-5

@@ -20,7 +20,6 @@
 * Persistant
 * Try reading the book how to solve it again.
 
-
 # Personal Mantras
   * Forget and learn again
   * Enjoy the process

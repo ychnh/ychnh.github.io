@@ -5,6 +5,7 @@
 * [docs.html](html/docs.html)
 * [wtime.html](html/wtime.html)
 * [rules.html](html/rules.html)
+* [lift.html](html/lift.html)
 * ./old
   * [old/hldmod.html](html/old/hldmod.html)
   * [old/,journal.html](html/old/,journal.html)

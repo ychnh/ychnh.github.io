@@ -139,17 +139,20 @@ What is 0? It must be 0/a
     * HxW
 
 # TODO
-* ( ) Add softmax to last layer of all model
-* ( ) LSTM fix overlap
-* (3) Evaluation
-  * tile issue with txt pointing path
-* (4) DAN152
-
 * ( ) Slow apache hadoop dataloader
+* ( ) Add softmax to last layer of all model (Changed on Predict)
+* ( ) 
+* (3) Evaluation
+
+* (5) tile issue with txt pointing path
+* (5) DAN152
+* (5) LSTM fix overlap
 * (5) Documentation
 * (5) FDN
 * (5) model save bugfix by using model.module when saving statedict
 * (5) Review new model
+
+
 
 TODO:
 * Test lstm overlap fix
@@ -157,18 +160,38 @@ TODO:
 * Evaluation and tile path revert
 * Test image aug
 
+# 10/23
+* Script to interface with UI
+  * script_predict.py
+* Improve argparse to generate hyperparameter
+* Test script train, predict, test
+* Issues installing albumentations for augmentation
+  * No CMAKE_CXX_COMPILER could be found
+  * Causing issues in other areas 
+
+# 10/22
+* Fix warning for outdated upsample function for FPN
+* Test day of new changes 
+  * lstm overlap test
+* postgres
+  * Test postgres interface
+  * psql -d ailcm -h ailcm-db1 -p 5432 -U postgres -W
+  * select * from ta_mntrng_accrcy;
+* Adding status Updater
+* Script to interface with UI
+  * script_train.py
+  * script_test.py
+
 # 10/21
 * Inspect training for DDCM
 * Generate report for DDCM
-
 * Test day of new changes 
   * softmax
     * Loading weights to changed model after adding softmax
   * lstm overlap test
-  * image aug test
-
-* Add evaluation
-
+    * fixing bug with mismatch
+  * Computer Issues need to change to edge
+* Training for FPN_Seg
 
 # 10/20
 * Get and setup DDCM from github repo

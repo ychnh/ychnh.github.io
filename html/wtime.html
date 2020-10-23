@@ -206,14 +206,13 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <h1>TODO</h1>
 
 <ul>
-<li>( ) Add softmax to last layer of all model</li>
-<li>( ) LSTM fix overlap</li>
-<li>(3) Evaluation
-<ul>
-<li>tile issue with txt pointing path</li>
-</ul></li>
-<li><p>(4) DAN152</p></li>
-<li><p>( ) Slow apache hadoop dataloader</p></li>
+<li>( ) Slow apache hadoop dataloader</li>
+<li>( ) Add softmax to last layer of all model (Changed on Predict)</li>
+<li>( ) </li>
+<li><p>(3) Evaluation</p></li>
+<li><p>(5) tile issue with txt pointing path</p></li>
+<li>(5) DAN152</li>
+<li>(5) LSTM fix overlap</li>
 <li>(5) Documentation</li>
 <li>(5) FDN</li>
 <li>(5) model save bugfix by using model.module when saving statedict</li>
@@ -226,22 +225,62 @@ This means that NaN must be 0/0 which holds no meaning</p>
 * Evaluation and tile path revert
 * Test image aug</p>
 
+<h1>10/23</h1>
+
+<ul>
+<li>Script to interface with UI
+<ul>
+<li>script_predict.py</li>
+</ul></li>
+<li>Improve argparse to generate hyperparameter</li>
+<li>Test script train, predict, test</li>
+<li>Issues installing albumentations for augmentation
+<ul>
+<li>No CMAKE<strong>CXX</strong>COMPILER could be found</li>
+<li>Causing issues in other areas </li>
+</ul></li>
+</ul>
+
+<h1>10/22</h1>
+
+<ul>
+<li>Fix warning for outdated upsample function for FPN</li>
+<li>Test day of new changes 
+<ul>
+<li>lstm overlap test</li>
+</ul></li>
+<li>postgres
+<ul>
+<li>Test postgres interface</li>
+<li>psql -d ailcm -h ailcm-db1 -p 5432 -U postgres -W</li>
+<li>select * from ta<strong>mntrng</strong>accrcy;</li>
+</ul></li>
+<li>Adding status Updater</li>
+<li>Script to interface with UI
+<ul>
+<li>script<strong>train.py</li>
+<li>script</strong>test.py</li>
+</ul></li>
+</ul>
+
 <h1>10/21</h1>
 
 <ul>
 <li>Inspect training for DDCM</li>
-<li><p>Generate report for DDCM</p></li>
-<li><p>Test day of new changes </p>
-
+<li>Generate report for DDCM</li>
+<li>Test day of new changes 
 <ul>
 <li>softmax
 <ul>
 <li>Loading weights to changed model after adding softmax</li>
 </ul></li>
-<li>lstm overlap test</li>
-<li>image aug test</li>
+<li>lstm overlap test
+<ul>
+<li>fixing bug with mismatch</li>
 </ul></li>
-<li><p>Add evaluation</p></li>
+<li>Computer Issues need to change to edge</li>
+</ul></li>
+<li>Training for FPN_Seg</li>
 </ul>
 
 <h1>10/20</h1>

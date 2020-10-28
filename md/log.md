@@ -6,7 +6,8 @@
     * why is this good? break away from abstraction to explore a new frame of mind
 * can you prove it with less?
 * If not less why is it so what more do you need?
-* * can you think of some examples?
+* can you think of some examples?
+
 # When you fail to make progress
 * Why does this happen?
 * I feel like I have failed?

@@ -1,3 +1,40 @@
+* space - shdwstrk/bkstb (they share gcd so place one first)
+* shift-space shrk
+3 - evs
+4 - speed
+h - hlt
+t - trinket
+~ - blink
+r - run
+tab,q,e,1,2 - sap,chp,kid,kick,blind
+f - fin
+caps - jmp
+* m5- stl 
+* m4- switch targ
+* mwup/shift - shddl, smoke
+* mwdown/shift - opener, strong opener (add reset cd counter of 1 sec)
+opener (symdth,shdnc,shdstrk)
+
+* v/shift - van, vial
+* c racial
+* z clk
+* s ddge
+* x mk4dth
+- mnt
+
+
+
+[ cc | etc/gen  | def ]
+[ cc | buff     | def ]
+cc - tb,1q2e
+def - zsxcv
+etc - th345
+fin - r
+
+use more s/mouse for sp that require movement
+sxz for not requre movement (feint any other?)
+
+
 * Transformer/Bert Training for Landcover?
 * Dataset - Keep track of source (Not sure how to go about doing this?)
 * Progress - Keep the hyperparameters used?
@@ -22,7 +59,6 @@ TODO
     * Is it possible to serialize args?
 
 * Decoder
-
 # How to predict the future
 
 We are given a sequence of landcover images from the past that are of the same size. {Image0, Image1, Image2, Image3}
@@ -159,6 +195,40 @@ TODO:
 * Test softmax fix with loading existing
 * Evaluation and tile path revert
 * Test image aug
+
+* Todo validation estimation/train estimation
+  * Time test of compute confmat
+  * Integrate to training loop
+
+* Profession and progression of 8.1 8.2 and 8.3
+
+# 10/27
+* Time analysis of confmat generation
+  * %timeit y,py = pred()
+    * 176 ms ± 299 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+  * %timeit conf2 = metric.confmat(y,py)
+    * 11.8 s ± 105 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+  * Time Analysis shows torch.bincount() being source of slowdown
+    * https://discuss.pytorch.org/t/torch-bincount-1000x-slower-on-cuda/42654
+  * move data to cpu prior to torch bincount
+    * %timeit conf2 = metric.confmat(y,py)
+      * 60.6 ms ± 2.15 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+* Discussions with Igor on working with interface
+* Discussions with Mr. Jaeho about model weight update
+* Create dataset for 170 extra data
+* Training dan with 170 extra data
+  * Encounter bug while training. fix. Updating wrong info in dictionary
+
+# 10/26
+* Working on adding validation dataset in training loop
+* add epoch_no
+* discuss training metrics with Igor and Mr. Jaeho. 
+  * No changes for now
+
+* computing metric from batch of py and y
+  * Study existing conf mat generating script 
+  * Create test environment to test this
+  * Issue with model not predctig properly
 
 # 10/23
 * Script to interface with UI

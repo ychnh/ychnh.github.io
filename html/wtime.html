@@ -2,6 +2,41 @@
 <button onclick="toggle_show()">Table of Contents</button>
 <div id="toc_frame"> <div id="toc"> </div> </div> <div id="contents">
 <ul>
+<li>space - shdwstrk/bkstb (they share gcd so place one first)</li>
+<li>shift-space shrk
+3 - evs
+4 - speed
+h - hlt
+t - trinket
+~ - blink
+r - run
+tab,q,e,1,2 - sap,chp,kid,kick,blind
+f - fin
+caps - jmp</li>
+<li>m5- stl </li>
+<li>m4- switch targ</li>
+<li>mwup/shift - shddl, smoke</li>
+<li><p>mwdown/shift - opener, strong opener (add reset cd counter of 1 sec)
+opener (symdth,shdnc,shdstrk)</p></li>
+<li><p>v/shift - van, vial</p></li>
+<li>c racial</li>
+<li>z clk</li>
+<li>s ddge</li>
+<li>x mk4dth</li>
+<li>mnt</li>
+</ul>
+
+<p>[ cc | etc/gen  | def ]
+[ cc | buff     | def ]
+cc - tb,1q2e
+def - zsxcv
+etc - th345
+fin - r</p>
+
+<p>use more s/mouse for sp that require movement
+sxz for not requre movement (feint any other?)</p>
+
+<ul>
 <li>Transformer/Bert Training for Landcover?</li>
 <li>Dataset - Keep track of source (Not sure how to go about doing this?)</li>
 <li>Progress - Keep the hyperparameters used?</li>
@@ -29,10 +64,9 @@
     * Is it possible to serialize args?</p>
 
 <ul>
-<li>Decoder</li>
+<li>Decoder
+<h1>How to predict the future</h1></li>
 </ul>
-
-<h1>How to predict the future</h1>
 
 <p>We are given a sequence of landcover images from the past that are of the same size. {Image0, Image1, Image2, Image3}
 We tile each Image# identically with a size of 1024. Then each tile has corresponding tiles in the other images.
@@ -224,6 +258,69 @@ This means that NaN must be 0/0 which holds no meaning</p>
 * Test softmax fix with loading existing
 * Evaluation and tile path revert
 * Test image aug</p>
+
+<ul>
+<li><p>Todo validation estimation/train estimation</p>
+
+<ul>
+<li>Time test of compute confmat</li>
+<li>Integrate to training loop</li>
+</ul></li>
+<li><p>Profession and progression of 8.1 8.2 and 8.3</p></li>
+</ul>
+
+<h1>10/27</h1>
+
+<ul>
+<li>Time analysis of confmat generation
+<ul>
+<li>%timeit y,py = pred()
+<ul>
+<li>176 ms ± 299 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)</li>
+</ul></li>
+<li>%timeit conf2 = metric.confmat(y,py)
+<ul>
+<li>11.8 s ± 105 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)</li>
+</ul></li>
+<li>Time Analysis shows torch.bincount() being source of slowdown
+<ul>
+<li>https://discuss.pytorch.org/t/torch-bincount-1000x-slower-on-cuda/42654</li>
+</ul></li>
+<li>move data to cpu prior to torch bincount
+<ul>
+<li>%timeit conf2 = metric.confmat(y,py)
+<ul>
+<li>60.6 ms ± 2.15 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Discussions with Igor on working with interface</li>
+<li>Discussions with Mr. Jaeho about model weight update</li>
+<li>Create dataset for 170 extra data</li>
+<li>Training dan with 170 extra data
+<ul>
+<li>Encounter bug while training. fix. Updating wrong info in dictionary</li>
+</ul></li>
+</ul>
+
+<h1>10/26</h1>
+
+<ul>
+<li>Working on adding validation dataset in training loop</li>
+<li>add epoch_no</li>
+<li><p>discuss training metrics with Igor and Mr. Jaeho. </p>
+
+<ul>
+<li>No changes for now</li>
+</ul></li>
+<li><p>computing metric from batch of py and y</p>
+
+<ul>
+<li>Study existing conf mat generating script </li>
+<li>Create test environment to test this</li>
+<li>Issue with model not predctig properly</li>
+</ul></li>
+</ul>
 
 <h1>10/23</h1>
 

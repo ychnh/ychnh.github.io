@@ -1,3 +1,25 @@
+# solving the cardinality a<=b b<=a -> a=b
+* how were you able to solve when b4 you wre not?
+  * thinking in terms of words.
+* are you on the right path?
+* can you put it in simple words
+    * why is this good? break away from abstraction to explore a new frame of mind
+* can you prove it with less?
+* If not less why is it so what more do you need?
+* * can you think of some examples?
+# When you fail to make progress
+* Why does this happen?
+* I feel like I have failed?
+* haven't got a good plan
+* I dont feel motivated. Need a *strong why*
+  * failure is where you feel so sick and tired of the situation that you feel the drove to go.
+* *Why do you study* mathematics?
+  * mastery?
+  * play
+  * whqt is play in math?
+* *Why this particular problem?*
+* *How is this problem significant in your understanding of mathematics?*
+
 # On Math v WW
 * i play ww till really late night, how about for math?
 * What about ww that keeps me going?

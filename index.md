@@ -1,27 +1,27 @@
 * ./
-* [math.html](html/math.html)
-* [log.html](html/log.html)
-* [board.html](html/board.html)
-* [docs.html](html/docs.html)
-* [wtime.html](html/wtime.html)
-* [rules.html](html/rules.html)
-* [lift.html](html/lift.html)
-* ./old
-  * [old/hldmod.html](html/old/hldmod.html)
-  * [old/,journal.html](html/old/,journal.html)
-  * [old/index.html](html/old/index.html)
-  * [old/todo.html](html/old/todo.html)
-  * [old/test.html](html/old/test.html)
-  * [old/,wtime.html](html/old/,wtime.html)
-  * [old/workout.html](html/old/workout.html)
-  * [old/readme.html](html/old/readme.html)
+* [board.html](https://ychnh.github.io/html/board.html)
+* [docs.html](https://ychnh.github.io/html/docs.html)
+* [lift.html](https://ychnh.github.io/html/lift.html)
+* [log.html](https://ychnh.github.io/html/log.html)
+* [math.html](https://ychnh.github.io/html/math.html)
+* [rules.html](https://ychnh.github.io/html/rules.html)
+* [wtime.html](https://ychnh.github.io/html/wtime.html)
 * ./ai
-  * [ai/topics.html](html/ai/topics.html)
-* ./test
-  * [test/wtime.html](html/test/wtime.html)
-  * [test/journal.html](html/test/journal.html)
-  * ./test/nested2
-    * [test/nested2/test.html](html/test/nested2/test.html)
+  * [ai/topics.html](https://ychnh.github.io/html/ai/topics.html)
+* ./old
+  * [old/,journal.html](https://ychnh.github.io/html/old/,journal.html)
+  * [old/,wtime.html](https://ychnh.github.io/html/old/,wtime.html)
+  * [old/hldmod.html](https://ychnh.github.io/html/old/hldmod.html)
+  * [old/index.html](https://ychnh.github.io/html/old/index.html)
+  * [old/readme.html](https://ychnh.github.io/html/old/readme.html)
+  * [old/test.html](https://ychnh.github.io/html/old/test.html)
+  * [old/todo.html](https://ychnh.github.io/html/old/todo.html)
+  * [old/workout.html](https://ychnh.github.io/html/old/workout.html)
 * ./temp
-  * [temp/test.html](html/temp/test.html)
-  * [temp/list.html](html/temp/list.html)
+  * [temp/list.html](https://ychnh.github.io/html/temp/list.html)
+  * [temp/test.html](https://ychnh.github.io/html/temp/test.html)
+* ./test
+  * [test/journal.html](https://ychnh.github.io/html/test/journal.html)
+  * [test/wtime.html](https://ychnh.github.io/html/test/wtime.html)
+  * ./test/nested2
+    * [test/nested2/test.html](https://ychnh.github.io/html/test/nested2/test.html)

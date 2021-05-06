@@ -1,6 +1,4 @@
-<!DOCTYPE html><html><head><title>MathJax TeX Test Page</title><link rel = "stylesheet" type = "text/css" href = "https://ychnh.github.io/test.css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> <script type="text/javascript" id="M" src="https://ychnh.github.io/tbl_contents.js"> </script> </head> <body style="background-color:white;">
-<button onclick="toggle_show()">Table of Contents</button>
-<div id="toc_frame"> <div id="toc"> </div> </div> <div id="contents">
+<!DOCTYPE html><html><head><title>MathJax TeX Test Page</title><link rel = "stylesheet" type = "text/css" href = "https://ychnh.github.io/style.css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> </head> <body style="background-color:white;">
 <ul>
 <li>space - shdwstrk/bkstb (they share gcd so place one first)</li>
 <li>shift-space shrk
@@ -333,7 +331,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li>Test script train, predict, test</li>
 <li>Issues installing albumentations for augmentation
 <ul>
-<li>No CMAKE<strong>CXX</strong>COMPILER could be found</li>
+<li>No CMAKE<em>CXX</em>COMPILER could be found</li>
 <li>Causing issues in other areas </li>
 </ul></li>
 </ul>
@@ -350,13 +348,13 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <ul>
 <li>Test postgres interface</li>
 <li>psql -d ailcm -h ailcm-db1 -p 5432 -U postgres -W</li>
-<li>select * from ta<strong>mntrng</strong>accrcy;</li>
+<li>select * from ta<em>mntrng</em>accrcy;</li>
 </ul></li>
 <li>Adding status Updater</li>
 <li>Script to interface with UI
 <ul>
-<li>script<strong>train.py</li>
-<li>script</strong>test.py</li>
+<li>script<em>train.py</li>
+<li>script</em>test.py</li>
 </ul></li>
 </ul>
 
@@ -510,7 +508,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <ul>
 <li>Need to redo C because missing precision recall miou</li>
 <li>Add precision recall as part of final report</li>
-<li>Creating report for dan<strong>e25</strong>combined test full</li>
+<li>Creating report for dan<em>e25</em>combined test full</li>
 <li>Creating report for dan_e50 test full</li>
 <li>Creating report for dan_e95 test full</li>
 <li>.5 day off</li>
@@ -753,7 +751,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li><p>Counting model parameter in pytorch</p>
 
 <ul>
-<li>def count<strong>parameters(model): return sum(p.numel() for p in model.parameters() if p.requires</strong>grad)</li>
+<li>def count<em>parameters(model): return sum(p.numel() for p in model.parameters() if p.requires</em>grad)</li>
 </ul></li>
 <li><p>How to add L2 regularization loss</p>
 
@@ -789,9 +787,9 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li><p>MBConv Block (Inverted Residual Block) Mobilenetv2: Inverted residuals and linear bottlenecks.</p>
 
 <ul>
-<li><strong>See proof of invertibility</strong></li>
+<li><em>See proof of invertibility</em></li>
 <li>Inverted Residual Block a narrow -> wide -> narrow approach.</li>
-<li>widen with a 1x1 convolution, then use a 3x3 <strong>depthwise convolution</strong>, then we use a 1x1 to ResAdd.</li>
+<li>widen with a 1x1 convolution, then use a 3x3 <em>depthwise convolution</em>, then we use a 1x1 to ResAdd.</li>
 <li>Depthwise separable convolution 3x1 1x3</li>
 </ul></li>
 <li><p>Squeeze and excitation optimization</p>
@@ -893,7 +891,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 
 <ul>
 <li>https://github.com/jhhuang96/ConvLSTM-PyTorch</li>
-<li>https://github.com/automan000/Convolutional<strong>LSTM</strong>PyTorch</li>
+<li>https://github.com/automan000/Convolutional<em>LSTM</em>PyTorch</li>
 </ul></li>
 <li><p>Add backbone 101 to deepagg net</p>
 
@@ -977,7 +975,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li>Following up on issue
 <ul>
 <li>Run and try with resnet it is fine</li>
-<li>Adjust with find<strong>unused</strong>parameters but it doesn't matter</li>
+<li>Adjust with find<em>unused</em>parameters but it doesn't matter</li>
 </ul></li>
 </ul></li>
 <li><p>Creating dataset</p></li>
@@ -1003,7 +1001,7 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li>Distributed trianing demo implement
 <ul>
 <li>Partition dataset</li>
-<li>Issue with find<strong>unused</strong>parameters=True</li>
+<li>Issue with find<em>unused</em>parameters=True</li>
 </ul></li>
 <li><p>Consideration</p>
 
@@ -1068,11 +1066,11 @@ This means that NaN must be 0/0 which holds no meaning</p>
 <li><p>Documentation</p></li>
 <li><p>Fix color for confusion matrix</p></li>
 <li>Add diagonal line for confusion matrix</li>
-<li>Add save option for imshow, imshow<strong>confmat, imshow</strong>list ...
+<li>Add save option for imshow, imshow<em>confmat, imshow</em>list ...
 <ul>
 <li>Is there a way to group common functionality together? figsize and plt.savefig()</li>
 <li>Bug with savefig() saving blank image</li>
-<li>plt savefig with background white [<strong>FUTURE</strong>]</li>
+<li>plt savefig with background white [<em>FUTURE</em>]</li>
 </ul></li>
 </ul>
 
@@ -1342,10 +1340,10 @@ mkdir build
 cd build
 cmake .. ^
   -G"Visual Studio 15 2017 Win64" ^
-  -DFFMPEG<strong>DIR:PATH="C:/ffmpeg-4.3" ^
-  -DVIDEO</strong>CODEC<strong>SDK</strong>DIR:PATH="C:/Install/Video<strong>Codec</strong>SDK<strong>9.1.23" ^
-  -DGENERATE</strong>PYTHON<strong>BINDINGS:BOOL="1" ^
-  -DCMAKE</strong>INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"</p>
+  -DFFMPEG<em>DIR:PATH="C:/ffmpeg-4.3" ^
+  -DVIDEO</em>CODEC<em>SDK</em>DIR:PATH="C:/Install/Video<em>Codec</em>SDK<em>9.1.23" ^
+  -DGENERATE</em>PYTHON<em>BINDINGS:BOOL="1" ^
+  -DCMAKE</em>INSTALL_PREFIX:PATH="D:/VideoProcessingFramework"</p>
 
 <ul>
 <li>TODO: Train models for the other ones. B0, A1.</li>
@@ -1510,7 +1508,7 @@ o semieye code refactoring for batch</li>
 <li>Write presentation and preparing demo
 <ul>
 <li>mIOU leq Recall Precision</li>
-<li>mIOU estimation using mean<strong>precision and mean</strong>recall</li>
+<li>mIOU estimation using mean<em>precision and mean</em>recall</li>
 <li>Calculating bounds for estimation</li>
 </ul></li>
 <li>Tiling issue find examples
@@ -1607,13 +1605,13 @@ o semieye code refactoring for batch</li>
 <li>this means that combine will only work the second time around</li>
 <li>Investigate the source copy of the repo in RTT machine to verify
 <ul>
-<li><strong>Only the last category of [road, train, river] is being saved under #####_linear. #####.png is just a blank black i \mage</strong></li>
+<li><em>Only the last category of [road, train, river] is being saved under #####_linear. #####.png is just a blank black i \mage</em></li>
 </ul></li>
 </ul></li>
 <li>Investigate
 <ul>
-<li>overwrite<strong>etc</strong>with_linear.py</li>
-<li>gray<strong>to</strong>rgb.py</li>
+<li>overwrite<em>etc</em>with_linear.py</li>
+<li>gray<em>to</em>rgb.py</li>
 </ul></li>
 </ul>
 
@@ -1784,7 +1782,7 @@ o semieye code refactoring for batch</li>
 
 <ul>
 <li>Multitask loss training. Need to calculate random loss and scale each accordingly to this value</li>
-<li>ADDED MASK LO<strong>S</strong>S</li>
+<li>ADDED MASK LO<em>S</em>S</li>
 <li>Think we need to freeze the layers prior to regression
 <ul>
 <li>Debugging freeze training inspect</li>
@@ -2007,7 +2005,7 @@ o semieye code refactoring for batch</li>
 <li>c_swmp = (124,34,126)</li>
 <li>c_brrn = (89,206,202)</li>
 <li>c_water = (6,2,250)</li>
-<li>cmap = ListedColormap([c<strong>road, c</strong>wood, c<strong>indst, c</strong>paddy, c<strong>field, c</strong>farm, c<strong>orchid, c</strong>plain, c<strong>swmp, c</strong>brrn, c_water])</li>
+<li>cmap = ListedColormap([c<em>road, c</em>wood, c<em>indst, c</em>paddy, c<em>field, c</em>farm, c<em>orchid, c</em>plain, c<em>swmp, c</em>brrn, c_water])</li>
 <li><p>['road', 'frst', 'buld', 'pddy', 'fild', 'farm', 'orcd', 'plan', 'swmp', 'brrn', 'watr']</p></li>
 <li><p>vmin=0, vmax=6</p></li>
 <li>Colormap and normalization</li>
@@ -2367,8 +2365,8 @@ x Validate water spray data
 x Revalidate due to issue with continuing after crash</li>
 <li>Train spray detector
 x Script file
-x Complete SPRAY<strong>LIQUID</strong>SCRIPT=LIQUID<strong>VALID
-x Complete POSITION</strong>VALID
+x Complete SPRAY<em>LIQUID</em>SCRIPT=LIQUID<em>VALID
+x Complete POSITION</em>VALID
 x Make core lib
 x Remove BG dependecy because I dont think it matters
 <ul>
@@ -2401,18 +2399,18 @@ x Remove warning message on posenet load weights</li>
 <li>Solution: will we aug the image, need to get a larger outer frame when preserving the image and then crop from center</li>
 <li>This is a more advanced form of cropping</li>
 <li>Seems like the most recent problem is due to my pose net not being up to par to various variations in the nozzle frame capture. In otherwords, my posenet should and needs to be able to detect pose as well as the nozzle appears in the detection frame and we need to adjust the augmentation according to this</li>
-<li><strong>*We cut some corners</strong>* regarding augmentation and now we need to fix it</li>
+<li><strong>We cut some corners</strong> regarding augmentation and now we need to fix it</li>
 <li>Also consider how we started training repnet from base and tranformation matrix. What is this base form.</li>
 </ul></li>
 <li><p>Design</p>
 
 <ul>
 <li>We trained the pose detector with viewing the entire outer frame. If we want it to be more robust we should train pose detection with zoom and closer variation.</li>
-<li><strong>POSE</strong> Detection
+<li><em>POSE</em> Detection
 <ul>
 <li>Improve pose detection by training with non perfect crops and variations in crop</li>
 </ul></li>
-<li><strong>SPRAY</strong> detection
+<li><em>SPRAY</em> detection
 <ul>
 <li>In a similar manner, sprat data should be collected to account for minor deficiencies in pose by sampling non perfect spray boxes</li>
 </ul></li>
@@ -2489,10 +2487,10 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>I feel like part of representation learning invovles the background removal which is invalidated when presented with new examples not seen?</li>
 </ul></li>
-<li><p><strong>*Spray Trainer</strong>*</p>
+<li><p><strong>Spray Trainer</strong></p>
 
 <ul>
-<li>/home/yhong/work/semicond/DaSiamRPN/code/spray<strong>detect</strong>MN </li>
+<li>/home/yhong/work/semicond/DaSiamRPN/code/spray<em>detect</em>MN </li>
 <li>Data loader/ augmentor</li>
 <li>Test and validate with visual display</li>
 </ul></li>
@@ -2540,7 +2538,7 @@ x Remove warning message on posenet load weights</li>
 </ul></li>
 <li>Need to offset coords wrt to framed bbox</li>
 <li>Visualize and validated Repnet/posenet dataset</li>
-<li>Add options to train<strong>encdec2D.py train</strong>pose.py</li>
+<li>Add options to train<em>encdec2D.py train</em>pose.py</li>
 </ul>
 
 <h1>4/21</h1>
@@ -2678,7 +2676,7 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>so that model doesn't always predict identity
 <ul>
-<li>model(x,bg,hotwire<strong>tf) == py</strong>with_tf</li>
+<li>model(x,bg,hotwire<em>tf) == py</em>with_tf</li>
 </ul></li>
 </ul></li>
 <li><p>VAE</p>
@@ -2703,13 +2701,13 @@ x Remove warning message on posenet load weights</li>
 <ul>
 <li>It seems like the matrix method works better since it can model alot of other transformations other than just rotation, (includeing translation)</li>
 </ul></li>
-<li><p>How would you have a <strong>pipeline to test different</strong> versions of code</p>
+<li><p>How would you have a <em>pipeline to test different</em> versions of code</p>
 
 <ul>
-<li>Probably best way is to do the <strong>github branch</strong> idea
+<li>Probably best way is to do the <em>github branch</em> idea
 <ul>
 <li>Need to manage my source</li>
-<li>And save <strong>common elments in a shared location</strong> that makes sense</li>
+<li>And save <em>common elments in a shared location</em> that makes sense</li>
 </ul></li>
 </ul></li>
 <li><p>Do we even care about rotation?</p>
@@ -3387,7 +3385,7 @@ Research potential solutions to issues with Lucas-Kanade</p>
 0241-0340
 * Time logging 1/3, 1/2, 1/1, 12/31
 0340-0423
-* Test dan<strong>IN</strong>f64 at different epochs
+* Test dan<em>IN</em>f64 at different epochs
 0423-0450
 * Semieye histogram experimentation and averaging techniques on edges
 * Noise reduction
@@ -4115,14 +4113,14 @@ dca region protect
 * Verify exp with fixed labels
 * DAN trn aug has higher acc with new labels and wrong labels
 0120-0215
-* Migrating code to CK<strong>GPU to test fdn</strong>full
+* Migrating code to CK<em>GPU to test fdn</em>full
 0215-0250
-* Running FDN<strong>full
+* Running FDN<em>full
   * Inspect data
 0250-0400
 * Add gpu options
 * add options to organize experiment
-* FDN</strong>full epoch 2 same max score
+* FDN</em>full epoch 2 same max score
 0400-0500
 * Add specify gpu functionality
 * Add strbool parse for bool options
@@ -4298,7 +4296,7 @@ dca region protect
   * Solution, purchase more RAM/ Lower dataloader per training
 1112-1200
 * Running pix2pix. Not too promising
-* Fix issue with clean<strong>gan</strong>data.py applying transfomration btw lbl and src
+* Fix issue with clean<em>gan</em>data.py applying transfomration btw lbl and src
 * Future: Add code to continue val.data and losses.data from crash
 0100-0120
 * Review GAN Clean. Not good
@@ -4344,7 +4342,7 @@ dca region protect
 * Read about boundary aware loss and image dilation
 0300-0400
 * Construct pipeline to compute boundary aware loss with masks
-  * sum( weight<strong>crossent( plbl</strong>mask, lbl) )
+  * sum( weight<em>crossent( plbl</em>mask, lbl) )
 0400-0416
 * Freeze dialiation and sobel convolutions to prevent utility layers being backpropagated
 0416-0504
@@ -4779,4 +4777,4 @@ Test building detection net
 0540-0600
 * Print and review papers to be presented in conference</p>
 
-</div></body> </html>
+</body> </html>

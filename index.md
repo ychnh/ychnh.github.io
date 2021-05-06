@@ -1,11 +1,11 @@
 * ./
 * [board.html](https://ychnh.github.io/html/board.html)
 * [docs.html](https://ychnh.github.io/html/docs.html)
-* [journal.html](https://ychnh.github.io/html/journal.html)
 * [lift.html](https://ychnh.github.io/html/lift.html)
 * [log.html](https://ychnh.github.io/html/log.html)
 * [math.html](https://ychnh.github.io/html/math.html)
 * [rules.html](https://ychnh.github.io/html/rules.html)
+* [study_guide.html](https://ychnh.github.io/html/study_guide.html)
 * [wtime.html](https://ychnh.github.io/html/wtime.html)
 * ./ai
   * [ai/topics.html](https://ychnh.github.io/html/ai/topics.html)

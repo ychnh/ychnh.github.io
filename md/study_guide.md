@@ -1,8 +1,8 @@
 # Guiding Questions
 
-What are you qurious about?
-Why is it interesting/significant?
-What is narrative, progression?
+* What are you qurious about?
+* Why is it interesting/significant?
+* What is narrative, progression?
 
 
 # Notes
@@ -25,6 +25,6 @@ What is narrative, progression?
 * (Research) Questions, (Research) Problems
 
 # Motivation
-If you want something, you must go after it with all your might and capacity.
-You musted be obessed.
-Problems are like training drills. To review your mastery of the material.
+* If you want something, you must go after it with all your might and capacity.
+* You musted be obessed.
+* Problems are like training drills. To review your mastery of the material.

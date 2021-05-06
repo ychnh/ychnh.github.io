@@ -1,24 +1,32 @@
-# On Taking Notes
-* Style:= Sufficient words to point
+# Notes
+Style, Sufficient words to point
+Format, Paper -> Digital
 
-* A := Narrative. Progression. Teaching someone. Key Questions
-* B := Journal log. Record. Scratch work. Study Meta.
-A,B are related by subject.
-A is independent of time.
-B is focused more around time. 
+(N)ote
+Narrative. Progression. Teaching someone. Key Questions
+(L)og
+Journal. Record. Scratch work. Study Meta. Thought Process. Direction.
 
-
-
-* Format Paper Digital
+N,L are related by subject.
+N is independent of time.
+L is focused more around time. 
 
 # How to study Math
 
+## Guiding Questions
+
 What are you qurious about?
-W
+Why is it interesting/significant?
 What is narrative, progression?
 
+## Process
 
-* Style Process
+* Write Notes
+	* Scratch Paper -> Write Journal Log
+* Rewrite Notes Blind
+	* Scratch Paper -> Write Journal Log
+* Review
 
 # Motivation
-* If you want something, you must go after it with all your might and capacity. You musted be obessed.
+If you want something, you must go after it with all your might and capacity.
+You musted be obessed.

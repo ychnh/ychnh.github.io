@@ -16,6 +16,7 @@ What is narrative, progression?
 	* L is focused more around time. 
 
 # Process
+* Dont memorize
 
 * Write Draft (N)otes
 	* Scratch Paper -> Write Journal Log

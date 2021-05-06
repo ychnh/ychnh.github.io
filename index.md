@@ -1,6 +1,7 @@
 * ./
 * [board.html](https://ychnh.github.io/html/board.html)
 * [docs.html](https://ychnh.github.io/html/docs.html)
+* [journal.html](https://ychnh.github.io/html/journal.html)
 * [lift.html](https://ychnh.github.io/html/lift.html)
 * [log.html](https://ychnh.github.io/html/log.html)
 * [math.html](https://ychnh.github.io/html/math.html)

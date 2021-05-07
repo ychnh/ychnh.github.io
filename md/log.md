@@ -44,6 +44,7 @@
 * Try reading the book how to solve it again.
 
 # Personal Mantras
+
   * Forget and learn again
   * Enjoy the process
   * If something is worth doing, it is worth doing badly

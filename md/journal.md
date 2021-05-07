@@ -40,7 +40,7 @@ Blind think. See what you can extend.
 # 210507
 
 ## HUNGERFORD THM 1.4.8 
-$|H:H \cap K| \leq |G:K|$. If $|G:K|$ is finite $|H:H \cap K| = |G:K| \leftrightarrow |HK| = |G|$
+  $|H:H \cap K| \leq |G:K|$. If $|G:K|$ is finite $|H:H \cap K| = |G:K| \leftrightarrow |HK| = |G|$
 
 * I began the problem by trying to understand what the statement was asking me to prove and the significance.
 	* That $K$ has more cosets in $G$ than $|K \cap H|$ has in $H$

@@ -40,5 +40,5 @@ window.onload = function () {
         toc += (new Array(level + 1)).join("</ul>");
     }
 
-    //document.getElementById("toc").innerHTML += toc;
+    document.getElementById("toc").innerHTML += toc;
 };

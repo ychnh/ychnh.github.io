@@ -1,3 +1,4 @@
+
 # solving the cardinality a<=b b<=a -> a=b
 * how were you able to solve when b4 you wre not?
   * thinking in terms of words.

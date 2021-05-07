@@ -46,7 +46,3 @@ Blind think. See what you can extend.
 	* This gave me the solution.
 
 * I have overlooked on how to show inequalities or counting, which is by showing a function from A to B.
-
-
-
-

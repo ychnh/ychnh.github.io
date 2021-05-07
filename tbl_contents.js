@@ -8,6 +8,10 @@ function toggle_show() {
 }
 
 window.onload = function () {
+
+    var x = document.getElementById("toc_frame");
+    x.style.display = "none";
+
     var toc = "";
     var level = 0;
 

@@ -1,4 +1,8 @@
 # TODO
+* Remove incomplete (html,md) pairs
+* Datetime
+* cacheing test
+
+# Done
 * Recover the util/build from my personal machine. It has the script for table of contents js
 * Link to markdown headings
-* Remove incomplete (html,md) pairs

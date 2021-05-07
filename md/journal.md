@@ -59,4 +59,5 @@ together a solution by guessing.
 	* I was looking at $|G:K|$ and the cosets $Kg = Khk$ and wishfully thought what if $Kkh$?
 	* Turns out it HK = KH!
 
-* I am really proud that I learned from my previous mistake.
+* I am really proud that I learned from my previous mistake. and was able to look for a different approach and not keep guess
+

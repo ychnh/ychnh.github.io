@@ -40,7 +40,7 @@ Blind think. See what you can extend.
 # 210507
 
 ## HUNGERFORD THM 1.4.8 
-$|H:H \cap K| \leq |G:K|$. If $|G:K|$ is finite $|H:H \cap K| = |G:K| \leftrightarrow |HK| = |G|$
+$|H:H \cap K| \leq |G:K|$. If $|G:K|$ is finite $|H:H \cap K| = |G:K| \leftrightarrow HK = G$
 
 * I began the problem by trying to understand what the statement was asking me to prove and the significance.
 	* That $K$ has more cosets in $G$ than $|K \cap H|$ has in $H$
@@ -50,3 +50,13 @@ $|H:H \cap K| \leq |G:K|$. If $|G:K|$ is finite $|H:H \cap K| = |G:K| \leftright
 	* This gave me the solution.
 
 * I have overlooked on how to show inequalities or counting, which is by showing a function from A to B.
+* I should review the different approaches and select the probable one before diving in
+
+* When I was trying to show the equality part, I approached it first by drawing out all the equalities and trying to match
+together a solution by guessing.
+	* I was getting stuck due to a similar reason as 1.4.7 and I looked for a clear direction.
+	* I realized that all i needed was to show that the mapping i showed was surjective under the the condition $|HK| = |G|$
+	* I was looking at $|G:K|$ and the cosets $Kg = Khk$ and wishfully thought what if $Kkh$?
+	* Turns out it HK = KH!
+
+* I am really proud that I learned from my previous mistake.

@@ -1,7 +1,7 @@
 # 210506
 
 ## Hungerford THM.1.4.7 $|HK| = \dfrac{|H||K|}{|H \cap K|}$
-ISSUE: Stuck working on cosets order of HK
+* ISSUE: Stuck working on cosets order of HK
 * Got  stuck because I was trying to piece together bits of what I 'guessed' was the solution.
 And was hoping would eventually just give me the solution through guessing.
 * I needed a clear sense of direction that I understand

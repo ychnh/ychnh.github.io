@@ -1,3 +1,8 @@
+function scroll_bottom() {
+  var objDiv = document.getElementById("contents");
+  objDiv.scrollTop = objDiv.scrollHeight;
+}
+
 function toggle_show() {
   var x = document.getElementById("toc_frame");
   if (x.style.display == "none") {

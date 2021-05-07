@@ -1,6 +1,7 @@
 # 210506
 
-## ISSUE: Stuck working on cosets order of HK
+## Hungerford THM.1.4.7 $|HK| = /dfrac{|H||K|}{|H /cap K|}$
+ISSUE: Stuck working on cosets order of HK
 * Got  stuck because I was trying to piece together bits of what I 'guessed' was the solution.
 And was hoping would eventually just give me the solution through guessing.
 * I needed a clear sense of direction that I understand
@@ -33,5 +34,19 @@ Blind think. See what you can extend.
 * What is it made of?
 * What does it belong to?
 * Do existing things play/act with it?
+
+# 210507
+
+## Hungerford THM 1.4.8 $|H:H /cap K| /leq |G:K|. If |G:K| is finite |H:H /cap K| = |G:K| /leftrightarrow |HK| = |G|$
+* I began the problem by trying to understand what the statement was asking me to prove and the significance.
+	* That $K$ has more cosets in $G$ than $|K /cap H|$ has in $H$
+* First, I started the problem by looking at the relationship between the set and subset and number of cosets.
+* But it became clear that this would not lead to any significant result or show interesting relationship.
+* Then I looked for a mapping between the LHS to the RHS that was a function and injective.
+	* This gave me the solution.
+
+* I have overlooked on how to show inequalities or counting, which is by showing a function from A to B.
+
+
 
 

@@ -4,23 +4,30 @@
 
 **Current**
 
-* Normal Groups
+* Previous Material
+	* Semigroups, Monoids, Groups
+	* Homomorphism and Subgroups
+	* Cyclic groups
+	* Cosets, Partition of
+* Normal, Quotient Groups, Homomorphism
 	* Review/Explore
-		* Preservation of structure of quotient groups in relation to parent groups
+	* Preservation of structure of quotient groups in relation to parent groups
 
 **Future**
+
 * Characterization of finite groups
 * Galois
 
 --------------------------------------
 
-
 ## Adv Calc
 
-### Current
+**Current**
+
 * sequence and characterization of infinity
 
-### Future
+**Future**
+
 * Derivation of derivative
 * Fund Theorem of Calc
 

@@ -76,13 +76,15 @@ together a solution by guessing.
 	* There were many ideas that are new and unexplored. Many questsions.
 	* I felt like I was rushing through it.
 
-* Work on another study subject
 
-* Conclusions
-	* All chapters are not equal
+* Conclusions 
+	* Work on another study subject
 	* A new chapter with many new ideas will take time to explore
+		* chapters are not equal
 
 * How can I over come?
+	* Take your time, and be consistant
+		* When you rush, you take the magic out of it
 	* Push through. Inner strength.
 	* Recharge, Rest really well.
 	* Think of the bigger goal

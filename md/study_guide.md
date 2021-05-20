@@ -1,9 +1,29 @@
 # Guiding Questions
 
-* Make a list of objectives and goals
+* What are the key themes?
 * What are you qurious about?
 * Why is it interesting/significant?
 * What is narrative, progression?
+
+
+# Guiding Methods
+
+* A new chapter with many new ideas will take time to explore and understand
+
+* Make a list of objectives and goals
+
+* Learn the tools that get you there. Dont memorize. (Paul Erdos forgetting Hasdorf next day)
+* Enjoy the process not the destination.
+* Make it complete by making it simple enough to explain to a person on the street
+* It is your grand adventure
+
+* Key themes
+* Keep it simple. Key points to remember.
+* Constantly cut and refine. Evolve adapt. Organic.
+	* Small details you can revisit as you work with it. 
+	* Less is more
+
+
 
 
 # Notes
@@ -31,20 +51,4 @@
 * You musted be obessed.
 * Problems are like training drills. To review your mastery of the material.
 
-# Burn out
-* I have stopped making progress on the problem. Why?
-	* I felt stuck.
-	* It was not going as easy as b4.
-	* Fatigue
 
-* How can I over come?
-	* Push through. Inner strength.
-	* Recharge, Rest really well.
-	* Think of the bigger goal
-
-# Spirit
-* GO HARD
-* Keep it simple. Key points to remember.
-* Constantly cut and refine. Evolve adapt. Organic.
-	* Small details you can revisit as you work with it. 
-	* Less is more

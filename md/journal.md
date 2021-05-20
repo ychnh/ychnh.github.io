@@ -61,3 +61,29 @@ together a solution by guessing.
 
 * I am really proud that I learned from my previous mistake. and was able to look for a different approach and not keep guess
 
+# 20205020
+
+## Burn out
+* I have stopped making progress on the problem. Why?
+	* I felt stuck.
+	* It was not going as easy as b4.
+	* Fatigue
+
+* Why did you feel stuck?
+	* progress wrt chapters completed
+		* assumed all chapters are equal
+	* There were many ideas that are new and unexplored. Many questsions.
+	* I felt like I was rushing through it.
+
+* Work on another study subject
+
+* Conclusions
+	* All chapters are not equal
+	* A new chapter with many new ideas will take time to explore
+
+* How can I over come?
+	* Push through. Inner strength.
+	* Recharge, Rest really well.
+	* Think of the bigger goal
+
+* GO HARD

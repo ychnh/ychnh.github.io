@@ -1,4 +1,4 @@
-#!/usr/bin/python4
+#!/usr/bin/python3
 import os
 from os.path import join,exists
 from os import system
@@ -15,8 +15,24 @@ args = parser.parse_args()
 if args.f:
     system('rm -r '+HTML)
 
+
+def os_remove(p):
+    if os.path.exists(p): os.remove(p)
+
+def BIJ_md_html(html):
+    md = 'md'+html[4:-4]+'md'
+    return md
+
+def BIJ_html_md(md):
+    html = 'html' + md[2:-2]+'html'
+    return html
+
+def path_split(p):
+    a,b = os.path.split(p)
+    return path_split(a)+[b]
+
+
 def requires_compile_md(fp_md):
-    return True
     if args.f:
         return True
 
@@ -76,25 +92,49 @@ def get_fphtml(fpmd):
     return fp_html
 
 
-exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil']
+exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil', 'ignore']
 
 
 for root, dirs, files in os.walk(MD, topdown=True):
+    if os.path.basename(root) in exclude: continue
     dirs[:] = [d for d in dirs if d not in exclude]
 
-print(files)
 
-FP_html.append( {'name':dirname(root),'type':'dir'})
+    FP_html.append( {'name':dirname(root),'type':'dir'})
 
-for f in files:
-    if f[-3:] == '.md':
-        fp_md = join(root,f) 
-        fp_html = get_fphtml(fp_md)
-        if requires_compile_md(fp_md):
-            comp(fp_md, fp_html)
-        name = fp_html[5:]
-        link = WEBROOT+ fp_html
-        FP_html.append( {'name':name, 'link':link,'type':'link'})
+    for f in files:
+        if f[-3:] == '.md':
+            fp_md = join(root,f) 
+            fp_html = get_fphtml(fp_md)
+            if requires_compile_md(fp_md):
+                comp(fp_md, fp_html)
+            name = fp_html[5:]
+            link = WEBROOT+ fp_html
+            FP_html.append( {'name':name, 'link':link,'type':'link'})
 
 build_index(FP_html)
-#system('./compile '+'index.md')
+
+
+
+# CLEAN ########################################################
+def get_files_recursive(dir):
+    FILES = []
+    for root, dirs, files in os.walk(dir, topdown=True):
+        for f in files:
+            FILES.append( str(join(root, f)) )
+    return FILES
+
+print('removing unlinked html')
+MD_FILES = get_files_recursive(MD)
+HTML_FILES = get_files_recursive(HTML)
+for h in HTML_FILES:
+    fp_md = BIJ_md_html(h)
+    if not (fp_md in MD_FILES):
+        os_remove( h )
+        print(h)
+
+print('removing empty directories')
+for root,_,_ in os.walk(HTML, topdown=True):
+    if len( os.listdir(root) ) == 0:
+        os.rmdir(root)
+        print( root )

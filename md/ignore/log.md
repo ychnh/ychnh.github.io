@@ -1574,4 +1574,3 @@ L is finite ( Discrete Ordered Chain }
 Find a smallest element inside a finite set
 
 # old:
-

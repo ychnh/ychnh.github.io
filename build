@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python4
 import os
 from os.path import join,exists
 from os import system
@@ -16,6 +16,7 @@ if args.f:
     system('rm -r '+HTML)
 
 def requires_compile_md(fp_md):
+    return True
     if args.f:
         return True
 

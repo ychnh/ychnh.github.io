@@ -60,5 +60,4 @@ together a solution by guessing.
 	* Turns out it HK = KH!
 
 * I am really proud that I learned from my previous mistake. and was able to look for a different approach and not keep guess
-	* Edit
 

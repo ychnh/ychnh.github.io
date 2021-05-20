@@ -1,7 +1,7 @@
 * ./
-* [1_objectives.html](https://ychnh.github.io/html/1_objectives.html)
-* [1_study_guide.html](https://ychnh.github.io/html/1_study_guide.html)
-* [2_log_math.html](https://ychnh.github.io/html/2_log_math.html)
-* [9_temp.html](https://ychnh.github.io/html/9_temp.html)
+* [0objectives.html](https://ychnh.github.io/html/0objectives.html)
+* [0study_guide.html](https://ychnh.github.io/html/0study_guide.html)
+* [1log_math.html](https://ychnh.github.io/html/1log_math.html)
+* [9temp.html](https://ychnh.github.io/html/9temp.html)
 * ./projects
   * [projects/algebra.html](https://ychnh.github.io/html/projects/algebra.html)

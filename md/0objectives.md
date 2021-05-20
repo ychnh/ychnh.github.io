@@ -2,12 +2,13 @@
 
 ## Algebra
 
-### Current
+**Current**
+
 * Normal Groups
 	* Review/Explore
 		* Preservation of structure of quotient groups in relation to parent groups
 
-### Future
+**Future**
 * Characterization of finite groups
 * Galois
 

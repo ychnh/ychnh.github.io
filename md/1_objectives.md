@@ -6,18 +6,19 @@
 * Normal Groups
 	* Review/Explore
 		* Preservation of structure of quotient groups in relation to parent groups
+
 ### Future
 * Characterization of finite groups
 * Galois
 
 --------------------------------------
-<!-- Comment-->
 
 
 ## Adv Calc
 
 ### Current
 * sequence and characterization of infinity
+
 ### Future
 * Derivation of derivative
 * Fund Theorem of Calc
@@ -26,6 +27,7 @@
 
 
 ## Lin Alg
+
 * Review back to Determinants
 * Orthogonal Theorems
 * Fund Thm of Algebra
@@ -43,7 +45,6 @@
 * Coordinate Prediction
 
 --------------------------------------
-<hr/>
 
 # AI
 

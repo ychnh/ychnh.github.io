@@ -1,12 +1,23 @@
 # Math
 
 ## Algebra
+
+### Current
 * Normal Groups
+	* Review/Explore
+		* Preservation of structure of quotient groups in relation to parent groups
+### Future
 * Characterization of finite groups
 * Galois
 
+--------------------------------------
+
+
 ## Adv Calc
+
+### Current
 * sequence and characterization of infinity
+### Future
 * Derivation of derivative
 * Fund Theorem of Calc
 
@@ -16,15 +27,19 @@
 * Fund Thm of Algebra
  
 
-# AI
 
-## PharmCadd
-* Make current one more efficient
-* Axial Attention
+# PharmCadd
+
+## Current
+* Make current one more efficient (Memory)
+	* Optimization Attention
+	* Combination of Convolutions?
+	*
 * Coordinate Prediction
 
 ## Face latent space generation
 
+# AI
 ## NLP
 * Text generation
 * Chat

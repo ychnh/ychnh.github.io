@@ -1,29 +1,2 @@
-* ./
-* [board.html](https://ychnh.github.io/html/board.html)
-* [docs.html](https://ychnh.github.io/html/docs.html)
-* [journal.html](https://ychnh.github.io/html/journal.html)
-* [lift.html](https://ychnh.github.io/html/lift.html)
-* [log.html](https://ychnh.github.io/html/log.html)
-* [math.html](https://ychnh.github.io/html/math.html)
-* [rules.html](https://ychnh.github.io/html/rules.html)
-* [study_guide.html](https://ychnh.github.io/html/study_guide.html)
-* [wtime.html](https://ychnh.github.io/html/wtime.html)
-* ./ai
-  * [ai/topics.html](https://ychnh.github.io/html/ai/topics.html)
-* ./old
-  * [old/,journal.html](https://ychnh.github.io/html/old/,journal.html)
-  * [old/,wtime.html](https://ychnh.github.io/html/old/,wtime.html)
-  * [old/hldmod.html](https://ychnh.github.io/html/old/hldmod.html)
-  * [old/index.html](https://ychnh.github.io/html/old/index.html)
-  * [old/readme.html](https://ychnh.github.io/html/old/readme.html)
-  * [old/test.html](https://ychnh.github.io/html/old/test.html)
-  * [old/todo.html](https://ychnh.github.io/html/old/todo.html)
-  * [old/workout.html](https://ychnh.github.io/html/old/workout.html)
-* ./temp
-  * [temp/list.html](https://ychnh.github.io/html/temp/list.html)
-  * [temp/test.html](https://ychnh.github.io/html/temp/test.html)
-* ./test
-  * [test/journal.html](https://ychnh.github.io/html/test/journal.html)
-  * [test/wtime.html](https://ychnh.github.io/html/test/wtime.html)
   * ./test/nested2
     * [test/nested2/test.html](https://ychnh.github.io/html/test/nested2/test.html)

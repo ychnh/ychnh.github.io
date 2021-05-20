@@ -76,20 +76,24 @@ def get_fphtml(fpmd):
 
 
 exclude = ['.git', '.ipynb_checkpoints','__pycache__', 'ytil']
+
+
 for root, dirs, files in os.walk(MD, topdown=True):
     dirs[:] = [d for d in dirs if d not in exclude]
 
-    FP_html.append( {'name':dirname(root),'type':'dir'})
+print(files)
 
-    for f in files:
-        if f[-3:] == '.md':
-            fp_md = join(root,f) 
-            fp_html = get_fphtml(fp_md)
-            if requires_compile_md(fp_md):
-                comp(fp_md, fp_html)
-            name = fp_html[5:]
-            link = WEBROOT+ fp_html
-            FP_html.append( {'name':name, 'link':link,'type':'link'})
+FP_html.append( {'name':dirname(root),'type':'dir'})
+
+for f in files:
+    if f[-3:] == '.md':
+        fp_md = join(root,f) 
+        fp_html = get_fphtml(fp_md)
+        if requires_compile_md(fp_md):
+            comp(fp_md, fp_html)
+        name = fp_html[5:]
+        link = WEBROOT+ fp_html
+        FP_html.append( {'name':name, 'link':link,'type':'link'})
 
 build_index(FP_html)
 #system('./compile '+'index.md')

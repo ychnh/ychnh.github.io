@@ -1,5 +1,6 @@
 # Guiding Questions
 
+* Make a list of objectives and goals
 * What are you qurious about?
 * Why is it interesting/significant?
 * What is narrative, progression?
@@ -47,4 +48,3 @@
 * Constantly cut and refine. Evolve adapt. Organic.
 	* Small details you can revisit as you work with it. 
 	* Less is more
-

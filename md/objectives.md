@@ -11,6 +11,7 @@
 * Galois
 
 --------------------------------------
+<!-- Comment-->
 
 
 ## Adv Calc
@@ -21,12 +22,16 @@
 * Derivation of derivative
 * Fund Theorem of Calc
 
+--------------------------------------
+
+
 ## Lin Alg
 * Review back to Determinants
 * Orthogonal Theorems
 * Fund Thm of Algebra
  
 
+--------------------------------------
 
 # PharmCadd
 
@@ -37,17 +42,32 @@
 	*
 * Coordinate Prediction
 
-## Face latent space generation
+--------------------------------------
+<hr/>
 
 # AI
+
+## RL
+* Tic Tac Toe
+	* Fix the crash and make it work for larger boards
+
+--------------------------------------
+
+## Face latent space generation
+
+
+--------------------------------------
+
 ## NLP
 * Text generation
 * Chat
 
-## RL
-* Tic Tac Toe
+--------------------------------------
 
 ## Text to image generation
+
+
+--------------------------------------
 
 # LIFT
 * Focus on form. The weight will come after.

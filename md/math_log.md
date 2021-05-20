@@ -12,6 +12,7 @@ And was hoping would eventually just give me the solution through guessing.
 ## Break
 * Prevent burnout
 * Something you find rewarding
+	* Social activity?
 * Something which you enjoy
 * Something which gives you closure
 	* Walk, food, lifting, movie

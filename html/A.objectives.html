@@ -58,16 +58,59 @@
 
 <h1>PharmCadd</h1>
 
-<h2>Current</h2>
+<p><strong>Current</strong></p>
 
 <ul>
 <li>Make current one more efficient (Memory)
 <ul>
+<li>Masking?
+<ul>
+<li>Scale down the loss for those values?</li>
+</ul></li>
 <li>Optimization Attention</li>
 <li>Combination of Convolutions?
-*</li>
+<ul>
+<li>How many blocks should we put?</li>
 </ul></li>
-<li>Coordinate Prediction</li>
+<li>spatial loss? reward more for pairs further apart ( no reduce, mult by guassian further away _| -shaped weights)
+<ul>
+<li>W[i,j] = sqrt(abs(i-j))</li>
+<li>Stack to same shape and mult</li>
+</ul></li>
+</ul></li>
+<li>Coordinate Prediction
+<ul>
+<li>trunk_coord module
+<ul>
+<li>MDS differentiable</li>
+</ul></li>
+<li>structure module
+<ul>
+<li>x,coords = SE3Transformer(x,coords)
+<ul>
+<li>x
+<ul>
+<li>x (b i j d) &lt;- output from attention</li>
+<li>x = linear(x)</li>
+<li>various things(Embeddings add)</li>
+<li>x 'b i d'</li>
+</ul></li>
+<li>coords
+<ul>
+<li>coords = trunk<em>to</em>coords[ MDScaling(distm) ]</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Loss
+<ul>
+<li>Coordinate
+<ul>
+<li>Centering</li>
+<li>RMSD</li>
+</ul></li>
+<li>Distance Matrix</li>
+</ul></li>
+</ul></li>
 </ul>
 
 <hr />

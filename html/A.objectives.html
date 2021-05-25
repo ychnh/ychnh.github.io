@@ -58,27 +58,27 @@
 
 <h1>PharmCadd</h1>
 
-<p><strong>Current</strong></p>
+<h2>Masking?</h2>
 
-<ul>
-<li>Make current one more efficient (Memory)
-<ul>
-<li>Masking?
-<ul>
-<li>Scale down the loss for those values?</li>
-</ul></li>
-<li>Optimization Attention</li>
-<li>Combination of Convolutions?
-<ul>
-<li>How many blocks should we put?</li>
-</ul></li>
-<li>spatial loss? reward more for pairs further apart ( no reduce, mult by guassian further away _| -shaped weights)
-<ul>
-<li>W[i,j] = sqrt(abs(i-j))</li>
-<li>Stack to same shape and mult</li>
-</ul></li>
-</ul></li>
-<li>Coordinate Prediction
+<pre><code>  * Better loss masked categorical cross entropy. Make unavailable values not contribute to loss
+* complete_structures_only:
+  * Update SCN
+* thinning:
+</code></pre>
+
+<h2>Make current one more efficient (Memory)</h2>
+
+<pre><code>* Optimization Attention
+* Combination of Convolutions?
+  * How many blocks should we put?
+* spatial loss? reward more for pairs further apart ( no reduce, mult by guassian further away _| -shaped weights)
+  * W[i,j] = sqrt(abs(i-j))
+  * Stack to same shape and mult
+* Dataloader memory issue with cycle()
+</code></pre>
+
+<h2>Coordinate Prediction</h2>
+
 <ul>
 <li>trunk_coord module
 <ul>
@@ -110,8 +110,29 @@
 </ul></li>
 <li>Distance Matrix</li>
 </ul></li>
-</ul></li>
 </ul>
+
+<h2>Coordinate prediction approach guide</h2>
+
+<ul>
+<li>SO3 group
+<ul>
+<li>rotation about x,y,z axis. Right hand rule</li>
+<li>invertible, identity, </li>
+<li>closed under operation
+<ul>
+<li><strong>Euler's Sperical Theorem</strong></li>
+</ul></li>
+</ul></li>
+<li>Group Representation</li>
+<li>Irreducible representation</li>
+<li>Wigner-D matrix</li>
+<li>Clebsch-Gordan matrcies</li>
+<li>Equivarient what is v,y</li>
+<li>General Linear Group</li>
+</ul>
+
+<h2>Is there a way to use persistent homology for shape formation?</h2>
 
 <hr />
 

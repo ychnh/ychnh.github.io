@@ -1,5 +1,6 @@
 # Guiding Questions
 
+* What are we studying here? Knowledge acquisition and internalization
 * What are the key themes?
 * What are you qurious about?
 * Why is it interesting/significant?

@@ -46,21 +46,21 @@
 # PharmCadd
 
 ## Masking?
-    * Better loss masked categorical cross entropy. Make unavailable values not contribute to loss
-	* complete_structures_only:
-		* Update SCN
-	* thinning:
+* Better loss masked categorical cross entropy. Make unavailable values not contribute to loss
+* complete_structures_only:
+	* Update SCN
+* thinning:
 
 ## Make current one more efficient (Memory)
-	* Optimization Attention
-	* Combination of Convolutions?
-		* How many blocks should we put?
-	* spatial loss? reward more for pairs further apart ( no reduce, mult by guassian further away _| -shaped weights)
-		* W[i,j] = sqrt(abs(i-j))
-		* Stack to same shape and mult
-	* Dataloader memory issue with cycle()
-## Coordinate Prediction
+* Optimization Attention
+* Combination of Convolutions?
+	* How many blocks should we put?
+* spatial loss? reward more for pairs further apart ( no reduce, mult by guassian further away _| -shaped weights)
+	* W[i,j] = sqrt(abs(i-j))
+	* Stack to same shape and mult
+* Dataloader memory issue with cycle()
 
+## Coordinate Prediction
 * trunk_coord module
 	* MDS differentiable
 * structure module
@@ -93,8 +93,6 @@
 * General Linear Group
 
 ## Is there a way to use persistent homology for shape formation?
-
-
 
 
 --------------------------------------

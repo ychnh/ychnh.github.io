@@ -9,6 +9,12 @@
 
 # Guiding Methods
 
+* TEST yourself
+	* ~ Self explaining lecture
+	* ~ Studying for a test
+
+* Have a GOAL in mind:
+
 * A new chapter with many new ideas will take time to explore and understand
 
 * Make a list of objectives and goals

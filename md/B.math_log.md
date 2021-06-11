@@ -111,10 +111,22 @@ Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H$ and 
 	* given a permutation, can you have an orbit? Yes
 * The elements of the orbin form a cycle
 * The cycle is unique up to permutation
-    a0,a1,a2,a3
-    b0,b1,b2,b3
-    Suppose they are not same according to permutation 
-    this means there is one disjoint cycle in a that is diff froma disjoint cycle in b
+  * a0,a1,a2,a3
+  * b0,b1,b2,b3
+  * Suppose they are not same according to permutation 
+  * this means there is one disjoint cycle in a that is diff froma disjoint cycle in b
+  * then any element in the orbit of this cycle should belong in one of the disjoint cycles since it is an element that is changed (non-ident)
+  * DISJOINT cycles which share same element are the same if they define the same function
+
+## Cor order of ab is lcm of the order of a and b 
+## Cor order of product of cycles is lcm of the orders of the cycles
+* Need to extend this to work on disjoint cycles
+    * order is the least number where a^m=1. Which means it divides every other number.
+* restrict the product of disjoint cycles on their orbit
+## Any Sn can be decomposed into transpositions
+* $(1234) = (12)(13)(14)$
+
+
 
 * When I first went through, I did not really think of the concepts such as orbit.
 * How does this kind of idea arise? How does this kind of naming arise?

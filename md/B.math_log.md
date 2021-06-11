@@ -99,7 +99,7 @@ together a solution by guessing.
 * Value your time and attention
 
 ## Hungerford Problem 1.5.19
-Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H $ $([G:N],|H|)=1) \rightarrow H<N $
+Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H$ and $([G:N],|H|)=1) \rightarrow H<N $
 * I spent alot of time on this problem, and also learned a number of things.
 * How can I improve?
 	* I think I need to improve in seeing connections and pathways I can go down

@@ -1,5 +1,6 @@
 # 210506
 
+
 ## HUNGERFORD THM.1.4.7
 $|HK| = \dfrac{|H||K|}{|H \cap K|}$
 
@@ -90,3 +91,30 @@ together a solution by guessing.
 	* Think of the bigger goal
 
 * GO HARD
+
+# 20200611
+
+## Working again
+* Don't fill your mind with social media
+* Value your time and attention
+
+## Hungerford Problem 1.5.19
+Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H $ $([G:N],|H|)=1) \rightarrow H<N $
+* I spent alot of time on this problem, and also learned a number of things.
+* How can I improve?
+	* I think I need to improve in seeing connections and pathways I can go down
+	* Also understanding the problem and related questions at hand
+
+## Prove that every permutation is a product of distjoin cycles
+
+* given a cycle, orbit creates a equi relation btw the elements of {1...N}
+	* given a permutation, can you have an orbit? Yes
+* The elements of the orbin form a cycle
+* The cycle is unique up to permutation
+    a0,a1,a2,a3
+    b0,b1,b2,b3
+    Suppose they are not same according to permutation 
+    this means there is one disjoint cycle in a that is diff froma disjoint cycle in b
+
+* When I first went through, I did not really think of the concepts such as orbit.
+* How does this kind of idea arise? How does this kind of naming arise?

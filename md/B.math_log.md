@@ -127,6 +127,8 @@ Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H$ and 
 * $(1234) = (12)(13)(14)$
 
 
-
 * When I first went through, I did not really think of the concepts such as orbit.
 * How does this kind of idea arise? How does this kind of naming arise?
+
+* can you show that this is unique? No it is not.
+* Is the number of transpositions unique? (No you can easily add identity) is even odd transposition well defined?

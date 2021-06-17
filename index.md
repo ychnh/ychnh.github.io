@@ -3,6 +3,7 @@
 * [A.study_guide.html](https://ychnh.github.io/html/A.study_guide.html)
 * [B.math_log.html](https://ychnh.github.io/html/B.math_log.html)
 * [B.se3.html](https://ychnh.github.io/html/B.se3.html)
+* [workout.html](https://ychnh.github.io/html/workout.html)
 * [Z.scratch.html](https://ychnh.github.io/html/Z.scratch.html)
 * ./projects
   * [projects/algebra.html](https://ychnh.github.io/html/projects/algebra.html)

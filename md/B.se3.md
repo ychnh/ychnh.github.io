@@ -10,7 +10,7 @@
 * representation p is reducible if $p = Q p_1 \oplus p_2 Q^{-1}$
 * representation p is irreducible if it is not possible to reduce
 * **?? Note that each irrep acts on a separate subspce, mapping vectors from that space back into it**
-    * This is due to the zero fill in the diagonal structure of the sum
+  * This is due to the zero fill in the diagonal structure of the sum
 * S is invariant subspace under irred. representation if $p(G)(S) \subset S$
 
 # Representation Theory of SO3

@@ -5,7 +5,7 @@
 $|HK| = \dfrac{|H||K|}{|H \cap K|}$
 
 * ISSUE: Stuck working on cosets order of HK
-* Got  stuck because I was trying to piece together bits of what I 'guessed' was the solution.
+* Got  stuck because I was trying to piece together bits of what I guessed was the solution.
 And was hoping would eventually just give me the solution through guessing.
 * I needed a clear sense of direction that I understand
 * Also needed to invest more time understanding/organizing the properties of the elements in the problem which came up while I was working on the problem.
@@ -92,10 +92,10 @@ together a solution by guessing.
 
 * GO HARD
 
-# 20200611
+# 20200611 (Fri)
 
 ## Working again
-* Don't fill your mind with social media
+* Dont fill your mind with social media
 * Value your time and attention
 
 ## Hungerford Problem 1.5.19
@@ -132,3 +132,181 @@ Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H$ and 
 
 * can you show that this is unique? No it is not.
 * Is the number of transpositions unique? (No you can easily add identity) is even odd transposition well defined?
+
+# 20200615 (Tue)
+* Show that every permutation can be classified as odd xor even
+* Now a transposition swaps two elments
+* Is it possible to have a odd number of swaps from identity be equal to even number of swaps?
+
+* IDEA (A) Is it possible to extend by induction?
+  * S2 is very simple
+
+* IDEA (B) How can we use commutativity? transpositions are mostly disjoint, and dijoint cycles commute
+  * (ab)(ac) = a-b, b-c, c-a abc
+  * $(abc)(ax) = (abcx)$
+  * $(bca)(bx) = (bcax)$
+  * Ok so every permutation is a unique product of disjoint cycles (up to reordering)
+  * Then if we can prove that a cycle-s even odd even is unique then we can show odd/even is unique.
+  * Every cycle can be broken into transpositions
+  * And it can be either one of these two cases
+  * $(abc)(ax)$
+  * $(abc)(ab)$ (cb)
+  * $(abc)(ac)$ (ab)
+  * $(abcd)(ac)$ (ab)(dc)
+  * (ab)(dc)(ac) = (ab)(cd)(ca) = (ab)(cda) = (ab)(acd) = (abcd)
+  * A transposition applied to a cycle can either increase it by one or split it
+  * if it is split, precisely one transposition is required to recover it?
+  * After some thinking we realize approach B is not bery fruitful because one can have many different representsations and adding of transpositiosn
+  * might end up with structures were we dont necessarily have cycles even.
+  * STUCK
+* IDEA So we move back to considering case (A) and look at for case S2 and our hypothesis is clearly true
+  * Let us also use (B) and restrict our view on cycles of size 2 (because any permutation in S2 is a cycle) and it makes our analysis down the line simpler
+  * Now we consider the SN case. And look at what needs to happen right before the final transposition is applied. We must have a map where only 2 elements are out of place.
+  * Final Cycle = X(ab) what is the shape of X? If it is a cycle or a product of 2 smaller cycles we are in luck since we can definitely determine the odd/even of those
+  * Is there a way we can change our view so that the final is a ident? (NO but we can view FINAL as a cycle)
+  * So now we need information on how to deduce the shape of X, the thing right before a cycle which when multipllied by a transpose will give our cycle
+      * How do we get it?
+      * Take a cycle and change 2 elements
+      * (V) Great so if you can write a formal way to state this the proof will fall out then
+      * Since X is decomposed into smaller cycles who,s total sum is N-1
+        * So X will break up into cycles whose combined lengths is N-1
+          * N even number -> N-1 odd: (Odd+Even=Odd) or (Odd) -> X is composed of odd -> X+1= N is composed of Even
+          * N odd number -> N-1 even: (Even+Even = Odd+Odd=Even) or (Even) -> X is composed of Even -> X+1 = N is composed of Odd
+        * Which implies X is 
+* Formalization of (V)
+  * Since we have a cycle, we can take one of the elements being swapped as the first.
+  * Let 2a be the two elements being swapped per our notation
+  * The placement of the 2nd element will create 2 disjoint cycle ( 1abc... )  and the remainder ( 234...(a-1) )
+  * Examples
+    * 123456
+    * 234561
+    * 123456
+    * 324561
+    * 123456
+    * 534261
+* Great a cycle can be 
+
+## How can you 
+* Train your ability to seek out different avenues and attack the problem from these angles?
+* Perhaps ability to quickly rule out some of the options?
+## After working independently and deriving the next two steps of the book, I've come to realizations
+* Thinking on your own and asking questions
+  * This is definitely the way to study. 
+* (Peristence and Tenacity) Some theorems and ideas are difficult and may take time and effort. Dont get frustrated
+* You have to put in work. Be serious about it. Make a genuine effort and think hard.
+* (Branch) out different paths of attack and explore the problem. 
+  * (Prune/Evaluate) Check and find counter examples or counter proofs to prune your branches.
+  * (Isolate) Do explore different subset of ideas and isolated events. And consolidate and organize your findings in this area
+  * (Reuse) what you find in a different branch. What you study in one area is useful and meaningful to the whole picture.
+* Question everything
+
+## Even permutations is a normal subgroup
+* Subgroup is clear $a$
+* Ok so it does not commute but clearly the $oeo^{-1} \in EVEN$
+* Great it is normal. What is structure of $\dfrac{G}{EVEN}$? or Size of [G:EVEN]
+    * Consider the mapping from even to odd by removing the last element from each even element, wait this is not well defined.
+  * consider mapping from EVEN-> ODD by mult by single transpose (12)
+      * Well defined since mult is well def
+      * Surjective because for any odd o, f(o(12)) = o
+      * Injective b/c f(o)=f(j) = o(12)=j(12) -> o=j
+  * So cardinality of two sets are equal => [G:EVEN]=2
+## Subgroup is simple if it has no other trivial subgroup
+* Odd is not subgroup because it does not contain identity
+## No other subgroup has index 2
+* I thought about how to draw contradiction
+* The most direct line of thought that helped me was this 
+  * Take any subgroup that has index 2.
+  * For all we know, this subgroup could be the alternating subgroup. 
+    * So what makes it different from An?
+    * What must this object be or not be?
+    * **(Pruning)**
+      * **If I work/play with the current assumptions, what possible conclusions can I arrive at?**
+      * **If it is an absurd conclusion, we must change/modify the assumptions.**
+  * It must contain an odd element and even elements
+oe=j
+
+## Even permutation is the unique subgroup of index 2 in Sn
+* I tried many many different approaches 
+  * I even explored the consequences of the assumption of another index existing
+      * the cosets of index 2 are contained by inverses
+      * S, the other subgroup must contain odd numbers
+      * The even subset of S is N/4
+          * This is instrumental because it shows that it is only posible for Sn that are divisible by 4
+      * S is normal
+  * I feel like where I looked today, there isn't really an answer because I am showing things which are already true
+  * i.e using normality to show normality
+  * I must find some special connection that uses the even/odd structure of Sn
+  * Have faith, if it is true, then the solution and the nature of the explanation exists.
+    * It is much difficult if you do not know if it is true or not. This is where your intuition? No you guess XD
+
+## Really difficult and stuck on (prev problem)
+* Ok it was a excepttional difficult exercise that requires a hint of use of a lemma
+* I think my advice is to look at a specific example and draw some inspiration
+
+## The time is now
+* I dont want to be fake. I want to be fing legit
+
+##  Examples of Sn
+* How does S2 extend to S3? or SN to SN+1
+  * Well... cycles of 2 and 3
+  * How does one extra value change the existing structure permutation combination wise
+      * Consider the set of cosets $[ SN(x,N+1) | x\in 1..N+1 ]$
+      * Show that each coset is disjoint
+          * suppose f(x,N+1) = g(y,N+1)
+              * f = g(y,N+1)(x,N+1) = g (yxN+1) Can we get f by itself? Yes!
+              * This means that for g(a)=x where a is a member of 1..N f(x)=N+1 which means f is not in SN
+                * Or just that fact that N+1 maps to y is a more direct contradiction
+      * So one can form a mapping from the elements int he union of these cosets into SN+1 and it must be bijection since their sizes are the same
+          * (RECALL) One intresting proof about same cardinality being a bijection
+      * In conclusion the additional set of transpositions introduced by N+1 is precisely enough
+* Another question: How many isomorphic subgroups of SN is there in SN+1? You can have SN while keeping the ith element fixed (and just rename the numbering)
+    * But there is definitely overlap. Just look at identity, it is shared by all isomoprhic subgroups of SN
+* So S4 is just [S3(x4) | x in 1..4]
+  * S2 
+    * (11) (12)
+  * S3
+    * (11)(13), (12)(13)
+    * (11)(23), (12)(23) 
+    * (11)(33), (12)(33) 
+    * 012
+    * 132
+    * (13), (12)(13)
+    * (23), (12)(23) 
+    * iden, (12)
+    *
+  * S4 2*3*4=24
+    *
+    * (11)(13)(14), (12)(13)(14)
+    * (11)(23)(14), (12)(23)(14)
+    * (11)(33)(14), (12)(33)(14) 
+    *
+    * (11)(13)(24), (12)(13)(24)
+    * (11)(23)(24), (12)(23)(24)
+    * (11)(33)(24), (12)(33)(24) 
+    *
+    * (11)(13)(34), (12)(13)(34)
+    * (11)(23)(34), (12)(23)(34)
+    * (11)(33)(34), (12)(33)(34) 
+    *
+    * (11)(13)(44), (12)(13)(44)
+    * (11)(23)(44), (12)(23)(44)
+    * (11)(33)(44), (12)(33)(44) 
+    *
+    * 1/2 1/3 1/4
+    * 1/2*1/3*1/4 have cycle 0
+    *
+    * (12)(13)(14), (13)(14), (12)(23)(14), (23)(14), (12)(14), (14)
+    * (12)(13)(24), (13)(24), (12)(23)(24), (23)(24), (12)(24), (24)
+    * (12)(13)(34), (13)(34), (12)(23)(34), (23)(34), (12)(34), (34)
+    * (12)(13), (13), (12)(23), (23), (12), Identity
+* Ok now split S4 into 4 parts, even,odd,even,odd
+* What elements are closed under multiplication?
+  * Lets study the orbit of our elements
+  * (12)(13)(12) = (231)(12) =  (23)
+  * (123)
+  *  (21)(31) = (231) 
+  *  (ab)(ac) = (abc)
+  * (ab)(ac)(ab) = (abc)(ab) = (bc)
+  * (ab)(ac)(bc) = (ac)
+  * (ab)(ac)(ac) = (ab)
+* What is structure of S4 where we can possibly have another subgroup of index 2

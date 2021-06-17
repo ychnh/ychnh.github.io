@@ -103,6 +103,13 @@
 * Tic Tac Toe
 	* Fix the crash and make it work for larger boards
 
+* Why is RL important? It generates it's own information.
+    * It is not learning from data
+* But if you think about it the rules and these things are kinda like 'data'
+    * It learns from them
+    * And uses the learning to explore the data space some more.
+
+
 --------------------------------------
 
 ## Face latent space generation

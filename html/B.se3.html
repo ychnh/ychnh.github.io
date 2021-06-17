@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><title>Title</title><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><link rel = "stylesheet" type = "text/css" href = "https://ychnh.github.io/style.css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> <script src="https://ychnh.github.io/tbl_contents.js"></script> </head> <body style="background-color:white;"> <button onclick="toggle_show()">Table of Contents</button> <button onclick="scroll_bottom()">GOTO END</button> <div id="toc_frame"> <div id="toc"></div> </div> <div id="contents">
+<h1>Definitions</h1>
+
+<ul>
+<li>Group: SO3</li>
+<li><p>Equivariance:
+  * \(f:X-Y\) is equivariant to \(T_g, Sg\) if for all \(\forall g,x f(T_g(x)) = S_g(f(x))\)</p></li>
+<li><p>For our transformations we look at representations</p></li>
+<li>representation: \(p:G-GL(N)\) where GL(N) is NxN matrix of linear transformations</li>
+<li>representations p,q are equivalent if \(p = QqQ^{-1}\)</li>
+<li>representation p is reducible if \(p = Q p_1 \oplus p_2 Q^{-1}\)</li>
+<li>representation p is irreducible if it is not possible to reduce</li>
+<li>? Note that each irrep acts on a separate subspce, mapping vectors from that space back into it
+  * This is due to the zero fill in the diagonal structure of the sum</li>
+<li>S is invariant subspace under irred. representation if \(p(G)(S) \subset S\)</li>
+</ul>
+
+<h1>Representation Theory of SO3</h1>
+
+<ul>
+<li>linear representations of compact group can be directly decomposed into sum of irreducibles st.</li>
+<li>\(p = Q \underset{j}{\oplus}(D_j) Q^{-1}\) where D_j are 2j+1x2j+1 complex matrices</li>
+<li><p>type-j vectors  where \(Q=I\) 
+  * ?? type-0 invariant under rotations?, type-1 rotation under 3d rotation mat?</p></li>
+<li><p>Orthogonal space where representation acts on is the space of spherical harmonics? (What is this space of \(\mathbb{C}^{2j+1}\))</p></li>
+</ul>
+
+<h1>Spherical Harmonics</h1>
+
+<ul>
+<li>Function \(Y_j:S2->\mathbb{C}^{2j+1}\)</li>
+<li>Basis of all integratible functions on S2</li>
+<li>\(Y_j(R_g x ) = D_j Y_j(x)\)</li>
+</ul>
+
+</div></body> </html>

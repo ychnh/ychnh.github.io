@@ -55,7 +55,7 @@
 
 # Motivation
 * If you want something, you must go after it with all your might and capacity.
-* You musted be obessed.
+* You musted be obessed. Focused
 * Problems are like training drills. To review your mastery of the material.
-
-
+* You must have good and clear goals in mind.
+    * Otherwise you will lose track of yourself

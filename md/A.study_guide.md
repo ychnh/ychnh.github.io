@@ -59,3 +59,6 @@
 * Problems are like training drills. To review your mastery of the material.
 * You must have good and clear goals in mind.
     * Otherwise you will lose track of yourself
+* Start small 
+* Some progress is better than none
+* If something is worth doing, it is worth doing badly

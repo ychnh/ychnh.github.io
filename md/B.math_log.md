@@ -310,3 +310,72 @@ oe=j
   * (ab)(ac)(bc) = (ac)
   * (ab)(ac)(ac) = (ab)
 * What is structure of S4 where we can possibly have another subgroup of index 2
+
+* (13), (12)(13)
+* (23), (12)(23) 
+* iden, (12)
+<(12)(13), (12), ident> will add  (13), (23)
+So if you had a 3 cycle and transposition which contains 2 of the cycle elements, then you'll get all the other transpositions
+* Is this true for all cases? Yes The posible transpositions involving 3 elements (ab) (bc) (ac)
+  * (abc) = (ab)(ac)
+  * (abc) = (bca) = (bc)(ba)
+  * (abc) = (cab) = (ca)(cb)
+  * 
+  * (ab)(ac)(ab) = (bc)
+* What happends when you mult (ab)(ac) by itself?
+  * (ab)(ac)(ab)(ac) = (bc)(ac) = (cba) = (acb) = (ac)(ab)
+* 3 times? (bc)(ac)(ab)(ac) = (bc)(cb) = ident
+
+
+* if you have 2 transpositions with 1 common link, you can generate the last of the 3 transposition
+
+
+* How many transpositions are there?
+N*(N-1)/2 
+One odd subset cannot contain them all in a subgroup because this would generate the entire subgroup
+Can a subgroup contain all the transpositions?
+In S3 product of 2 3-cycles is another cycle how does this extend to S4?
+
+* Suppose what you want is true and the branch out based on this assumption .
+* Then come back and prove the desired property
+
+
+* Can you show a 3cycle exists in our S?
+* Then use normality
+
+* Not all learning is equivalent
+* Why did I decide to read book for guidance?
+
+
+* given a fixed r,s (rsk) where k!=r,s generates An
+    * Yes, the goal is to show that we can make (abc) and 3 cycles, which are the generators of An.
+    * (rsa) = (rs)(ra)
+    * (rsb) = (rs)(rb)
+    * (ra)(rs)(rs)(rb) = (ra)(rb) = (rab)
+    * Conclusion: we can form and (rab) where we choose ab
+    * (rab) = (bra) = (br)(ba)
+    * (rcb) = (brc) = (br)(bc)
+    * (ba)(br)(br)(bc) = (ba)(bc) = (bac) = (acb)
+
+* if S normal and S contains a 3 cycle, then S generates An
+  * Show you can generate any given (abx) show you can make any (abc) using normality
+      * (xc)(ab)(bx)(xc) is in S
+      * (ab)(xc)(bx)(xc) = (ab)(bc) = (bac)
+        * Replacement operator: (xc)(bx)(xc) = (xc)(xbc) = (cb) = (bc)
+      * (bac)(bac) = (abc)
+
+* Finally show S must contain a 3 cycle (ab)(ac)
+
+* An is simple?
+G   An
+2    1
+6    3
+24  12
+S=3 4 cosets 6 transposition
+2345
+n*(n-1)/2 = n!/2k
+
+k = (n-2)!
+k divsor of n!/2
+n=4 k=2
+n=5 k=6

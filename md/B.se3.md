@@ -17,14 +17,15 @@
 * linear representations of compact group can be directly decomposed into sum of irreducibles st.
 * $p = Q \underset{j}{\oplus}(D_j) Q^{-1}$ where D_j are 2j+1x2j+1 complex matrices
 * type-j vectors  where $Q=I$ 
-  * **?? type-0 invariant under rotations?, type-1 rotation under 3d rotation mat?**
+  * **?? type-0 invariant under rotations?, type-1 rotation under 3d rotation mat??**
 
-* Orthogonal space where representation acts on is the space of spherical harmonics? (What is this space of $\mathbb{C}^{2j+1}$)
+* Orthogonal space where representation acts on is the space of spherical harmonics? 
+  * **?? What is this space of $\mathbb{C}^{2j+1}$, the space of spherical harmonics??**
 
 # Spherical Harmonics
 * Function $Y_j:S2-\mathbb{C}^{2j+1}$
 * Basis of all integratible functions on S2
-* $Y_j(R_g x ) = D_j Y_j(x)$
+* Y_j $Y_j(R_g x ) = D_j Y_j(x)$
 
 # Need to understand (measure theory review)
 * Hilbert space

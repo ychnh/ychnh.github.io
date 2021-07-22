@@ -379,3 +379,10 @@ k = (n-2)!
 k divsor of n!/2
 n=4 k=2
 n=5 k=6
+
+# 20200722
+* Dont giveup keep trying
+* look for small patterns, keep digging, 
+* try to master the small parts
+* Save your energy
+* How can you write/think/do Math more effectively without getting tired?

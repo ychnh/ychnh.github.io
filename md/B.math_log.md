@@ -16,6 +16,7 @@
 
 Suppose $H\leq G, N\trianglelefteq G$, then $([G:H],|N|)=1 \rightarrow N<H$ and $([G:N],|H|)=1) \rightarrow H<N $
 
+
 * I spent alot of time on this problem, and also learned a number of things.
 * How can I improve?
 	* I think I need to improve in seeing connections and pathways I can go down
@@ -189,28 +190,26 @@ oe=j
     * (13), (12)(13)
     * (23), (12)(23) 
     * iden, (12)
-    *
   * S4 2*3*4=24
-    *
     * (11)(13)(14), (12)(13)(14)
     * (11)(23)(14), (12)(23)(14)
     * (11)(33)(14), (12)(33)(14) 
-    *
+    * _
     * (11)(13)(24), (12)(13)(24)
     * (11)(23)(24), (12)(23)(24)
     * (11)(33)(24), (12)(33)(24) 
-    *
+    * _
     * (11)(13)(34), (12)(13)(34)
     * (11)(23)(34), (12)(23)(34)
     * (11)(33)(34), (12)(33)(34) 
-    *
+    * _
     * (11)(13)(44), (12)(13)(44)
     * (11)(23)(44), (12)(23)(44)
     * (11)(33)(44), (12)(33)(44) 
-    *
+    * _
     * 1/2 1/3 1/4
     * 1/2*1/3*1/4 have cycle 0
-    *
+    * _
     * (12)(13)(14), (13)(14), (12)(23)(14), (23)(14), (12)(14), (14)
     * (12)(13)(24), (13)(24), (12)(23)(24), (23)(24), (12)(24), (24)
     * (12)(13)(34), (13)(34), (12)(23)(34), (23)(34), (12)(34), (34)
@@ -230,7 +229,7 @@ oe=j
 * (13), (12)(13)
 * (23), (12)(23) 
 * iden, (12)
-<(12)(13), (12), ident> will add  (13), (23)
+* $<(12)(13), (12), ident>$ will add  (13), (23)
 So if you had a 3 cycle and transposition which contains 2 of the cycle elements, then you'll get all the other transpositions
 * Is this true for all cases? Yes The posible transpositions involving 3 elements (ab) (bc) (ac)
   * (abc) = (ab)(ac)
@@ -247,7 +246,8 @@ So if you had a 3 cycle and transposition which contains 2 of the cycle elements
 
 
 * How many transpositions are there?
-N*(N-1)/2 
+
+$N*(N-1)/2$
 One odd subset cannot contain them all in a subgroup because this would generate the entire subgroup
 Can a subgroup contain all the transpositions?
 In S3 product of 2 3-cycles is another cycle how does this extend to S4?
@@ -394,5 +394,3 @@ Blind think. See what you can extend.
 * What is it made of?
 * What does it belong to?
 * Do existing things play/act with it?
-
-

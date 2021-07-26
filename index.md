@@ -1,5 +1,6 @@
 * ./
 * [B.math_log.html](https://ychnh.github.io/html/B.math_log.html)
+* [A.journal.html](https://ychnh.github.io/html/A.journal.html)
 * [A.objectives.html](https://ychnh.github.io/html/A.objectives.html)
 * [A.study_guide.html](https://ychnh.github.io/html/A.study_guide.html)
 * [B.se3.html](https://ychnh.github.io/html/B.se3.html)

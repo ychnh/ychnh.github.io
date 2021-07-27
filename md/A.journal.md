@@ -7,6 +7,7 @@
   * love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control
 
 What is it that you want to do?
+
 * Problem Solving
   * Surfing (Mountain Climbining) 
 * Experimenting, Creating, Designing

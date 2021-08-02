@@ -227,7 +227,7 @@ Self = {Goals/Intent, Average of Conscious Experiences}
     * You must go and ask different members some questions
     * Investigate/dance and learn the different ways the members interact
 
-# 210727 _________________________________
+# 210727
 
 ## Stuck or returning to fixed mindset vs growth mindset
 * Why do i continue to return to the fixed mindset?
@@ -283,7 +283,7 @@ From the ashes of 1925, Babe Ruth rose like a rocket. Through discipline.
 * Vimimum pdf viewer
 * Vimimum c
 
-# 210726 _________________________________
+# 210726
 
 ## Identity
 

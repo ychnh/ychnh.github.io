@@ -205,9 +205,9 @@ autotelic personality
 
 ## Attention
 
-    differentiation  and  integration.  Differentiation  implies  amovement toward uniqueness, toward separating oneself from others. In-tegration refers to its opposite: a union with other people, with ideas andentities beyond the self. A complex self is one that succeeds in combiningthese opposite tendencies
+    differentiation and integration. Differentiation implies a movement toward uniqueness, toward separating oneself from others. Integration refers to its opposite: a union with other people, with ideas andentities beyond the self. A complex self is one that succeeds in combiningthese opposite tendencies
 
-    The  “battle”  is  not  really  against  the  self,  but  against  the  entropy  thatbrings disorder to consciousness. It is really a battle for the self; it is a struggle for establishing control over attention. The struggle does notnecessarily have to be physical, as in the case of the climber. But anyonewho has experienced flow knows that the deep enjoyment it provides re-quires an equal degree of disciplined concentration.
+    The “battle” is not really  against  the  self,  but  against  the  entropy  thatbrings disorder to consciousness. It is really a battle for the self; it is a struggle for establishing control over attention. The struggle does notnecessarily have to be physical, as in the case of the climber. But anyonewho has experienced flow knows that the deep enjoyment it provides re-quires an equal degree of disciplined concentration.
 
     These  examples  illustrate  what  we  mean  by  optimal  experience.  Theyare situations in which attention can be freely invested to achieve a person’sgoals, because there is no disorder to straighten out, no threat for the selfto defend against. 
 
@@ -215,7 +215,7 @@ autotelic personality
 
 
 $ Self <- Conscious Experiences <- Attention <- Self$
-Self = {Goals/Intent, Average of Conscious Experiences}
+* Self = {Goals/Intent, Average of Conscious Experiences}
 
 * Concentration
 

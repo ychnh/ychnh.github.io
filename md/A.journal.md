@@ -1,5 +1,8 @@
 # 210730
 
+as
+*test
+
 ## CHANGING MINDSETS: A WORKSHOP
 
     In my work, I see lots of young children like this—bright, seemingly resourceful children who are paralyzed by setbacks

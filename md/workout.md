@@ -1,6 +1,6 @@
 # Today's menu
-5x10, 5x10 pull ohpress
-light BB row, 5x5 squat, 1x5 dips
+* 5x10, 5x10 pull ohpress
+* light BB row, 5x5 squat, 1x5 dips
 
 # Lift
 * Pullup
@@ -81,6 +81,16 @@ light BB row, 5x5 squat, 1x5 dips
 * Use the machine to get the feeling
 * Need to lean back
 * Get a comfortable stance (Lock shoudler and place weight on there kinda like the other lifts)
+
+* Foot slightly tilted, mostly straight
+* Solid knees and shins support
+* Squeeze abs
+* Push outwards on outer edge of feet
+* Chest out
+* Hamstring tight, quads tight
+* Don't fold knees early engage quads. Suck in knees after
+* Open up hips
+* Hip movement during squat
 
 # Pullup
 * High Lats

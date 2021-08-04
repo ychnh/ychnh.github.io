@@ -1,3 +1,22 @@
+# Today's menu
+5x10, 5x10 pull ohpress
+light BB row, 5x5 squat, 1x5 dips
+
+# Lift
+* Pullup
+* BB row
+* OH press
+* Bench press
+* Squat
+* Deadlift
+* Dips
+* Pushup
+
+* 5x5 (Pyramid, Hourglass, Reverse Pyramid)
+* 5x5, 5x5 (Superset)
+* 1x5 (Heavy 1 Pass)
+* 5x10, 5x10 (HIIT)
+
 # 20200828
 * Really focus on the muscle contractions as you do the pulling motion. Back to the basics
 # 20200819

@@ -1,7 +1,32 @@
-# 210730
+# 210802
 
-as
-*test
+* What if she leaves me?
+* What is the meaning of marriage?
+* What if she changes.
+* What if I change?
+* Do I not want to be lonely?
+* I do not have control over any of this
+
+* What parts of me should not change? Can this even be the case?
+  * Religion?
+  * Ideas?
+
+* Lauren said that people should not marry unless they are comfortable being by themselves
+
+* What if she or I came from a pre-existing marriage?
+
+    As they stood there together, Ekwefi's mind went back to the days when they were young. She had married Anene because Okonkwo was too poor then to marry. Two years after her marriage to Anene she could bear it no longer and she ran away to Okonkwo.
+    It had been early in the morning. The moon was shining. She was going to the stream to getch water. Okonkwo's house was on the way to the stream. She went in and knocked at his door and he came out. Even in those days he was not a man of many words.
+    He just carried her into his bed and in the darkness began to feela round her waiste for the loose end of her cloth.
+
+
+    When people with a fixed mindset fail their test—in chemistry, dieting, smoking, or anger—they beat themselves up. They’re incompetent, weak, or bad people. Where do you go from there?
+
+    Next time you try to diet, think of Nathan and remember that willpower is not just a thing you have or don’t have. Willpower needs help. I’ll come back to this point
+
+    Regardless of how bad you may feel, do it! (Put that on your mirror, too.) And when you succeed, don’t forget to ask yourself: What do I have to do to maintain and continue the growth?
+
+# 210730
 
 ## CHANGING MINDSETS: A WORKSHOP
 
@@ -218,6 +243,7 @@ autotelic personality
 
 
 $$ Self <- Conscious Experiences <- Attention <- Self$$
+
 * Self = {Goals/Intent, Average of Conscious Experiences}
 
 * Concentration
